@@ -12,7 +12,7 @@ const Login = () => {
     return (
         <>
         {/* <img style={{width:"100%",position:'absolute',top:'0px',zIndex:"999"}} src={`./images/backgorund.png`}></img>  */}
-        <section id='login'>
+        <section id='login' className='container'>
 
         <div style={{position:'relative',paddingBottom:'50px',marginBottom:'100px'}}>
 
@@ -29,16 +29,19 @@ const Login = () => {
             
         <form className='login-form'>
 
-            <div >
+            <div style={{width:"400px"}} className='row'>
             <label htmlFor="username">Username:</label>
-            <input className='login-form-text' type="text" name='username' />
+            <input className='login-form-text col' type="text" name='username' />
             </div>
 
-            <div>
+            <div style={{width:"400px"}}  className='row'>
             <label htmlFor="passowrd">Password:</label>
-            <input  className='login-form-password' type={passwordVisisbility ? "text" : "password"} name='password' /> 
-            {passwordVisisbility ? <i style={{marginLeft:"15px"}} className="far fa-eye"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
-            : <i style={{marginLeft:"15px"}} className="far fa-eye-slash"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
+         
+                 <input  className='col login-form-password' type={passwordVisisbility ? "text" : "password"} name='password' /> 
+            {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
+            : <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
+        
+           
             </div>
             
             <button type='submit' className='login-form-btn'>Sign In</button>

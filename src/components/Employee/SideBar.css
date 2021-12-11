@@ -1,0 +1,27 @@
+.employee-left-side-bar {
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100vh;
+  background-image: url("./images/left-side-bar.png");
+  background-size: 100% 100%;
+  left: 0;
+  top: 0;
+  padding: 20px;
+}
+.employee-left-side-bar-logo {
+  width: 140px;
+  height: 152px;
+  align-self: center;
+  margin-bottom: 80px;
+}
+.employee-left-side-bar div h6 {
+  color: #7700bb;
+  font-weight: bolder;
+}
+.employee-left-side-bar div ul li {
+  color: rgb(61, 58, 58);
+  font-weight: 500;
+}

@@ -19,7 +19,7 @@ const Slide = ({imgSrc}) => {
     <Carousel>
     <Carousel.Item>
     <img
-      style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
+      // style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
       className="d-block w-100"
       src={imgSrc}
       alt='slide-img'
@@ -27,7 +27,7 @@ const Slide = ({imgSrc}) => {
   </Carousel.Item>
       <Carousel.Item>
     <img
-     style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
+    //  style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
       className="d-block w-100"
       src={imgSrc}
       alt='slide-img'
@@ -35,7 +35,7 @@ const Slide = ({imgSrc}) => {
   </Carousel.Item>
       <Carousel.Item>
     <img
-     style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
+    //  style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
       className="d-block w-100"
       src={imgSrc}
       alt='slide-img'
