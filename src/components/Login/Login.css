@@ -1,0 +1,127 @@
+#login {
+  color: black;
+  background-image: url("./backgorund.png");
+  background-size: 100% 100%;
+  height: 100%;
+  text-align: center;
+}
+#login h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  margin-top: 30px;
+  color: #7900bf;
+}
+.login-logo {
+  position: absolute;
+  width: 140px;
+  height: 152px;
+  left: 51px;
+  top: 10px;
+}
+
+.login-nav-btn {
+  position: absolute;
+  width: 30%;
+  height: 59px;
+  right: 70px;
+  top: 53px;
+  background: #7700bb;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 25px;
+}
+
+.login-nav-btn:hover {
+  cursor: pointer;
+}
+
+.login-form-btn {
+  width: 150px;
+  height: 59px;
+  background: #7700bb;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 25px;
+}
+.login-carousel {
+  position: relative;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+}
+.login-form div {
+  padding: 30px;
+}
+.login-form div label {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 56px;
+  color: #000000;
+}
+.login-form-text {
+  display: block;
+  border: 1px solid black;
+  width: 400px;
+  height: 40px;
+  border-radius: 15px;
+}
+.login-form div label {
+  display: block;
+}
+.login-form-password {
+  display: inline-block;
+  border: 1px solid black;
+  width: 360px;
+  height: 40px;
+  border-radius: 15px;
+}
+.login-form div i:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .login-nav-btn {
+    right: 0px;
+    font-size: 1.3rem;
+  }
+  .login-logo {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .login-nav-btn {
+    font-size: 0.9rem;
+  }
+  #login h2 {
+    font-size: 30px;
+  }
+  .login-form div {
+    padding: 15px;
+  }
+  .login-form-text {
+    width: 300px;
+    margin-right: 15px;
+  }
+  .login-form-password {
+    width: 280px;
+  }
+}
