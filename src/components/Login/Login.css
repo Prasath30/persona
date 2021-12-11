@@ -64,6 +64,7 @@
   align-items: center;
   text-align: left;
   padding: 10px;
+  margin-bottom: 30px;
 }
 .login-form div {
   padding: 30px;
@@ -112,10 +113,13 @@
     font-size: 0.9rem;
   }
   #login h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .login-form div {
     padding: 15px;
+  }
+  .login-form div label {
+    font-size: 20px;
   }
   .login-form-text {
     width: 300px;
