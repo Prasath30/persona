@@ -3,19 +3,22 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 100vh;
+  width: 250px;
   background-image: url("./images/left-side-bar.png");
   background-size: 100% 100%;
-  left: 0;
   top: 0;
+  left: 0;
   padding: 20px;
+}
+.p {
+  position: sticky;
+  top: 0;
 }
 .employee-left-side-bar-logo {
   width: 140px;
   height: 152px;
   align-self: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .employee-left-side-bar div h6 {
   color: #7700bb;
@@ -23,5 +26,82 @@
 }
 .employee-left-side-bar div ul li {
   color: rgb(61, 58, 58);
+  font-weight: 500;
+  font-size: 13px;
+}
+/* Right side bar css */
+
+.employee-right-side-bar {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-image: url("./images/right-side-bar.png");
+  background-size: 100% 100%;
+  right: 0;
+  top: 0;
+  padding: 20px;
+}
+.employee-right-side-bar-logo {
+  width: 100px;
+  height: 112px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.employee-right-side-bar form {
+  margin-bottom: 10vh;
+}
+.employee-right-side-bar h2 {
+  font-family: "Caveat", cursive;
+  color: #7700bb;
+  text-align: center;
+}
+
+.employee-right-side-bar form div input,
+select,
+textarea {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: rgb(241, 234, 234);
+}
+.employee-right-side-bar form div label {
+  display: block;
+  margin-top: 10px;
+}
+
+.sidebar-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-form-btn button {
+  background-color: #7700bb;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.employee-right-side-bar-calendar {
+  width: 280px;
+  height: 230px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.employee-right-side-bar-calendar abbr {
+  text-decoration: none;
+}
+.employee-right-side-bar-calendar button {
+  background-color: white;
+  outline: none;
+  border: none;
+  padding: 5px 5px 5px 5px;
   font-weight: 500;
 }

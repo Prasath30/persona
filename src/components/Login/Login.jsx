@@ -29,12 +29,12 @@ const Login = () => {
             
         <form className='login-form'>
 
-            <div style={{width:"400px"}} className='row'>
+            <div style={{width:"370px"}} className='row'>
             <label htmlFor="username">Username:</label>
             <input className='login-form-text col' type="text" name='username' />
             </div>
 
-            <div style={{width:"400px"}}  className='row'>
+            <div style={{width:"370px"}}  className='row'>
             <label htmlFor="passowrd">Password:</label>
          
                  <input  className='col login-form-password' type={passwordVisisbility ? "text" : "password"} name='password' /> 

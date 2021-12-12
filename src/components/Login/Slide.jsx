@@ -1,19 +1,19 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { Carousel } from 'react-bootstrap'
 
 const Slide = ({imgSrc}) => {
 
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    // const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
     
-    useEffect(() => {
-        function handleResize() {
-      setScreenWidth(window.innerWidth);
-    }
+    // useEffect(() => {
+    //     function handleResize() {
+    //   setScreenWidth(window.innerWidth);
+    // }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-    }, [])
+    // window.addEventListener('resize', handleResize);
+    // return () => window.removeEventListener('resize', handleResize);
+    // }, [])
     return (
         <div>
     <Carousel>
@@ -35,7 +35,7 @@ const Slide = ({imgSrc}) => {
   </Carousel.Item>
       <Carousel.Item>
     <img
-    //  style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
+      // style={  screenWidth > 500 ? {height:'70vh'} : {height:'35vh'} }
       className="d-block w-100"
       src={imgSrc}
       alt='slide-img'

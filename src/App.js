@@ -5,8 +5,8 @@ import Employee from "./components/Employee/Employee";
 function App() {
   return (
     <>
-    <Login/>
-    {/* <Employee /> */}
+    {/* <Login/> */}
+    <Employee />
 
 
     </>
