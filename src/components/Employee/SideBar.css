@@ -32,7 +32,7 @@
 /* Right side bar css */
 
 .employee-right-side-bar {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -44,10 +44,9 @@
   padding: 20px;
 }
 .employee-right-side-bar-logo {
-  width: 100px;
-  height: 112px;
+  width: 50px;
+  height: 62px;
   align-self: center;
-  margin-bottom: 10px;
 }
 .employee-right-side-bar form {
   margin-bottom: 10vh;
@@ -61,7 +60,7 @@
 .employee-right-side-bar form div input,
 select,
 textarea {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border-radius: 10px;
   outline: none;
   border: 1px solid gray;
@@ -69,7 +68,7 @@ textarea {
 }
 .employee-right-side-bar form div label {
   display: block;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .sidebar-form-btn {
@@ -89,19 +88,84 @@ textarea {
 }
 
 .employee-right-side-bar-calendar {
-  width: 280px;
-  height: 230px;
+  position: relative;
+  width: 200px;
+  height: 100px;
   padding: 0;
   margin: 0;
   text-align: center;
+  margin-bottom: 70px;
+  margin-left: 30px;
 }
 .employee-right-side-bar-calendar abbr {
+  font-size: 10px;
   text-decoration: none;
 }
 .employee-right-side-bar-calendar button {
   background-color: white;
   outline: none;
   border: none;
-  padding: 5px 5px 5px 5px;
+  font-size: 10px;
+  padding: 0;
+  padding-left: 5px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+/* mob view */
+.mob-employee-left-side-bar-logo {
+  text-align: center;
+  display: flex;
+  margin: auto;
+}
+.mob-employee-left-side-bar {
+  margin-top: 20px;
+}
+.mob-employee-left-side-bar div h6 {
+  color: #7700bb;
+  font-size: 20px;
+}
+.mob-employee-right-side-bar h2 {
+  font-family: "Caveat", cursive;
+  color: #7700bb;
+  text-align: center;
+}
+.mob-employee-right-side-bar form div input {
+  margin-bottom: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: rgb(241, 234, 234);
+}
+.mob-employee-right-side-bar-inputs div {
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+.mob-employee-right-side-bar-inputs div label {
+  display: block;
+}
+
+.mob-employee-right-side-bar-calendar {
+  position: relative;
+  width: 270px;
+  height: 170px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-left: 30px;
+}
+.mob-employee-right-side-bar-calendar abbr {
+  font-size: 10px;
+  text-decoration: none;
+}
+.mob-employee-right-side-bar-calendar button {
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: 10px;
+  padding: 0;
+  padding-left: 5px;
+  padding-bottom: 8px;
   font-weight: 500;
 }

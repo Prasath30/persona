@@ -1,0 +1,77 @@
+.health-issue-categories {
+  position: relative;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  margin-left: 280px;
+  margin-right: 320px;
+}
+
+.category-card {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-card:hover {
+  cursor: pointer;
+}
+.category-card div {
+  position: absolute;
+  bottom: 0;
+  background-color: #7600bb79;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  width: 200px;
+}
+.category-card div i {
+  float: right;
+}
+
+.category-img {
+  width: 200px;
+  height: 250px;
+}
+.health-issue-categories h2 {
+  font-family: "caveat", cursive;
+  text-align: center;
+}
+.employee-newsletter {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.employee-newsletter:hover {
+  cursor: pointer;
+}
+.employee-newsletter img {
+  width: 231px;
+  height: 250px;
+  padding-left: 0;
+}
+.employee-newsletter div button {
+  background-color: inherit;
+  color: #7700bb;
+  font-family: "roboto", sans-serif;
+  border: 3px solid #f6a226;
+  border-radius: 10px;
+}
+.newsletter-date {
+  color: #f6a226;
+  font-family: "roboto", sans-serif;
+}
+.newsletter-title {
+  color: #7700bb;
+  font-family: "roboto", sans-serif;
+}
+.wellness-campaign {
+  margin-top: 8vh;
+}
