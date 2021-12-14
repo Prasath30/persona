@@ -25,11 +25,11 @@ const Content = () => {
 
     const Cardb = ({date,title}) =>{
         return(
-            <div  className={ mobview > "900" ? 'col employee-newsletter' : null }  >
+            <div  className={ mobview > "900" ? 'col employee-newsletter' : 'col employee-newsletter' }  >
                 <img src={`./images/category/newsletter.png`} alt="" />
                 <div>
-                    <p className={ mobview > "900" ? 'newsletter-date' : null } >{date}</p>
-                    <p  className={ mobview > "900" ? 'newsletter-title' : null } >{title}</p>
+                    <p className={ mobview > "900" ? 'newsletter-date' : 'newsletter-date' } >{date}</p>
+                    <p  className={ mobview > "900" ? 'newsletter-title' : 'newsletter-title' } >{title}</p>
                     <button>Show More</button>
                 </div>
             </div>
@@ -41,8 +41,9 @@ const Content = () => {
     return (
         <>
         <div  className={ mobview > "900" ? 'health-issue-categories' : null } >
-                    <h2>Take Charge of Your Mental Health</h2>
-        <div  className={ mobview > "900" ? 'row categories' : null } >
+                    
+        <div  className= 'row categories' style={mobview < "900" ? {display:"none"}: null} >
+        <h2>Take Charge of Your Mental Health</h2>
         <Card   imgSrc={`./images/category/one.png`}   caption="Feeling Stressed" />
         <Card  imgSrc={`./images/category/two.png`}   caption="Manage Burnout"  />
         <Card  imgSrc={`./images/category/three.png`} caption="Relationship/People Problems"  />
@@ -50,7 +51,7 @@ const Content = () => {
         <Card imgSrc={`./images/category/five.png`}  caption="Not Sure what to talk about" />
         <Card imgSrc={`./images/category/six.png`}   caption="Need Mental Clarity" />
         </div>
-          <div  className={ mobview > "900" ? 'row wellness-campaign' : null } >
+          <div  className={ mobview > "900" ? 'row wellness-campaign' : 'row wellness-campaign' } >
                 <h2>Wellness Campaigns</h2>
             <Cardb date="Jan 2022" title="Why Mental illness" />
             <Cardb date="Feb 2022" title="Manage Your Stress" />

@@ -37,7 +37,7 @@
   width: 200px;
   height: 250px;
 }
-.health-issue-categories h2 {
+.categories h2 {
   font-family: "caveat", cursive;
   text-align: center;
 }
@@ -74,4 +74,9 @@
 }
 .wellness-campaign {
   margin-top: 8vh;
+}
+.wellness-campaign h2 {
+  color: #7700bb;
+  font-family: "caveat", "cursive";
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 .employee-left-side-bar {
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -32,15 +32,15 @@
 /* Right side bar css */
 
 .employee-right-side-bar {
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 300px;
   background-image: url("./images/right-side-bar.png");
   background-size: 100% 100%;
-  right: 0;
   top: 0;
+  right: 0;
   padding: 20px;
 }
 .employee-right-side-bar-logo {
@@ -129,6 +129,13 @@ textarea {
   font-family: "Caveat", cursive;
   color: #7700bb;
   text-align: center;
+}
+.mob-employee-right-side-bar form div label {
+  display: block;
+}
+.mob-employee-right-side-bar form div select,
+input {
+  margin-bottom: 30px;
 }
 .mob-employee-right-side-bar form div input {
   margin-bottom: 5px;

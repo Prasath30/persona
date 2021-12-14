@@ -88,7 +88,8 @@ const SideBar = () => {
                   <input type="email"  name='email' size={30} />
                  </div> 
               </div>
-                
+                <div className={mobview > "900" ? null : "row"} style={mobview > "900" ? null : {marginBottom:"30px"}} >
+                <div className={mobview > "900" ? null : "col-md-6 col-sm-12"} >
                   <label htmlFor="calendar">Date:</label>
                   <Calendar 
                   className={ mobview > "900" ? "employee-right-side-bar-calendar"   : "mob-employee-right-side-bar-calendar" }
@@ -100,13 +101,17 @@ const SideBar = () => {
                   nextLabel={nextBtn()}
                   prevLabel={prevBtn()}
                   />
-                  <div className={ mobview > "900" ? null  : 'form-group' } >
+                  </div>
+                  <div className={mobview > "900" ? null : "col-md-6 col-sm-12"}  >
+
+                 
+                  <div  style={mobview > "900" ? null : {marginBottom:"30px"}} >
                     <label htmlFor="time">Time:</label>
                     <input type="time"  name="time" style={{width:"100px"}}/>
                   </div>
-                  <div className={ mobview > "900" ? null  : 'form-group'} >
+                  <div  >
                      <label htmlFor="category">Category:</label>
-                      <select name="category" id="" style={{marginBottom:"8px"}}>
+                      <select name="category" id="" >
                           <option value={category.one} >Feeling Stressed</option>
                           <option value={category.two}>Manage Burnout</option>
                           <option value={category.three}>Relationship/People Problems</option>
@@ -115,9 +120,12 @@ const SideBar = () => {
                           <option value={category.six}>Need Mental Clarity</option>
                       </select>
                   </div>
-                  <div>
+                  </div>
+                  </div>
+                  <div className={mobview > "900" ? null : "form-group"}>
+                   
                   <label htmlFor="message">Any Message ?</label>
-                  <textarea name="" id="" cols="33" rows="3"></textarea>
+                  <textarea name="" id="" cols="30" rows="3" className={mobview > "900" ? null : "form-control"}></textarea>
                   </div>
                   <div  className={ mobview > "900" ? 'sidebar-form-btn'  : null } >
                     <button type='submit' >Submit</button> 
