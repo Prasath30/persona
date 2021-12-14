@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import Calendar from 'react-calendar'
-// import 'react-calendar/dist/Calendar.css';
+import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 
 const SideBar = () => {
@@ -48,7 +48,7 @@ const SideBar = () => {
 
     return (
         <>
-        
+       <div className='container'>
           <section   className={ mobview > "900" ? 'employee-left-side-bar'  : null } >
             <img  className={ mobview > "900" ? 'employee-left-side-bar-logo'  : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/Logo-3.png`} alt="logo"  />
             <div className={ mobview > "900" ? null  : "row mob-employee-left-side-bar" } >
@@ -91,8 +91,7 @@ const SideBar = () => {
                 <div className={mobview > "900" ? null : "row"} style={mobview > "900" ? null : {marginBottom:"30px"}} >
                 <div className={mobview > "900" ? null : "col-md-6 col-sm-12"} >
                   <label htmlFor="calendar">Date:</label>
-                  <Calendar 
-                  className={ mobview > "900" ? "employee-right-side-bar-calendar"   : "mob-employee-right-side-bar-calendar" }
+                  <Calendar
                   value={date} 
                   onChange={setdate} 
                   onClickDay={handleClick} 
@@ -135,7 +134,7 @@ const SideBar = () => {
               </div>
              
           </section>
-   
+        </div> 
         </>
     )
 }
