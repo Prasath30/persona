@@ -3,17 +3,10 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 
-const SideBar = () => {
+const SideBar = ({category,categoryValue}) => {
 
     const [date, setdate] = useState(new Date())
-    const [category, setcategory] = useState({
-        one:"Feeling Stressed",
-        two:"Manage Burnout",
-        three:"Relationship/People Problems",
-        four:"Wish to Feel Good",
-        five:"Not Sure what to talk about",
-        six:"Need Mental Clarity"
-    })
+
    const [mobview, setmobview] = useState(window.innerWidth)
     
     useEffect(() => {
@@ -92,6 +85,7 @@ const SideBar = () => {
                 <div className={mobview > "900" ? null : "col-md-6 col-sm-12"} >
                   <label htmlFor="calendar">Date:</label>
                   <Calendar
+
                   value={date} 
                   onChange={setdate} 
                   onClickDay={handleClick} 
@@ -110,7 +104,7 @@ const SideBar = () => {
                   </div>
                   <div  >
                      <label htmlFor="category">Category:</label>
-                      <select name="category" id="" >
+                      <select name="category" id="" value={categoryValue} >
                           <option value={category.one} >Feeling Stressed</option>
                           <option value={category.two}>Manage Burnout</option>
                           <option value={category.three}>Relationship/People Problems</option>
@@ -126,7 +120,7 @@ const SideBar = () => {
                   <label htmlFor="message">Any Message ?</label>
                   <textarea name="" id="" cols="30" rows="3" className={mobview > "900" ? null : "form-control"}></textarea>
                   </div>
-                  <div  className={ mobview > "900" ? 'sidebar-form-btn'  : "sidebar-form-btn" } >
+                  <div  className={ mobview > "900" ? 'sidebar-form-btn'  : null } >
                     <button type='submit' >Submit</button> 
                   </div>
                      

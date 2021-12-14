@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react'
 import "./Content.css"
 
-const Content = () => {
+const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
+
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -11,9 +12,15 @@ const Content = () => {
         });
     }, [])
 
+    const handleCardClick = (e,captio) =>{
+            e.preventDefault();
+            setcategoryValue(captio)
+    }
+
+
     const Card = ({imgSrc,caption}) =>{
         return(
-            <div  className={ mobview > "900" ? 'col category-card container'  : null } >
+            <div  id={caption === categoryValue ? "selectedCard" : null} className={ mobview > "900" ? 'col category-card container'  : null } onClick={(e)=>handleCardClick(e,caption)} >
                 <img id="category-img" className={ mobview > "900" ? 'category-img' : null } src={imgSrc} alt="" />
                 <div>
                     <p>{caption}</p>
@@ -22,6 +29,7 @@ const Content = () => {
             </div>
         )
     }
+
 
     const Cardb = ({date,title}) =>{
         return(
@@ -44,12 +52,12 @@ const Content = () => {
                     
         <div  className= 'row categories' style={mobview < "900" ? {display:"none"}: null} >
         <h2>Take Charge of Your Mental Health</h2>
-        <Card   imgSrc={`./images/category/one.png`}   caption="Feeling Stressed" />
-        <Card  imgSrc={`./images/category/two.png`}   caption="Manage Burnout"  />
-        <Card  imgSrc={`./images/category/three.png`} caption="Relationship/People Problems"  />
-        <Card imgSrc={`./images/category/four.png`}  caption="Wish to Feel Good" />
-        <Card imgSrc={`./images/category/five.png`}  caption="Not Sure what to talk about" />
-        <Card imgSrc={`./images/category/six.png`}   caption="Need Mental Clarity" />
+        <Card   imgSrc={`./images/category/one.png`}   caption={category.one}    />
+        <Card  imgSrc={`./images/category/two.png`}   caption={category.two}     />
+        <Card  imgSrc={`./images/category/three.png`} caption={category.three}    />
+        <Card imgSrc={`./images/category/four.png`}  caption={category.four}      />
+        <Card imgSrc={`./images/category/five.png`}  caption={category.five}       />
+        <Card imgSrc={`./images/category/six.png`}   caption={category.six}       />
         </div>
           <div  className={ mobview > "900" ? 'row wellness-campaign' : 'row wellness-campaign' } >
                 <h2>Wellness Campaigns</h2>

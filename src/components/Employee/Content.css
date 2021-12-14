@@ -80,3 +80,8 @@
   font-family: "caveat", "cursive";
   text-align: center;
 }
+#selectedCard {
+  border: 2px solid #f6a226;
+  box-shadow: 6px 8px 7px gray;
+  border-radius: 20px;
+}
