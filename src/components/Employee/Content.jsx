@@ -20,8 +20,8 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const Card = ({imgSrc,caption}) =>{
         return(
-            <div  id={caption === categoryValue ? "selectedCard" : null} className={ mobview > "900" ? 'col category-card container'  : null } onClick={(e)=>handleCardClick(e,caption)} >
-                <img id="category-img" className={ mobview > "900" ? 'category-img' : null } src={imgSrc} alt="" />
+            <div   className={ mobview > "1140" ? 'col category-card container'  : null } onClick={(e)=>handleCardClick(e,caption)} >
+                <img id={caption === categoryValue ? "selectedCard" : null} className={ mobview > "1140" ? 'category-img' : null } src={imgSrc} alt="" />
                 <div>
                     <p>{caption}</p>
                     <i class="fas fa-long-arrow-alt-right"></i>
@@ -30,14 +30,27 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         )
     }
 
+    const CardbStyle = {
+        width:"230px",
+          position: "relative",
+            marginTop: "30px",
+            marginBottom: "30px",
+            marginLeft: "50px",
+            textAlign: "center",
+            background: "#eaebef",
+            width: "231px",
+            borderRadius:"18px",
+            padding: "0"
+
+    }
 
     const Cardb = ({date,title}) =>{
         return(
-            <div  className={ mobview > "900" ? 'col employee-newsletter' : 'col employee-newsletter' }  >
-                <img src={`./images/category/newsletter.png`} alt="" />
+            <div  style={CardbStyle} className='employee-newsletter' >
+                <img style={{width:"230px"}} src={`./images/category/newsletter.png`} alt="" />
                 <div>
-                    <p className={ mobview > "900" ? 'newsletter-date' : 'newsletter-date' } >{date}</p>
-                    <p  className={ mobview > "900" ? 'newsletter-title' : 'newsletter-title' } >{title}</p>
+                    <p className={ mobview > "1140" ? 'newsletter-date' : 'newsletter-date' } >{date}</p>
+                    <p  className={ mobview > "1140" ? 'newsletter-title' : 'newsletter-title' } >{title}</p>
                     <button>Show More</button>
                 </div>
             </div>
@@ -48,9 +61,9 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     return (
         <>
-        <div  className={ mobview > "900" ? 'health-issue-categories' : null } >
+        <div  className={ mobview > "1140" ? 'health-issue-categories' : null } >
                     
-        <div  className= 'row categories' style={mobview < "900" ? {display:"none"}: null} >
+        <div  className= 'row categories' style={mobview < "1140" ? {display:"none"}: null} >
         <h2>Take Charge of Your Mental Health</h2>
         <Card   imgSrc={`./images/category/one.png`}   caption={category.one}    />
         <Card  imgSrc={`./images/category/two.png`}   caption={category.two}     />
@@ -59,7 +72,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         <Card imgSrc={`./images/category/five.png`}  caption={category.five}       />
         <Card imgSrc={`./images/category/six.png`}   caption={category.six}       />
         </div>
-          <div  className={ mobview > "900" ? 'row wellness-campaign' : 'row wellness-campaign' } >
+          <div  className={ mobview > "1140" ? 'row wellness-campaign' : 'row wellness-campaign' } >
                 <h2>Wellness Campaigns</h2>
             <Cardb date="Jan 2022" title="Why Mental illness" />
             <Cardb date="Feb 2022" title="Manage Your Stress" />

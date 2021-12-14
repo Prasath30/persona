@@ -22,19 +22,19 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     }
 
     const handleClick = (e) =>{
-
+                console.log(e)
     }
 
     const nextBtn = () =>{
 
         return (
-            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"3px",paddingTop:"-10px"}} ><i  className="fas fa-angle-right"></i></div>
+            <div style={{backgroundColor:"white",width:"30px",height:"20px",borderRadius:"10px",paddingTop:"-10px",boxShadow:"5px 5px 5px gray"}} ><i  className="fas fa-angle-right"></i></div>
         )
     }
     const prevBtn = () =>{
   
         return (
-            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"4px",paddingTop:"-10px"}} ><i  className="fas fa-angle-left"></i></div>
+            <div style={{backgroundColor:"white",width:"30px",height:"20px",borderRadius:"10px",paddingTop:"-10px",boxShadow:"5px 5px 5px gray"}} ><i  className="fas fa-angle-left"></i></div>
         )
     }
 
@@ -42,10 +42,10 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     return (
         <>
        <div className='container'>
-          <section   className={ mobview > "900" ? 'employee-left-side-bar'  : null } >
-            <img  className={ mobview > "900" ? 'employee-left-side-bar-logo'  : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/Logo-3.png`} alt="logo"  />
-            <div className={ mobview > "900" ? null  : "row mob-employee-left-side-bar" } >
-            <div className={ mobview > "900" ? null  : "col-md-6 col-sm-12" } >
+          <section   className={ mobview > "1140" ? 'employee-left-side-bar'  : null } >
+            <img  className={ mobview > "1140" ? 'employee-left-side-bar-logo'  : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/Logo-3.png`} alt="logo"  />
+            <div className={ mobview > "1140" ? null  : "row mob-employee-left-side-bar" } >
+            <div className={ mobview > "1140" ? null  : "col-md-6 col-sm-12" } >
                 <h6>What you get from our sessions? </h6>
                 <ul>
                     <li>Understand your thoughts</li>
@@ -55,7 +55,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                 </ul>
             </div>
 
-            <div className={ mobview > "900" ? null  : "col-md-6 col-sm-12" } >
+            <div className={ mobview > "1140" ? null  : "col-md-6 col-sm-12" } >
                 <h6>Process Flow of Sessions</h6>
                 <ul>
                     <li>First session - Discuss the issue and how you would like to benifit from the session</li>
@@ -65,27 +65,27 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
             </div>
           </section>  
             
-          <section  className={ mobview > "900" ? 'employee-right-side-bar'  : null } >
-              <img   className={ mobview > "900" ? 'employee-right-side-bar-logo' : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/ellipse.png`} alt="ellipse"  />
-              <div className={ mobview > "900" ? null  : 'mob-employee-right-side-bar' } >
+          <section  className={ mobview > "1140" ? 'employee-right-side-bar'  : null } >
+              <img   className={ mobview > "1140" ? 'employee-right-side-bar-logo' : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/ellipse.png`} alt="ellipse"  />
+              <div className={ mobview > "1140" ? null  : 'mob-employee-right-side-bar' } >
                  <h2>Book a session</h2>
               <form action="" className='form'>
 
               <div className='row mob-employee-right-side-bar-inputs'>
-                <div className={ mobview > "900" ? null  : 'form-group col-md-6 col-sm-12' }>
+                <div className={ mobview > "1140" ? null  : 'form-group col-md-6 col-sm-12' }>
                     <label htmlFor="name">Name</label>
                   <input type="text"  name='name'  size={30}/>
                 </div>
-                 <div className={ mobview > "900" ? null  : 'form-group col-md-6 col-sm-12' }>
+                 <div className={ mobview > "1140" ? null  : 'form-group col-md-6 col-sm-12' }>
                     <label htmlFor="email">Email id</label>
                   <input type="email"  name='email' size={30} />
                  </div> 
               </div>
-                <div className={mobview > "900" ? null : "row"} style={mobview > "900" ? null : {marginBottom:"30px"}} >
-                <div className={mobview > "900" ? null : "col-md-6 col-sm-12"} >
+                <div className={mobview > "1140" ? null : "row"} style={mobview > "1140" ? null : {marginBottom:"30px"}} >
+                <div className={mobview > "1140" ? null : "col-md-6 col-sm-12"}  >
                   <label htmlFor="calendar">Date:</label>
                   <Calendar
-
+                    className="employee-right-side-bar-calendar"
                   value={date} 
                   onChange={setdate} 
                   onClickDay={handleClick} 
@@ -95,10 +95,10 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   prevLabel={prevBtn()}
                   />
                   </div>
-                  <div className={mobview > "900" ? null : "col-md-6 col-sm-12"}  >
+                  <div className={mobview > "1140" ? null : "col-md-6 col-sm-12 time"}  >
 
                  
-                  <div  style={mobview > "900" ? null : {marginBottom:"30px"}} >
+                  <div  style={mobview > "1140" ? null : {marginBottom:"30px"}} >
                     <label htmlFor="time">Time:</label>
                     <input type="time"  name="time" style={{width:"100px"}}/>
                   </div>
@@ -115,10 +115,10 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   </div>
                   </div>
                   </div>
-                  <div className={mobview > "900" ? null : "form-group"}>
+                  <div className={mobview > "1140" ? null : "form-group"}>
                    
                   <label htmlFor="message">Any Message ?</label>
-                  <textarea name="" id="" cols="30" rows="3" className={mobview > "900" ? null : "form-control"}></textarea>
+                  <textarea name="" id="" cols="30" rows="3" className={mobview > "1140" ? null : "form-control"}></textarea>
                   </div>
                   <div  className='sidebar-form-btn' >
                     <button type='submit' >Submit</button> 

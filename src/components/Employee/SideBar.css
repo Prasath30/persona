@@ -9,12 +9,13 @@
   top: 0;
   left: 0;
   padding: 20px;
+  padding-bottom: 10vh;
 }
 .employee-left-side-bar-logo {
   width: 140px;
   height: 152px;
   align-self: center;
-  margin-bottom: 50px;
+  margin-bottom: 220px;
 }
 .employee-left-side-bar div h6 {
   color: #7700bb;
@@ -23,7 +24,10 @@
 .employee-left-side-bar div ul li {
   color: rgb(61, 58, 58);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
+}
+.employee-left-side-bar div ul {
+  margin-bottom: 70px;
 }
 /* Right side bar css */
 
@@ -40,12 +44,12 @@
   padding: 20px;
 }
 .employee-right-side-bar-logo {
-  width: 50px;
-  height: 62px;
   align-self: center;
 }
 .employee-right-side-bar form {
   margin-bottom: 10vh;
+}
+.employee-right-side-bar form div {
 }
 .employee-right-side-bar h2 {
   font-family: "Caveat", cursive;
@@ -60,11 +64,17 @@ textarea {
   border-radius: 10px;
   outline: none;
   border: 1px solid gray;
-  background-color: rgb(241, 234, 234);
+  background-color: rgba(241, 234, 234, 0.562);
 }
 .employee-right-side-bar form div label {
   display: block;
   margin-top: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  color: #000000;
 }
 
 .sidebar-form-btn {
@@ -83,31 +93,41 @@ textarea {
   border-radius: 10px;
 }
 
-.employee-right-side-bar-calendar {
-  position: relative;
-  width: 200px;
-  height: 100px;
+/* .employee-right-side-bar-calendar {
   padding: 0;
-  margin: 0;
   text-align: center;
-  margin-bottom: 70px;
-  margin-left: 30px;
-}
+
+  margin-left: 50px;
+} */
 .employee-right-side-bar-calendar abbr {
-  font-size: 10px;
   text-decoration: none;
+  font-size: 13px;
+  color: black;
+}
+.react-calendar__navigation__label__labelText {
+  font-size: 18px;
+  font-weight: 700;
 }
 .employee-right-side-bar-calendar button {
   background-color: white;
+
   outline: none;
   border: none;
   font-size: 10px;
   padding: 0;
   padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 8px;
   font-weight: 500;
 }
 
+.employee-right-side-bar-calendar button:hover {
+  background-color: rgba(168, 164, 164, 0.356);
+  border-radius: 15px;
+}
+.time {
+  margin-top: 50px;
+}
 /* mob view */
 .mob-employee-left-side-bar-logo {
   text-align: center;
@@ -138,7 +158,7 @@ input {
   border-radius: 10px;
   outline: none;
   border: 1px solid gray;
-  background-color: rgb(241, 234, 234);
+  background: #f3f3f3;
 }
 .mob-employee-right-side-bar-inputs div {
   margin-bottom: 40px;

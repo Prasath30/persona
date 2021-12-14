@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Content from './Content.jsx'
 import  "./Employee.css"
 import SideBar from './SideBar'
@@ -13,9 +13,16 @@ const Employee = () => {
         six:"Need Mental Clarity"
     })
     const [categoryValue, setcategoryValue] = useState(category.one)
+      const [mobview, setmobview] = useState(window.innerWidth)
+    
+    useEffect(() => {
+        window.addEventListener("resize" ,function(){
+            setmobview(window.innerWidth)
+        });
+    }, [])
     return (
         <>
-        <section className='employee'>
+        <section className={ mobview > "1140" ? 'employee' : "employee container"}>
           <SideBar category={category} setcategory={setcategory} categoryValue={categoryValue} setcategoryValue={setcategoryValue} />  
           <Content  category={category} setcategory={setcategory} categoryValue={categoryValue} setcategoryValue={setcategoryValue} />
           </section>
