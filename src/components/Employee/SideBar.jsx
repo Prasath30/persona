@@ -126,7 +126,7 @@ const SideBar = () => {
                   <label htmlFor="message">Any Message ?</label>
                   <textarea name="" id="" cols="30" rows="3" className={mobview > "900" ? null : "form-control"}></textarea>
                   </div>
-                  <div  className={ mobview > "900" ? 'sidebar-form-btn'  : null } >
+                  <div  className={ mobview > "900" ? 'sidebar-form-btn'  : "sidebar-form-btn" } >
                     <button type='submit' >Submit</button> 
                   </div>
                      
