@@ -44,6 +44,7 @@
   text-align: center;
 }
 .employee-newsletter {
+  padding-bottom: 50px;
 }
 
 .employee-newsletter:hover {
@@ -57,8 +58,9 @@
   background-color: inherit;
   color: #7700bb;
   font-family: "roboto", sans-serif;
-  border: 3px solid #f6a226;
+  border: 3px solid #f5b14c;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 .newsletter-date {
   color: #f6a226;
