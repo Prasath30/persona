@@ -3,7 +3,7 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 
-const SideBar = ({category,categoryValue}) => {
+const SideBar = ({category,categoryValue,setcategoryValue}) => {
 
     const [date, setdate] = useState(new Date())
 
@@ -28,13 +28,13 @@ const SideBar = ({category,categoryValue}) => {
     const nextBtn = () =>{
 
         return (
-            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"3px",paddingTop:"-10px"}} ><i  class="fas fa-angle-right"></i></div>
+            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"3px",paddingTop:"-10px"}} ><i  className="fas fa-angle-right"></i></div>
         )
     }
     const prevBtn = () =>{
   
         return (
-            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"4px",paddingTop:"-10px"}} ><i  class="fas fa-angle-left"></i></div>
+            <div style={{backgroundColor:"blanchedalmond",width:"16px",height:"16px",borderRadius:"4px",paddingTop:"-10px"}} ><i  className="fas fa-angle-left"></i></div>
         )
     }
 
@@ -104,7 +104,7 @@ const SideBar = ({category,categoryValue}) => {
                   </div>
                   <div  >
                      <label htmlFor="category">Category:</label>
-                      <select name="category" id="" value={categoryValue} >
+                      <select name="category" id="" value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} >
                           <option value={category.one} >Feeling Stressed</option>
                           <option value={category.two}>Manage Burnout</option>
                           <option value={category.three}>Relationship/People Problems</option>
@@ -120,7 +120,7 @@ const SideBar = ({category,categoryValue}) => {
                   <label htmlFor="message">Any Message ?</label>
                   <textarea name="" id="" cols="30" rows="3" className={mobview > "900" ? null : "form-control"}></textarea>
                   </div>
-                  <div  className={ mobview > "900" ? 'sidebar-form-btn'  : null } >
+                  <div  className='sidebar-form-btn' >
                     <button type='submit' >Submit</button> 
                   </div>
                      
