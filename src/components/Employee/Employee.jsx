@@ -22,9 +22,12 @@ const Employee = () => {
     }, [])
     return (
         <>
-        <section className={ mobview > "1140" ? 'employee' : "employee container"}>
-          <SideBar category={category} setcategory={setcategory} categoryValue={categoryValue} setcategoryValue={setcategoryValue} />  
+        <section className='employee'>
+          <div className={mobview < "1140" ? "container" : null} >
+            <SideBar category={category} setcategory={setcategory} categoryValue={categoryValue} setcategoryValue={setcategoryValue} />  
           <Content  category={category} setcategory={setcategory} categoryValue={categoryValue} setcategoryValue={setcategoryValue} />
+          </div>
+          
           </section>
         </>
     )

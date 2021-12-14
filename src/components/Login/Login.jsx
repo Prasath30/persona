@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Slide from './Slide.jsx'
 import './Login.css';
-
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -45,6 +45,7 @@ const Login = () => {
             </div>
             
             <button type='submit' className='login-form-btn'>Sign In</button>
+            <button type='submit' className='login-form-btn' ><Link to="/employee">Go to next page</Link></button>
         </form>
  
         </section>

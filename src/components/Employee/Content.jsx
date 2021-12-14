@@ -31,14 +31,13 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
     }
 
     const CardbStyle = {
-        width:"230px",
+        width:"231px",
           position: "relative",
             marginTop: "30px",
             marginBottom: "30px",
             marginLeft: "50px",
             textAlign: "center",
             background: "#eaebef",
-            width: "231px",
             borderRadius:"18px",
             padding: "0"
 

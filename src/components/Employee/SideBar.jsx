@@ -16,10 +16,6 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     }, [])
 
 
-    const change = (e) =>{
-        e.preventDefault();
-        console.log(date)
-    }
 
     const handleClick = (e) =>{
                 console.log(e)
@@ -87,6 +83,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <Calendar
                     className="employee-right-side-bar-calendar"
                   value={date} 
+                  minDate={date}
                   onChange={setdate} 
                   onClickDay={handleClick} 
                   next2Label={null}
