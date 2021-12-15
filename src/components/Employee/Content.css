@@ -53,6 +53,7 @@
 
 .employee-newsletter div {
   width: 231px;
+  text-align: center;
 }
 .employee-newsletter div button {
   background-color: inherit;
@@ -73,12 +74,14 @@
 .wellness-campaign {
   margin-top: 8vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .wellness-campaign h2 {
   color: #7700bb;
   font-family: "caveat", "cursive";
-  text-align: center;
+  margin-bottom: 30px;
 }
 #selectedCard {
   border: 5px solid #f6a226;

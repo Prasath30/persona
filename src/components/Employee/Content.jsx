@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import { Carousel } from 'react-bootstrap'
 import "./Content.css"
 
 const Content = ({category,setcategoryValue,categoryValue}) => {
@@ -31,11 +32,8 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
     }
 
     const CardbStyle = {
-        width:"231px",
-          position: "relative",
-            marginTop: "30px",
-            marginBottom: "30px",
-            marginLeft: "50px",
+            width:"231px", 
+            position: "relative",
             textAlign: "center",
             background: "#eaebef",
             borderRadius:"18px",
@@ -71,11 +69,24 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         <Card imgSrc={`./images/category/five.png`}  caption={category.five}       />
         <Card imgSrc={`./images/category/six.png`}   caption={category.six}       />
         </div>
-          <div  className={ mobview > "1140" ? 'row wellness-campaign' : 'row wellness-campaign' } >
+          <div className='wellness-campaign' >
                 <h2>Wellness Campaigns</h2>
-            <Cardb date="Jan 2022" title="Why Mental illness" />
-            <Cardb date="Feb 2022" title="Manage Your Stress" />
-            <Cardb date="Mar 2022" title="Declutter Your Minf" />
+                <Carousel className='c'>
+                    <Carousel.Item >
+                          <Cardb date="Jan 2022" title="Why Mental illness" />
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <Cardb date="Feb 2022" title="Manage Your Stress" />
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                         <Cardb date="Mar 2022" title="Declutter Your Minf" />
+                    </Carousel.Item>
+                </Carousel>
+          
+            
+           
         </div>
         </div>
       

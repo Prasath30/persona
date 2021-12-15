@@ -82,8 +82,8 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <label htmlFor="calendar">Date:</label>
                   <Calendar
                     className="employee-right-side-bar-calendar"
-                  value={date} 
-                  minDate={date}
+                  
+                  minDate={new Date()}
                   onChange={setdate} 
                   onClickDay={handleClick} 
                   next2Label={null}
