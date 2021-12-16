@@ -7,13 +7,13 @@ import Employer from "./components/Employer/Employer";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
           <Route exact  path="/" element={<Login/>} />
           <Route path="/employee" element={ <Employee />} />
       </Routes>
-    </BrowserRouter>
-    {/* <Employer/> */}
+    </BrowserRouter> */}
+    <Employer/>
     
 
     </>

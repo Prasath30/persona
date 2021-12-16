@@ -1,0 +1,100 @@
+.employer-content {
+  background-color: #eff2f9;
+  position: relative;
+  margin-left: 250px;
+  margin-right: 350px;
+  padding: 30px;
+}
+.employer-welcome-head {
+  margin-right: 350px;
+  background-color: white;
+}
+.employer-welcome-head div {
+  margin-top: 50px;
+}
+.employer-welcome-head div h6 {
+  color: gray;
+}
+.employer-welcome-head div h2 {
+  font-family: "Merriweather", serif;
+  color: #f89606;
+}
+.package-card {
+  background-color: white;
+  width: 270px;
+  height: 180px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+.package-card div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.package-card div h6 {
+  color: gray;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.package-card h6 {
+  color: #f6a226;
+  font-family: serif;
+  font-size: 20px;
+}
+.package-card div img {
+  width: 70px;
+  height: 70px;
+}
+.package-card div h6 {
+  padding-top: 20px;
+  padding-left: 0px;
+}
+.employer-package-sec {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+}
+.wellbeing-card-title {
+  text-align: center;
+  font-weight: 400;
+}
+.wellbeing-card-caption {
+  height: 80px;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-top: 15px;
+  color: white;
+}
+.employer-wellbeing {
+  background-image: url("./images/employee-well-being.png");
+}
+.employer-wellbeing div {
+  margin-bottom: 20px;
+}
+.employer-redflags {
+  background-image: url("./images/employee-well-being.png");
+  margin-top: 40px;
+}
+.employer-redflags h3 {
+  font-family: "Acme", sans-serif;
+  color: #7900bf;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.empoyer-session {
+  background-image: url("./images/employee-well-being.png");
+  position: relative;
+}
+.empoyer-session img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
