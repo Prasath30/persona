@@ -1,10 +1,15 @@
 import React,{useEffect,useState} from 'react'
-import { Carousel } from 'react-bootstrap'
+// import { Carousel } from 'react-bootstrap'
+import Carousel from "react-elastic-carousel"
 import "./Content.css"
 
 const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
+
+    const breakPoints = [
+        {itemsToShow:3}
+    ]
 
     
     useEffect(() => {
@@ -71,18 +76,18 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         </div>
           <div className='wellness-campaign' >
                 <h2>Wellness Campaigns</h2>
-                <Carousel className='c'>
-                    <Carousel.Item >
+                <Carousel breakPoints={breakPoints}>
+                    
                           <Cardb date="Jan 2022" title="Why Mental illness" />
-                    </Carousel.Item>
+                   
 
-                    <Carousel.Item>
+                    
                         <Cardb date="Feb 2022" title="Manage Your Stress" />
-                    </Carousel.Item>
+                    
 
-                    <Carousel.Item>
+                    
                          <Cardb date="Mar 2022" title="Declutter Your Minf" />
-                    </Carousel.Item>
+                    
                 </Carousel>
           
             

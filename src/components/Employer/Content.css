@@ -89,12 +89,69 @@
   text-align: center;
   margin-bottom: 40px;
 }
-.empoyer-session {
-  background-image: url("./images/employee-well-being.png");
+.employer-session {
   position: relative;
+  background-image: url("./images/employee-well-being.png");
+  margin-top: 60px;
 }
-.empoyer-session img {
-  position: absolute;
-  top: 0;
-  right: 0;
+.employer-session h2 {
+  text-align: center;
+  font-family: "Acme", sans-serif;
+  color: #7900bf;
+}
+.employer-session-img {
+  float: right;
+  width: 300px;
+}
+.employer-session-img-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+.session-chart {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.session-chart h6 {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}
+.session-card {
+  background-color: #fffaf2;
+  border-radius: 20px;
+  text-align: center;
+  width: 200px;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+.session-review {
+  height: 170px;
+}
+.session-review-stars {
+  background-color: #bd70e9;
+  width: 100px;
+  text-align: center;
+  border-radius: 20px;
+  margin-right: 30px;
+  margin-left: 20px;
+}
+.session-review-stars h6 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.employer-reports {
+  position: relative;
+  background-image: url("./images/employee-well-being.png");
+  margin-top: 60px;
+}
+.employer-reports div select {
+  width: 200px;
+  background-color: #fffaf2;
+}
+.employer-reports h2 {
+  text-align: center;
+  font-family: "Acme", sans-serif;
+  color: #7900bf;
+  margin-bottom: 60px;
 }
