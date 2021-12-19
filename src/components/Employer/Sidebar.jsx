@@ -1,15 +1,22 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 
-const Sidebar = () => {
+const Sidebar = ({leftdisplay,rightdisplay}) => {
 
+     const [mobview, setmobview] = useState(window.innerWidth)
+    
+    useEffect(() => {
+        window.addEventListener("resize" ,function(){
+            setmobview(window.innerWidth)
+        });
+    }, [])
 
 
     return (
         <>
-          <section className='employer-left-sidebar'>
+          <section  className={mobview < "1150" ? "mob-employer-left-sidebar" : 'employer-left-sidebar' } style={mobview < "1150" ? {left:leftdisplay} : null }>
             <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" />
             <div className='btn-ic'>
                 <button><img src={`./images/Employer/btn-1-ic.png`} alt="" />Metrics</button>
@@ -20,7 +27,7 @@ const Sidebar = () => {
             </div>
           </section> 
 
-          <section className='employer-right-sidebar' >
+          <section  className={mobview < "1150" ? "mob-employer-right-sidebar" : 'employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
             <img  className='employer-right-sidebar-logo'  src={`./images/ellipse.png`} alt="" />
 
             <div className='employer-right-sidebar-workshop container'>

@@ -1,10 +1,20 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "./Content.css"
 import ApexCharts from 'apexcharts'
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
 
-const Content = () => {
+const Content = ({setdisplay}) => {
+
+         const [mobview, setmobview] = useState(window.innerWidth)
+    
+    useEffect(() => {
+        window.addEventListener("resize" ,function(){
+            setmobview(window.innerWidth)
+        });
+    }, [])
+
+ 
 
     const cardTitle ={
         one:"No. of Sessions availed / Q1 ",
@@ -22,7 +32,11 @@ const Content = () => {
     }
 
     const breakPoints = [
-        {itemsToShow:3}
+        {width:"1", 
+        itemsToShow:1},
+        {width:550, itemsToShow:1},
+        {width:768, itemsToShow:3}
+
     ]
 
     const reviewTitle ={
@@ -84,9 +98,9 @@ const Content = () => {
     }
      const WellbeingCard = ({imgSrc,title,caption,color}) => {
          return(
-                <div className='col row'>
+                <div className='col row well-being'>
                     <div className='col'>
-                    <img src={imgSrc} className='img-fluid' alt="" />
+                    <img src={imgSrc}  alt="" />
                     <h5 className='wellbeing-card-title'>{title}</h5>
                     </div>
                     <h5 className='col wellbeing-card-caption' style={{backgroundColor:color}} >{caption}</h5>
@@ -97,7 +111,7 @@ const Content = () => {
 
      const Averages = ({title,color}) =>{
          return(
-             <div className='col'>
+             <div className='col employer-averages'>
                    <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
                    {color === "green"? <Chart options={options} type="donut" series={series}  width="150px"  /> :
                    <Chart options={{
@@ -144,7 +158,7 @@ const Content = () => {
                      <h6>{reviewTitle}</h6>
                      <img src={bottomimgSrc} className='img-fluid' alt="" />
                  </div>
-                 <div className='col-lg-8'>
+                 <div className='col-lg-8 review-text' style={{marginBottom:"80px"}}>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
                  </div>
              </div>
@@ -201,8 +215,9 @@ const Content = () => {
 
     return (
         <> 
-           <section className='employer-content' >
-           <div className='employer-welcome-head row'>
+            
+           <section className='employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
+           <div className='employer-welcome-head row' style={mobview < "1150" ? {margin:"0"} : null} >
                 <img src={`./images/Employer/welcome-head.png`} className='img-fluid col-lg-5' alt="" />
                 <div className='col'>
                     <h6>
@@ -245,6 +260,9 @@ const Content = () => {
                    },
                     fill: {
                         opacity: 0.8
+                    },
+                    legend:{
+                        show:false
                     } 
                 }} series={[14, 23, 21, 17, 15, 10, 12, 17, 21]}
                 width="400px" 
@@ -259,7 +277,8 @@ const Content = () => {
                 <div className='employer-session-img-wrap'>
                     <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt="" />
                 </div>
-                <Session 
+                <div>
+                    <Session 
                     cardTitle={cardTitle}
                     chartTitle={chartTitle}
                     reviewTitle={reviewTitle}
@@ -268,13 +287,16 @@ const Content = () => {
                     number={35}
                     workshop="false"
                 />
+                </div>
+                
            </div>
-        <div className='employer-session'>
+        <div className='employer-workshop'>
                 <h2>Workshop Usage & Feedback</h2>
                 <div className='employer-session-img-wrap'>
                     <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt="" />
                 </div>
-            <Session 
+                <div>
+                      <Session 
                 cardTitle={cardTitle}
                 chartTitle={chartTitle}
                 reviewTitle={reviewTitle}
@@ -283,6 +305,8 @@ const Content = () => {
                 number={35}
                 workshop="true"
             />
+                </div>
+          
             </div>
             <div className='employer-reports'>
                 <h2>Employee Mental Well-being Reports</h2>
