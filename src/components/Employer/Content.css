@@ -233,4 +233,11 @@
   .employer-reports {
     margin-top: 250px;
   }
+  .well-being {
+    display: flex;
+    flex-direction: column;
+  }
+  .wellbeing-card-caption {
+    padding-bottom: 20px;
+  }
 }

@@ -11,9 +11,10 @@ function App() {
       <Routes>
           <Route exact  path="/" element={<Login/>} />
           <Route path="/employee" element={ <Employee />} />
+          <Route path="/employer" element={ <Employer/>} />
       </Routes>
     </BrowserRouter>
-    {/* <Employer/> */}
+    
     
 
     </>

@@ -36,9 +36,11 @@ const Employer = () => {
         <>
         <div className='employer-wrap' style={{background:"#eff2f9"}}>
         <div className={mobview< "500" ? 'employer container' :"employer"}>
-        <div className='mob-navbar' id="navbar" style={mobview < "1150" ?{display:"block",position:"fixed",top:"0",zIndex:"999",width:"100%"} : {display:"none"}} >
-                <i class="fas fa-bars fa-3x "  onClick={openRightSidebar}  style={{position:'absolute',right:"30px",paddingTop:"10px",color:"#7700BB"}}></i>
-                <img src="https://img.icons8.com/nolan/64/menu.png" onClick={openLeftSidebar} />
+        <div className='mob-navbar' id="navbar" style={mobview < "1150" ?{display:"block",position:"fixed",top:"0",left:"0",right:"0",zIndex:"999",width:"100%"} : {display:"none"}} >
+                {/* <i class="fas fa-bars fa-3x "  ></i> */}
+                <i class="fas fa-chevron-circle-left fa-3x" onClick={openRightSidebar}  style={{position:'absolute',right:"30px",paddingTop:"10px",color:"#7700BB"}}></i>
+                <i class="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
+                
             </div>
          <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} />
          <Content />   
