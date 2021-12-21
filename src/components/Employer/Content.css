@@ -232,10 +232,15 @@
   }
   .employer-reports {
     margin-top: 250px;
+    text-align: center;
+  }
+  .employer-reports form div label {
+    display: block;
+    font-weight: 500;
   }
   .well-being {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .wellbeing-card-caption {
     padding-bottom: 20px;

@@ -17,7 +17,7 @@ const Login = () => {
         <div style={{position:'relative',paddingBottom:'50px',marginBottom:'100px'}}>
 
             <img className='login-logo' src={`./images/Logo-3.png`} alt="logo"  />
-            <button className="login-nav-btn" >Book a session</button>
+            <button className="login-nav-btn" ><Link to="/employee" className='login-form-btn'>Book a session</Link></button>
 
         </div>
 
@@ -41,11 +41,11 @@ const Login = () => {
             {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
             : <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
         
-           
             </div>
             
-            <button type='submit' className='login-form-btn'>Sign In</button>
-            <button type='submit' className='login-form-btn' ><Link to="/employee" className='login-form-btn'>Go to next page</Link></button>
+            
+            {/* <button type='submit' className='login-form-btn'>Sign In</button> */}
+            <button type='button' className='login-form-btn' ><Link to="/employer" className='login-form-btn'>Sign In</Link></button>
         </form>
  
         </section>

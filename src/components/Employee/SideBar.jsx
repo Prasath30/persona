@@ -1,19 +1,20 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
-
+    const calendorMaxDate = new Date(new Date().setMonth(new Date().getMonth()+1));
     const [date, setdate] = useState(new Date())
 
+
    const [mobview, setmobview] = useState(window.innerWidth)
-    
-    useEffect(() => {
+   
         window.addEventListener("resize" ,function(){
             setmobview(window.innerWidth)
         });
-    }, [])
+        
+    
 
 
 
@@ -39,7 +40,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
         <>
        <div className='container'>
           <section   className={ mobview > "1140" ? 'employee-left-side-bar'  : null } >
-            <img  className={ mobview > "1140" ? 'employee-left-side-bar-logo'  : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/Logo-3.png`} alt="logo"  />
+            <img   className={ mobview > "1140" ? 'employee-left-side-bar-logo'  : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/Logo-3.png`} alt="logo"  />
             <div className={ mobview > "1140" ? null  : "row mob-employee-left-side-bar" } >
             <div className={ mobview > "1140" ? null  : "col-md-6 col-sm-12" } >
                 <h6>What you get from our sessions? </h6>
@@ -82,8 +83,9 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <label htmlFor="calendar">Date:</label>
                   <Calendar
                     className="employee-right-side-bar-calendar"
-                  
+                  value={date}
                   minDate={new Date()}
+                  maxDate={calendorMaxDate}
                   onChange={setdate} 
                   onClickDay={handleClick} 
                   next2Label={null}
@@ -95,11 +97,11 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div className={mobview > "1140" ? null : "col-md-6 col-sm-12 time"}  >
 
                  
-                  <div  style={mobview > "1140" ? null : {marginBottom:"30px"}} >
+                  <div  style={{marginTop:"30px"}} >
                     <label htmlFor="time">Time:</label>
-                    <input type="time"  name="time" style={{width:"100px"}}/>
+                    <input type="time"  name="time" style={{width:"100px"}}  />
                   </div>
-                  <div  >
+                  <div style={{marginTop:"30px"}} >
                      <label htmlFor="category">Category:</label>
                       <select name="category" id="" value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} >
                           <option value={category.one} >Feeling Stressed</option>
@@ -112,7 +114,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   </div>
                   </div>
                   </div>
-                  <div className={mobview > "1140" ? null : "form-group"}>
+                  <div className={mobview > "1140" ? null : "form-group"} style={{marginTop:"30px"}}>
                    
                   <label htmlFor="message">Any Message ?</label>
                   <textarea name="" id="" cols="30" rows="3" className={mobview > "1140" ? null : "form-control"}></textarea>

@@ -1,0 +1,16 @@
+.admin-register {
+  margin-left: 250px;
+}
+/* .radio-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */
+.admin-register h1 {
+  font-family: Acme;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+
+  color: #7900bf;
+}

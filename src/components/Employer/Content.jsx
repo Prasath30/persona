@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import "./Content.css"
-import ApexCharts from 'apexcharts'
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
 
@@ -32,7 +31,7 @@ const Content = ({setdisplay}) => {
     }
 
     const breakPoints = [
-        {width:"1", 
+        {width:1, 
         itemsToShow:1},
         {width:550, itemsToShow:1},
         {width:768, itemsToShow:3}
@@ -75,7 +74,7 @@ const Content = ({setdisplay}) => {
     const Cardb = ({date,title}) =>{
         return(
             <div  style={CardbStyle} className='employee-newsletter' >
-                <img style={{width:"230px"}} src={`./images/category/newsletter.png`} alt="" />
+                <img style={{width:"230px"}} src={`./images/category/newsletter.png`} alt="newslettre" />
                 <div>
                     <p className='newsletter-date' >{date}</p>
                     <p  className='newsletter-title' >{title}</p>
@@ -89,7 +88,7 @@ const Content = ({setdisplay}) => {
         return (
                  <div className='package-card col'>
                   <div>
-                      <img src={imgSrc} alt="" /> 
+                      <img src={imgSrc} alt="package" /> 
                       <h6>{title}</h6>
                   </div>
                   <h6>{caption}</h6>
@@ -98,12 +97,12 @@ const Content = ({setdisplay}) => {
     }
      const WellbeingCard = ({imgSrc,title,caption,color}) => {
          return(
-                <div className='col row well-being'>
+                <div  className={mobview < "1140" ? 'col-sm-12 row well-being' : 'col row well-being' } >
                     <div className='col'>
-                    <img src={imgSrc}  alt="" />
+                    <img src={imgSrc}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>{title}</h5>
                     </div>
-                    <h5 className='col wellbeing-card-caption' style={{backgroundColor:color}} >{caption}</h5>
+                    <h5 className='col  wellbeing-card-caption' style={{backgroundColor:color}} >{caption}</h5>
                 </div>
               
          )
@@ -154,9 +153,9 @@ const Content = ({setdisplay}) => {
      const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
          return(
              <div className='session-review row'>
-                 <div className='session-review-stars col'>
+                 <div className='session-review-stars col '>
                      <h6>{reviewTitle}</h6>
-                     <img src={bottomimgSrc} className='img-fluid' alt="" />
+                     <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
                  </div>
                  <div className='col-lg-8 review-text' style={{marginBottom:"80px"}}>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
@@ -218,7 +217,7 @@ const Content = ({setdisplay}) => {
             
            <section className='employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row' style={mobview < "1150" ? {margin:"0"} : null} >
-                <img src={`./images/Employer/welcome-head.png`} className='img-fluid col-lg-5' alt="" />
+                <img src={`./images/Employer/welcome-head.png`} className='img-fluid col-lg-5'  alt='welcome head' />
                 <div className='col'>
                     <h6>
                        Hi! Welcome back to your 
@@ -236,7 +235,7 @@ const Content = ({setdisplay}) => {
             <PackageCard imgSrc={`./images/Employer/package/four.png`}  title="Billing Amount" caption="XX-XX-XXX" />
            </div>
             
-            <div className='employer-wellbeing'>
+            <div id="employer-metrics" className='employer-wellbeing'>
            <div className='employe-well-being row'>
 
                 <WellbeingCard color="#F30909" imgSrc={`./images/Employer/high-risk.png`} title="High-risk" caption="x% of Employees" />
@@ -252,7 +251,7 @@ const Content = ({setdisplay}) => {
            </div>
            </div>
 
-           <div className='employer-redflags row'>
+           <div id="employer-redflags" className='employer-redflags row'>
                  <h3>Employee Mental Health Red Flags</h3>
                 <Chart type='polarArea' options={{
                     stroke: {
@@ -269,13 +268,13 @@ const Content = ({setdisplay}) => {
                   className='col'  
                 />
                 <div className='col'>
-                    <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt="" />
+                    <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt='rect'  />
                 </div>
            </div>
-           <div className='employer-session'>
+           <div id="employer-campaign" className='employer-session'>
                     <h2>1-1 Sessions Usage & Feedback</h2>
                 <div className='employer-session-img-wrap'>
-                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt="" />
+                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
                 </div>
                 <div>
                     <Session 
@@ -290,10 +289,10 @@ const Content = ({setdisplay}) => {
                 </div>
                 
            </div>
-        <div className='employer-workshop'>
+        <div  className='employer-workshop'>
                 <h2>Workshop Usage & Feedback</h2>
                 <div className='employer-session-img-wrap'>
-                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt="" />
+                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
                 </div>
                 <div>
                       <Session 
@@ -308,7 +307,7 @@ const Content = ({setdisplay}) => {
                 </div>
           
             </div>
-            <div className='employer-reports'>
+            <div id="employer-reports" className='employer-reports'>
                 <h2>Employee Mental Well-being Reports</h2>
                 <form className='row'>
                     <div className='col'>
@@ -327,9 +326,9 @@ const Content = ({setdisplay}) => {
                 </form>
                 <div style={{marginTop:"50px"}}>
                      <Carousel breakPoints={breakPoints}>
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`}  />
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`}  />
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`}  />
+                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report' />
+                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report'  />
+                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report' />
                 </Carousel>
                 </div>
             </div>

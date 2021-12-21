@@ -1,3 +1,5 @@
 .employee {
-  background: #fffaf2;
+  background: hsl(37, 100%, 97%);
+  height: 100%;
+  position: relative;
 }

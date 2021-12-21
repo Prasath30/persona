@@ -14,7 +14,12 @@ const Employer = () => {
             setmobview(window.innerWidth)
         });
     }, [])
-       const openLeftSidebar =()=>{
+
+     
+     
+
+
+    const openLeftSidebar =()=>{
         leftdisplay === "-500px" ?  setleftdisplay("0") : setleftdisplay("-500px");
         setshow(!show)
         if(!show){
@@ -23,6 +28,7 @@ const Employer = () => {
            document.body.style.overflow ='visible'; 
         }
     }
+
        const openRightSidebar =()=>{
         rightdisplay === "-500px" ? setrightdisplay("0") : setrightdisplay("-500px")
           setshow(!show)
@@ -32,14 +38,18 @@ const Employer = () => {
            document.body.style.overflow ='visible'; 
         }
     }
+
+
+      
+ 
     return (
         <>
         <div className='employer-wrap' style={{background:"#eff2f9"}}>
         <div className={mobview< "500" ? 'employer container' :"employer"}>
         <div className='mob-navbar' id="navbar" style={mobview < "1150" ?{display:"block",position:"fixed",top:"0",left:"0",right:"0",zIndex:"999",width:"100%"} : {display:"none"}} >
-                {/* <i class="fas fa-bars fa-3x "  ></i> */}
-                <i class="fas fa-chevron-circle-left fa-3x" onClick={openRightSidebar}  style={{position:'absolute',right:"30px",paddingTop:"10px",color:"#7700BB"}}></i>
-                <i class="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
+               
+                <i className="fas fa-chevron-circle-left fa-3x" onClick={openRightSidebar}  style={{position:'absolute',right:"30px",paddingTop:"10px",color:"#7700BB"}}></i>
+                <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
                 
             </div>
          <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} />

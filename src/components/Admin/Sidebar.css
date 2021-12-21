@@ -1,0 +1,25 @@
+.admin-sidebar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  width: 250px;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+.admin-sidebar div {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.admin-sidebar div button {
+  margin-bottom: 30px;
+  background-color: #7900bf;
+  padding: 8px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}

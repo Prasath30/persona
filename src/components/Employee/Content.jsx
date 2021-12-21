@@ -7,8 +7,12 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
 
-    const breakPoints = [
-        {itemsToShow:3}
+     const breakPoints = [
+        {width:"1", 
+        itemsToShow:1},
+        {width:550, itemsToShow:1},
+        {width:768, itemsToShow:3}
+
     ]
 
     
@@ -30,7 +34,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
                 <img id={caption === categoryValue ? "selectedCard" : null} className={ mobview > "1140" ? 'category-img' : null } src={imgSrc} alt="" />
                 <div>
                     <p>{caption}</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <i className="fas fa-long-arrow-alt-right"></i>
                 </div>
             </div>
         )
@@ -79,13 +83,8 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
                 <Carousel breakPoints={breakPoints}>
                     
                           <Cardb date="Jan 2022" title="Why Mental illness" />
-                   
-
-                    
                         <Cardb date="Feb 2022" title="Manage Your Stress" />
-                    
-
-                    
+                        <Cardb date="Feb 2022" title="Manage Your Stress" />
                          <Cardb date="Mar 2022" title="Declutter Your Minf" />
                     
                 </Carousel>

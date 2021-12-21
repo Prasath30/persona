@@ -48,6 +48,9 @@
   margin-bottom: 30px;
   padding: 10px;
 }
+.btn-ic button img {
+  color: white;
+}
 
 /* right side bar */
 .employer-right-sidebar {
@@ -94,7 +97,7 @@
 .employer-right-sidebar-workshop div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .employer-right-sidebar-workshop div img {
   width: 50px;
@@ -110,9 +113,9 @@
   margin-bottom: 40px;
 }
 
-.employer-right-sidebar-calendar div.react-calendar__navigation {
+/* .employer-right-sidebar-calendar div.react-calendar__navigation {
   display: none;
-}
+} */
 .employer-right-sidebar-quarterly-round-up {
   height: 400px;
   background-color: white;

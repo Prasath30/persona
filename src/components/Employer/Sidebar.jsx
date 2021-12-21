@@ -19,11 +19,12 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
           <section  className={mobview < "1150" ? "mob-employer-left-sidebar" : 'employer-left-sidebar' } style={mobview < "1150" ? {left:leftdisplay} : null }>
             <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" />
             <div className='btn-ic'>
-                <button><img src={`./images/Employer/btn-1-ic.png`} alt="" />Metrics</button>
-                <button><img src={`./images/Employer/btn-2-ic.png`} alt="" />Red Flags</button>
-                <button><img src={`./images/Employer/btn-3-ic.jpeg`} alt="" />Feedback</button>
-                <button><img src={`./images/Employer/btn-4-ic.jpeg`} alt="" />Reports</button>
-                <button><img src={`./images/Employer/btn-5-ic.png`} alt="" />campaigns</button>
+                <a href="#employer-metrics"><button><img src={`./images/Employer/btn-1-ic.png`} alt="" />Metrics</button></a>
+                <a href="#employer-redflags"> <button><img src={`./images/Employer/btn-2-ic.png`} alt="" />Red Flags</button></a>
+               <a href="#kjcnj"><button><img src={`./images/Employer/btn-3-ic.jpeg`} alt="" />Feedback</button></a>
+                <a href="#employer-reports"><button><img src={`./images/Employer/btn-4-ic.jpeg`} alt="" />Reports</button></a>
+                <a href="#employer-campaign"><button><img src={`./images/Employer/btn-5-ic.png`} alt="" />campaigns</button></a>
+                
             </div>
           </section> 
 
