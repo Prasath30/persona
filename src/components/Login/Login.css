@@ -1,9 +1,14 @@
+.login {
+  display: flex;
+  flex-direction: row;
+}
+
 .background-img {
-  height: 99vh;
-  width: 90%;
+  width: 100%;
 }
 .login-left-sec {
   position: relative;
+  width: 60%;
 }
 
 .login-logo {
@@ -12,8 +17,10 @@
   left: 10%;
 }
 .login-form {
-  /* margin-right: 20px;
-  text-align: center; */
+  margin-left: 100px;
+  margin-top: 10%;
+  width: 30%;
+  text-align: center;
 }
 .login-form h2 {
   font-family: "Open Sans", sans-serif;
@@ -39,7 +46,7 @@
   color: #000000;
 }
 .login-form-text {
-  display: block;
+  display: inline-block;
   border: 1px solid black;
   width: 100%;
   height: 40px;
@@ -49,60 +56,13 @@
 .login-form-password {
   display: inline-block;
   border: 1px solid black;
-  width: 100%;
+  width: 70%;
   height: 40px;
   border-radius: 15px;
 }
 .login-form div i:hover {
   cursor: pointer;
 }
-
-/* #login {
-  color: black;
-   background-image: url("./backgorund.png");
-  background-size: 100% 100%; 
-   text-align: center; 
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-} */
-/* .login-left-sec {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  background-image: url("./background.png");
-  background-size: 100% 100%;
-}
-
-.login-logo {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 51px;
-  top: 35%;
-}
-
- 
-.login-nav-btn {
-  position: absolute;
-  width: 30%;
-  height: 59px;
-  right: 70px;
-  top: 53px;
-  background: #7700bb;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  color: #ffffff;
-  border-radius: 25px;
-}
-
-.login-nav-btn:hover {
-  cursor: pointer;
-}
-
 .login-form-btn {
   width: 150px;
   height: 59px;
@@ -116,92 +76,47 @@
   color: #ffffff;
   border-radius: 25px;
 }
-.login-carousel {
-  position: relative;
-}
 
-.login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  float: right;
-  align-items: center;
-  padding: 10px;
-  /* margin-right: 3%; 
-  margin-top: 10%;
-}
-.login-form h2 {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 33px;
-  margin-top: 30px;
-  color: #7900bf;
-}
-.login-form div {
-  padding: 0px;
-  margin-bottom: 0px;
-}
-.login-form div label {
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 56px;
-  color: #000000;
-}
-.login-form-text {
-  display: block;
-  border: 1px solid black;
-  width: 100%;
-  height: 40px;
-  border-radius: 15px;
-}
-
-.login-form-password {
-  display: inline-block;
-  border: 1px solid black;
-  width: 100%;
-  height: 40px;
-  border-radius: 15px;
-}
-.login-form div i:hover {
-  cursor: pointer;
-}
-@media screen and (max-width: "1130px") {
-  #login {
+@media screen and (max-width: 1000px) {
+  .login {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-}
-
-@media screen and (max-width: 850px) {
-  .login-nav-btn {
-    right: 0px;
-    font-size: 1.3rem;
-  }
-  .login-logo {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .login-nav-btn {
-    font-size: 0.9rem;
-  }
-  #login h2 {
-    font-size: 28px;
+  .login-form {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 40px;
+    text-align: center;
   }
   .login-form div {
-    padding: 15px;
+    text-align: center;
   }
   .login-form div label {
-    font-size: 20px;
+    display: inline-block;
+  }
+  .login-left-sec {
+    width: 100%;
   }
   .login-form-text {
-    width: 280px;
+    width: 50%;
   }
   .login-form-password {
-    width: 260px;
+    width: 40%;
   }
-}  */
+}
+@media screen and (max-width: 500px) {
+  .login-form-text {
+    width: 100%;
+  }
+  .login-form div label {
+    display: block;
+  }
+  .login-form div {
+    text-align: left;
+  }
+  .login-form-password {
+    width: 70%;
+  }
+}

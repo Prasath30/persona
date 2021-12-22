@@ -4,9 +4,9 @@ import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
-    const calendorMaxDate = new Date(new Date().setMonth(new Date().getMonth()+1));
-    const [date, setdate] = useState(new Date())
-
+    const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
+    const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
+    console.log(date)
 
    const [mobview, setmobview] = useState(window.innerWidth)
    
@@ -84,11 +84,12 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <Calendar
                     className="employee-right-side-bar-calendar"
                   value={date}
-                  minDate={new Date()}
+                  minDate={new Date(new Date().setDate(new Date().getDate()+1))}
                   maxDate={calendorMaxDate}
                   onChange={setdate} 
                   onClickDay={handleClick} 
                   next2Label={null}
+                  tileDisabled={({date})=> date.getDay()===0}
                   prev2Label={null}
                   nextLabel={nextBtn()}
                   prevLabel={prevBtn()}
@@ -100,6 +101,14 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div  style={{marginTop:"30px"}} >
                     <label htmlFor="time">Time:</label>
                     <input type="time"  name="time" style={{width:"100px"}}  />
+                  </div>
+                  <div style={{marginTop:"30px"}} >
+                      <label htmlFor="professional">Proffesional:</label>
+                      <select name="" id="">
+                        <option value="">Proffesional 1</option>
+                        <option value="">Proffesional 2</option>
+                        <option value="">Proffesional 2</option>
+                      </select>
                   </div>
                   <div style={{marginTop:"30px"}} >
                      <label htmlFor="category">Category:</label>
@@ -117,7 +126,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div className={mobview > "1140" ? null : "form-group"} style={{marginTop:"30px"}}>
                    
                   <label htmlFor="message">Any Message ?</label>
-                  <textarea name="" id="" cols="30" rows="3" className={mobview > "1140" ? null : "form-control"} style={mobview < "1140" ? {background:"#f3f3f3"} : {background:"rgba(241, 234, 234, 0.562)"}}></textarea>
+                  <textarea name="" id="" cols="30" rows="5" className={mobview > "1140" ? null : "form-control"} style={mobview < "1140" ? {background:"#f3f3f3"} : {background:"rgba(241, 234, 234, 0.562)"}}></textarea>
                   </div>
                   <div  className='sidebar-form-btn' >
                     <button type='submit' >Submit</button> 

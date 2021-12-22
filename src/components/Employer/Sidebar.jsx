@@ -4,7 +4,8 @@ import Calendar from 'react-calendar'
 // import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay}) => {
-
+         const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
+    const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
      const [mobview, setmobview] = useState(window.innerWidth)
     
     useEffect(() => {
@@ -12,6 +13,11 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
             setmobview(window.innerWidth)
         });
     }, [])
+
+
+     const handleClick = (e) =>{
+                console.log(e)
+    }
 
       const prevBtn = ()=> {
         return (
@@ -59,18 +65,22 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
             <div>
               <h4 className='coming-events'>Upcoming Events</h4>
               <Calendar
-              className={"employer-right-sidebar-calendar"} 
-                prevLabel={prevBtn()}
-                nextLabel={nextBtn()}
-                next2Label={null}
+                    className="employee-right-side-bar-calendar"
+                  value={date}
+                  // minDate={new Date(new Date().setDate(new Date().getDate()+1))}
+                  // maxDate={calendorMaxDate}
+                  onChange={setdate} 
+                  onClickDay={handleClick} 
+                  next2Label={null}
+                  // tileDisabled={({date})=> date.getDay()===0}
                   prev2Label={null}
-                value={new Date()}
-                
-              />
+                  nextLabel={nextBtn()}
+                  prevLabel={prevBtn()}
+                  />
             </div>
-            <div className='employer-right-sidebar-quarterly-round-up'>
+            {/* <div className='employer-right-sidebar-quarterly-round-up'>
                 <p>Quarterly RoundUp of Events</p>
-            </div>
+            </div> */}
 
           </section> 
         </>

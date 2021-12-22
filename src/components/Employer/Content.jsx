@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
+import { type } from 'jquery'
 
 const Content = ({setdisplay}) => {
 
@@ -44,11 +45,7 @@ const Content = ({setdisplay}) => {
     }
 
     // jasncsCN
-      const series = [
-    //will be displayed on the y-axis
-      66,44
-    
-  ];
+      const series = [66];
   const options = {
     chart: {
       id: "simple-bar"
@@ -56,10 +53,20 @@ const Content = ({setdisplay}) => {
     xaxis: {
       categories: [1, 2, 3, 4] //will be displayed on the x-asis
     },
+     plotOptions:{
+        radialBar:{
+            dataLabels:{
+                name:{
+                    show:false
+                }
+            }
+        }
+    },
     colors:["#629F72","#FFFFFF"],
     legend: {
     show:false
   },
+    
   };
       const CardbStyle = {
             width:"231px", 
@@ -112,13 +119,24 @@ const Content = ({setdisplay}) => {
          return(
              <div className='col employer-averages'>
                    <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
-                   {color === "green"? <Chart options={options} type="donut" series={series}  width="150px"  /> :
+                   {color === "green"? <Chart options={options} type="radialBar" series={series}  width="200px"  /> :
                    <Chart options={{
                        legend:{
                            show:false
                        },
+                       
+                       
+                       plotOptions:{
+                            radialBar:{
+                                dataLabels:{
+                                    name:{
+                                        show:false
+                                    }
+                                }
+                            }
+                       },
                        colors:["#EA1300","#FFFFFF"]
-                   }} type="donut" series={series}  width="150px"  />
+                   }} type="radialBar" series={series}  width="200px"  />
                    }
             </div>
          )
@@ -144,8 +162,13 @@ const Content = ({setdisplay}) => {
                            show:false
                        },
                        colors:["#FFAB7F","#CEADEA"],
+                        states:{
+                            hover:{
+                                typeof:"none"
+                            }
+                        }
                        
-                   }} type="pie" series={series}  width="180px"  />
+                   }} type="pie" series={[60,40]}  width="180px"  />
                 </div>
             )
      }
@@ -261,10 +284,18 @@ const Content = ({setdisplay}) => {
                         opacity: 0.8
                     },
                     legend:{
-                        show:false
-                    } 
-                }} series={[14, 23, 21, 17, 15, 10, 12, 17, 21]}
-                width="400px" 
+                        show:true,
+                        position: 'top',
+                        horizontalAlign: 'center',
+                    },
+                    
+                    
+                    labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"]
+                    
+                    
+                }} series={[10, 20, 30, 10, 15, 10, 10,10,10]}
+                
+                width="500px" 
                   className='col'  
                 />
                 <div className='col'>
@@ -320,7 +351,9 @@ const Content = ({setdisplay}) => {
                      <div className='col'>
                         <label htmlFor="type">Report Frequency:</label>
                         <select name="" id="">
-                            <option value=""></option>
+                            <option value="">Quarterly:</option>
+                            <option value="">Half-Yearly:</option>
+                            <option value="">Annualy:</option>
                         </select>
                     </div>
                 </form>
