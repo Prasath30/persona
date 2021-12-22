@@ -97,7 +97,7 @@ const Content = ({setdisplay}) => {
     }
      const WellbeingCard = ({imgSrc,title,caption,color}) => {
          return(
-                <div  className={mobview < "1140" ? 'col-sm-6 col-md-6 row well-being' : 'col row well-being' } >
+                <div  className={mobview < "1140" ? 'col-sm-12 row well-being' : 'col row well-being' } >
                     <div className='col'>
                     <img src={imgSrc}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>{title}</h5>

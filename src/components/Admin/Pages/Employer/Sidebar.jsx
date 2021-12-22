@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
-// import 'react-calendar/dist/Calendar.css';
+import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay}) => {
 
@@ -13,16 +13,6 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
         });
     }, [])
 
-      const prevBtn = ()=> {
-        return (
-          <div style={{marginTop:"-10px"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
-        
-        )}
-        const nextBtn = ()=> {
-        return (
-          <div style={{marginTop:"-10px"}} ><i  className="fas fa-angle-right fa-2x"></i></div>
-        
-        )}
 
     return (
         <>
@@ -59,14 +49,7 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
             <div>
               <h4 className='coming-events'>Upcoming Events</h4>
               <Calendar
-              className={"employer-right-sidebar-calendar"} 
-                prevLabel={prevBtn()}
-                nextLabel={nextBtn()}
-                next2Label={null}
-                  prev2Label={null}
-                value={new Date()}
-                
-              />
+              className={"employer-right-sidebar-calendar"} />
             </div>
             <div className='employer-right-sidebar-quarterly-round-up'>
                 <p>Quarterly RoundUp of Events</p>

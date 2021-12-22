@@ -1,27 +1,88 @@
-#login {
-  color: black;
-  background-image: url("./backgorund.png");
-  background-size: 100% 100%;
-  height: 100%;
-  text-align: center;
-  padding-bottom: 10vh;
+.background-img {
+  height: 99vh;
+  width: 90%;
 }
-#login h2 {
+.login-left-sec {
+  position: relative;
+}
+
+.login-logo {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.login-form {
+  /* margin-right: 20px;
+  text-align: center; */
+}
+.login-form h2 {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 33px;
   margin-top: 30px;
+  margin-bottom: 30px;
   color: #7900bf;
 }
-.login-logo {
-  position: absolute;
-  width: 140px;
-  height: 152px;
-  left: 51px;
-  top: 10px;
+.login-form div {
+  padding: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+.login-form div label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 56px;
+  color: #000000;
+}
+.login-form-text {
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
 }
 
+.login-form-password {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+}
+.login-form div i:hover {
+  cursor: pointer;
+}
+
+/* #login {
+  color: black;
+   background-image: url("./backgorund.png");
+  background-size: 100% 100%; 
+   text-align: center; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+/* .login-left-sec {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  background-image: url("./background.png");
+  background-size: 100% 100%;
+}
+
+.login-logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 51px;
+  top: 35%;
+}
+
+ 
 .login-nav-btn {
   position: absolute;
   width: 30%;
@@ -47,6 +108,7 @@
   height: 59px;
   background: #7700bb;
   font-family: Open Sans;
+
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
@@ -58,20 +120,27 @@
   position: relative;
 }
 
-.row {
-  width: 100%;
-}
 .login-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  float: right;
   align-items: center;
-  text-align: left;
   padding: 10px;
+  /* margin-right: 3%; 
+  margin-top: 10%;
+}
+.login-form h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 33px;
+  margin-top: 30px;
+  color: #7900bf;
 }
 .login-form div {
   padding: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .login-form div label {
   display: block;
@@ -85,7 +154,7 @@
 .login-form-text {
   display: block;
   border: 1px solid black;
-  width: 400px;
+  width: 100%;
   height: 40px;
   border-radius: 15px;
 }
@@ -93,12 +162,17 @@
 .login-form-password {
   display: inline-block;
   border: 1px solid black;
-  width: 360px;
+  width: 100%;
   height: 40px;
   border-radius: 15px;
 }
 .login-form div i:hover {
   cursor: pointer;
+}
+@media screen and (max-width: "1130px") {
+  #login {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -130,4 +204,4 @@
   .login-form-password {
     width: 260px;
   }
-}
+}  */

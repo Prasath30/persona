@@ -30,7 +30,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const Card = ({imgSrc,caption}) =>{
         return(
-            <div   className={ mobview > "1140" ? 'col category-card container'  : null } onClick={(e)=>handleCardClick(e,caption)} >
+            <div   className={ mobview > "1140" ? 'col-3 category-card container'  : null } onClick={(e)=>handleCardClick(e,caption)} >
                 <img id={caption === categoryValue ? "selectedCard" : null} className={ mobview > "1140" ? 'category-img' : null } src={imgSrc} alt="" />
                 <div>
                     <p>{caption}</p>

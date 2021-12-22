@@ -25,13 +25,13 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const nextBtn = () =>{
 
         return (
-            <div style={{backgroundColor:"white",width:"30px",height:"20px",borderRadius:"10px",paddingTop:"-10px",boxShadow:"5px 5px 5px gray"}} ><i  className="fas fa-angle-right"></i></div>
+            <div style={{backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}} ><i  className="fas fa-angle-right fa-lg"></i></div>
         )
     }
     const prevBtn = () =>{
   
         return (
-            <div style={{backgroundColor:"white",width:"30px",height:"20px",borderRadius:"10px",paddingTop:"-10px",boxShadow:"5px 5px 5px gray"}} ><i  className="fas fa-angle-left"></i></div>
+            <div style={{backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}} ><i  className="fas fa-angle-left fa-lg"></i></div>
         )
     }
 
@@ -117,7 +117,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div className={mobview > "1140" ? null : "form-group"} style={{marginTop:"30px"}}>
                    
                   <label htmlFor="message">Any Message ?</label>
-                  <textarea name="" id="" cols="30" rows="3" className={mobview > "1140" ? null : "form-control"}></textarea>
+                  <textarea name="" id="" cols="30" rows="3" className={mobview > "1140" ? null : "form-control"} style={mobview < "1140" ? {background:"#f3f3f3"} : {background:"rgba(241, 234, 234, 0.562)"}}></textarea>
                   </div>
                   <div  className='sidebar-form-btn' >
                     <button type='submit' >Submit</button> 
