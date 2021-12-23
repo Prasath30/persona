@@ -7,6 +7,7 @@ import { type } from 'jquery'
 const Content = ({setdisplay}) => {
 
          const [mobview, setmobview] = useState(window.innerWidth)
+         const [reportImg, setreportImg] = useState('')
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -85,7 +86,7 @@ const Content = ({setdisplay}) => {
                 <div>
                     <p className='newsletter-date' >{date}</p>
                     <p  className='newsletter-title' >{title}</p>
-                    <button>Show More</button>
+                    <button>Read</button>
                 </div>
             </div>
         )
@@ -191,7 +192,7 @@ const Content = ({setdisplay}) => {
         if(workshop !== "true"){
              return(
             <>
-            <div className='row'>
+            <div className='row session-card-wrap'>
                 <SessionCard cardTitle={cardTitle.one}   number={number} />   
                 <SessionCard cardTitle={cardTitle.two}   number={number} />
                 <SessionCard cardTitle={cardTitle.three} number={number} />
@@ -212,7 +213,7 @@ const Content = ({setdisplay}) => {
         }
         return(
                 <>
-            <div className='row'>
+            <div className='row session-card-wrap'>
                 <SessionCard cardTitle={cardTitle.four}   number={number} />   
                 <SessionCard cardTitle={cardTitle.five}   number={number} />
             </div>
@@ -231,6 +232,17 @@ const Content = ({setdisplay}) => {
         )
        
        
+     }
+
+     const CarouselImg = ({imgSrc})=>{
+         return(
+             <div>
+                 
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>setreportImg(imgSrc)} >
+                <img style={{marginLeft:"20px",width:"220px"}} src={imgSrc} alt='report'  />
+                </button>
+             </div>
+         )
      }
 
 
@@ -284,9 +296,9 @@ const Content = ({setdisplay}) => {
                         opacity: 0.8
                     },
                     legend:{
-                        show:true,
-                        position: 'top',
-                        horizontalAlign: 'center',
+                        show:false,
+                        position: 'right',
+                        horizontalAlign: 'right',
                     },
                     
                     
@@ -295,7 +307,7 @@ const Content = ({setdisplay}) => {
                     
                 }} series={[10, 20, 30, 10, 15, 10, 10,10,10]}
                 
-                width="500px" 
+                width="400px" 
                   className='col'  
                 />
                 <div className='col'>
@@ -359,12 +371,34 @@ const Content = ({setdisplay}) => {
                 </form>
                 <div style={{marginTop:"50px"}}>
                      <Carousel breakPoints={breakPoints}>
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report' />
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report'  />
-                        <img style={{marginLeft:"20px",width:"220px"}} src={`./images/Employer/employee-report.png`} alt='report' />
+                        
+                        <CarouselImg imgSrc={`./images/Employer/employee-report.png`} /> 
+                         <CarouselImg imgSrc={`./images/Employer/employee-report.png`} /> 
+                          <CarouselImg imgSrc={`./images/Employer/employee-report.png`} /> 
                 </Carousel>
                 </div>
             </div>
+            
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <img src={reportImg} alt="" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
+      </div>
+    </div>
+  </div>
+</div>
             <div style={{marginTop:"150px"}}>
                  <Carousel breakPoints={breakPoints}>
                     

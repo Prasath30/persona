@@ -24,13 +24,13 @@
 }
 .package-card {
   background-color: white;
-  width: 270px;
+  width: 250px;
   height: 180px;
   padding-right: 20px;
   padding-top: 30px;
   padding-left: 20px;
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-right: 0px;
   border-radius: 20px;
   text-align: center;
@@ -61,9 +61,10 @@
   padding-left: 0px;
 }
 .employer-package-sec {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
+  margin-right: 3px;
+}
+.employe-well-being {
+  margin-right: 3px;
 }
 .well-being {
   text-align: center;
@@ -125,18 +126,26 @@
   margin-top: 60px;
   padding-bottom: 80px;
 }
+.session-card-wrap {
+  margin-top: 100px;
+}
+
 .employer-session h2 {
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
 }
+
 .employer-session-img {
   float: right;
+  display: block;
   width: 350px;
 }
+
 .employer-session-img-wrap {
   position: relative;
   margin-bottom: 20px;
+  width: 100%;
 }
 /* jasnsjnsdj */
 .employer-workshop {
@@ -152,11 +161,11 @@
 }
 .employer-workshop-img {
   float: right;
-  width: 300px;
+  width: 350px;
 }
 .employer-workshop-img-wrap {
-  position: relative;
-  margin-bottom: 20px;
+  /* position: relative;
+  margin-bottom: 20px; */
 }
 /* SJSNDNsdn */
 .session-chart {
@@ -178,8 +187,9 @@
   border-radius: 20px;
   text-align: center;
   width: 200px;
-  margin-left: 80px;
+  margin-left: 70px;
   margin-bottom: 30px;
+
   padding-top: 20px;
 }
 .session-review {

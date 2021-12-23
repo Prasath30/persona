@@ -1,14 +1,16 @@
 import React,{useState} from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
+import TimePicker from 'react-time-picker';
 import "./SideBar.css"
 
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
-    const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
+    const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+8));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
     console.log(date)
 
    const [mobview, setmobview] = useState(window.innerWidth)
+   
    
         window.addEventListener("resize" ,function(){
             setmobview(window.innerWidth)
@@ -102,6 +104,9 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                     <label htmlFor="time">Time:</label>
                     <input type="time"  name="time" style={{width:"100px"}}  />
                   </div>
+                
+                 
+                  
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Proffesional:</label>
                       <select name="" id="">

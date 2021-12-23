@@ -1,5 +1,5 @@
 .employer-left-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 250px;
@@ -37,6 +37,11 @@
 .btn-ic {
   display: flex;
   flex-direction: column;
+}
+.btn-ic button i {
+  padding-right: 0px;
+  padding-top: 15px;
+  float: left;
 }
 .btn-ic button {
   width: 200px;

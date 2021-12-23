@@ -57,7 +57,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
                 <div>
                     <p className={ mobview > "1140" ? 'newsletter-date' : 'newsletter-date' } >{date}</p>
                     <p  className={ mobview > "1140" ? 'newsletter-title' : 'newsletter-title' } >{title}</p>
-                    <button>Show More</button>
+                    <button>Read</button>
                 </div>
             </div>
         )
