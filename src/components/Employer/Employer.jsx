@@ -28,11 +28,11 @@ const Employer = () => {
         leftdisplay === "-500px" ?  setleftdisplay("0") : setleftdisplay("-500px");
         
         setleftShow(!leftShow)
-        // if(!leftShow){
-        //       document.body.style.overflow ='hidden';
-        // }else{
-        //    document.body.style.overflow ='visible'; 
-        // }
+        if(!leftShow){
+              document.body.style.overflow ='hidden';
+        }else{
+           document.body.style.overflow ='visible'; 
+        }
     }
 
        const openRightSidebar =()=>{
@@ -41,11 +41,11 @@ const Employer = () => {
         }
         rightdisplay === "-500px" ? setrightdisplay("0") : setrightdisplay("-500px")
           setrightShow(!rightShow)
-        // if(!rightShow){
-        //       document.body.style.overflow ='hidden';
-        // }else{
-        //    document.body.style.overflow ='visible'; 
-        // }
+        if(!rightShow){
+              document.body.style.overflow ='hidden';
+        }else{
+           document.body.style.overflow ='visible'; 
+        }
     }
 
 
