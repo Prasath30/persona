@@ -1,6 +1,7 @@
 .login {
   display: flex;
   flex-direction: row;
+  padding-bottom: 10vh;
 }
 
 .background-img {

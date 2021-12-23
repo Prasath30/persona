@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import Calendar from 'react-calendar'
 // import 'react-calendar/dist/Calendar.css';
 
-const Sidebar = ({leftdisplay,rightdisplay}) => {
+const Sidebar = ({leftdisplay,rightdisplay,openLeftSidebar}) => {
          const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
      const [mobview, setmobview] = useState(window.innerWidth)
@@ -35,7 +35,7 @@ const Sidebar = ({leftdisplay,rightdisplay}) => {
           <section  className={mobview < "1150" ? "mob-employer-left-sidebar" : 'employer-left-sidebar' } style={mobview < "1150" ? {left:leftdisplay} : null }>
             <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" />
             <div className='btn-ic'>
-                <a href="#employer-metrics"><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
+                <a href="#employer-metrics" onClick={()=>{openLeftSidebar()}}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
                 <a href="#employer-redflags"> <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
                <a href="#kjcnj"><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
                 <a href="#employer-reports"><button><i class="fas fa-file-contract fa-lg"></i>Reports</button></a>

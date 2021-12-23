@@ -28,11 +28,11 @@ const Employer = () => {
         leftdisplay === "-500px" ?  setleftdisplay("0") : setleftdisplay("-500px");
         
         setleftShow(!leftShow)
-        if(!leftShow){
-              document.body.style.overflow ='hidden';
-        }else{
-           document.body.style.overflow ='visible'; 
-        }
+        // if(!leftShow){
+        //       document.body.style.overflow ='hidden';
+        // }else{
+        //    document.body.style.overflow ='visible'; 
+        // }
     }
 
        const openRightSidebar =()=>{
@@ -41,11 +41,11 @@ const Employer = () => {
         }
         rightdisplay === "-500px" ? setrightdisplay("0") : setrightdisplay("-500px")
           setrightShow(!rightShow)
-        if(!rightShow){
-              document.body.style.overflow ='hidden';
-        }else{
-           document.body.style.overflow ='visible'; 
-        }
+        // if(!rightShow){
+        //       document.body.style.overflow ='hidden';
+        // }else{
+        //    document.body.style.overflow ='visible'; 
+        // }
     }
 
 
@@ -61,7 +61,7 @@ const Employer = () => {
                 <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
                 
             </div>
-         <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} />
+         <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} openLeftSidebar={openLeftSidebar} />
          <Content />   
          </div>
          </div>
