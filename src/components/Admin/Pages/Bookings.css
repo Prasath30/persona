@@ -1,8 +1,8 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
-  margin-left: 250px;
+  margin-left: 22%;
+  width: 78%;
 }
 
 td,
@@ -14,4 +14,11 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+@media screen and (max-width: 1150px) {
+  table {
+    width: 100%;
+    margin-left: 0;
+  }
 }

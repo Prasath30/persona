@@ -2,10 +2,11 @@ import React from 'react';
 import "./Sidebar.css";
 import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = ({mobview}) => {
+  // console.log(mobview)
     return (
         <>
-          <section className='admin-sidebar'>
+          <section className='admin-sidebar' style={mobview < "1150" ? {display:"none"}: {display:'block'}}>
             <div>
                 <Link className='admin-links' to="/admin/register" ><button>Register </button></Link> 
                 <Link className='admin-links' to="/admin/booking" ><button>Booking</button></Link>

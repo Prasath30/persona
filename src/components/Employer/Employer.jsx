@@ -13,6 +13,7 @@ const Employer = () => {
     useEffect(() => {
         window.addEventListener("resize" ,function(){
             setmobview(window.innerWidth)
+            console.log(mobview)
         });
     }, [])
 
