@@ -8,43 +8,45 @@ const AdminCard = () => {
     return (
         <>
             <section className='admin-card-wrap container'>
-            <div className='row'>
-                 <div className='admin-card col-6'>
+     
+                 <div className='admin-card'>
                     <div>
-                        <img src={`/images/Admin/booking.jpg`} className='img-fluid' alt="" />
+                        <img src={`/images/Admin/booking.jpg`} alt="" />
                     </div>
                     <button>
                         Go to Register
                     </button>
                 </div>
-                <div className='admin-card col-6'>
+                
+                <div className='admin-card '>
                     <div>
-                        <img src={`/images/Admin/register.png`} className='img-fluid' alt="" />
+                        <img src={`/images/Admin/register.png`}  alt="" />
                     </div>
                     <button>
                         Go to Register
                     </button>
                 </div>
-            </div>
+                
+     
+                  <div className='admin-card'>
+                    <div>
+                        <img src={`/images/Admin/employer.jpg`} alt="" />
+                    </div>
+                    <button>
+                        Go to Register
+                    </button>
+                </div>
+                <div className='admin-card'>
+                    <div>
+                        <img src={`/images/Admin/professional.png`}  alt="" />
+                    </div>
+                    <button>
+                        Go to Register
+                    </button>
+                </div>
+            
+            
 
-            <div className='row'>
-                  <div className='admin-card col-6'>
-                    <div>
-                        <img src={`/images/Admin/employer.jpg`} className='img-fluid' alt="" />
-                    </div>
-                    <button>
-                        Go to Register
-                    </button>
-                </div>
-                <div className='admin-card col-6'>
-                    <div>
-                        <img src={`/images/Admin/professional.png`} className='img-fluid' alt="" />
-                    </div>
-                    <button>
-                        Go to Register
-                    </button>
-                </div>
-            </div>
                
               
             </section> 

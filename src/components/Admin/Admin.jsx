@@ -12,6 +12,7 @@ const Admin = () => {
 
     const {id} = useParams()
     const [left, setleft] = useState("-500px")
+    const [leftShow, setleftShow] = useState(false)
     const [mobview, setmobview] = useState(window.innerWidth)
     
     useEffect(() => {
@@ -20,44 +21,68 @@ const Admin = () => {
             console.log(mobview)
         });
     }, [])
+
+    const openLeftSidebar =()=>{
+          left === "-500px" ?  setleft("0") : setleft("-500px");
+        
+        setleftShow(!leftShow)
+        if(!leftShow){
+              document.body.style.overflow ='hidden';
+        }else{
+           document.body.style.overflow ='visible'; 
+        }
+    }
+    
+    const Navbar = () =>{
+        return(
+             <div style={mobview < "1150" ? {height:"70px",marginBottom:"10px",background:"rgba(255, 239, 213, 0.3)"} : {display:'none'}}>
+                  <div className='mob-navbar' id="navbar" style={mobview < "1150" ?{display:"block",position:"fixed",top:"0",left:"0",right:"0",zIndex:"999",width:"100%",paddingBottom:"15px",} : {display:"none"}} >
+                <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
+            </div>
+            </div>
+        )
+    }
     // console.log(id)
 
+    if(!id){
+        return(
+            <div className='admin'>
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />  
+                    <AdminCard />
+                </div>
+        )
+    }
 
 
     switch (id) {
         case "employer":
              return (<>
                 <div className='admin'>
-                
                     <Employer />   
                 </div>
                 </>)
          case "register":       
             return (<>
                 <div className='admin'>
-                    <Sidebar mobview={mobview} />
+                    <Navbar />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
                     <Register />   
                 </div>
                 </>)
         case "booking":
             return (<>
                 <div className='admin'>
-                  <div className={mobview< "500" ? 'employer container' :"employer"}>
-                  <div style={{postion:"relative"}}>
-                    <i 
-                    className="fas fa-chevron-circle-right fa-3x" 
-                    id="navbar"
-                    style={mobview < "1150" ?{display:"block",position:"fixed",top:"15px",left:"0",right:"0",zIndex:"999",width:"100%",paddingBottom:"15px"} : {display:"none"}}></i>  
-            </div>
-            </div>
-                    <Sidebar mobview={mobview}  />
+                    
+                    <Navbar />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
                     <Bookings /> 
                 </div>
                 </>)
         default:
             return (<>
                 <div className='admin'>
-                    <Sidebar mobview={mobview}  />  
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />  
+                    <AdminCard />
                 </div>
                 </>)
     }

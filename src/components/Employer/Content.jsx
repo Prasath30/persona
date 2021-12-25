@@ -107,7 +107,7 @@ const Content = ({setdisplay}) => {
          return(
                 <div  className={mobview < "1140" ? 'col-sm-6 col-md-6 row well-being' : 'col row well-being' } >
                     <div className='col'>
-                    <img src={imgSrc}  alt='well-being' />
+                    <img src={imgSrc}  alt='well-being' className='img-fluid' />
                     <h5 className='wellbeing-card-title'>{title}</h5>
                     </div>
                     <h5 className='col  wellbeing-card-caption' style={{backgroundColor:color}} >{caption}</h5>
