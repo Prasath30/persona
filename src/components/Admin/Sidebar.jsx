@@ -7,10 +7,10 @@ const Sidebar = () => {
         <>
           <section className='admin-sidebar'>
             <div>
-                <button><Link to="" />Register</button>
-                <button><Link to="" />Booking</button>
-                <button><Link to="" />Employers</button>
-                <button><Link to="" />Professionals</button>
+                <Link className='admin-links' to="/admin/register" ><button>Register </button></Link> 
+                <Link className='admin-links' to="/admin/booking" ><button>Booking</button></Link>
+                <Link className='admin-links' to="/admin/employer" ><button>Employers</button></Link>
+              <Link className='admin-links' to="/admin/professionals"><button>Professionals</button></Link>
             </div>
           </section>  
         </>

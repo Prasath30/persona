@@ -33,7 +33,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
     return (
         <>
           <section  className={mobview < "1150" ? "mob-employer-left-sidebar" : 'employer-left-sidebar' } style={mobview < "1150" ? {left:leftdisplay} : null }>
-            <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" />
+            <img className='employer-left-side-bar-logo' src={"/images/Logo-3.png"} alt="" />
             <div className='btn-ic'>
                 <a href="#employer-metrics" onClick={()=>setleftdisplay("-500px")}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
                 <a href="#employer-redflags" onClick={()=>setleftdisplay("-500px")} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
@@ -45,18 +45,18 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
           </section> 
 
           <section  className={mobview < "1150" ? "mob-employer-right-sidebar" : 'employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
-            <img  className='employer-right-sidebar-logo'  src={`./images/ellipse.png`} alt="" />
+            <img  className='employer-right-sidebar-logo'  src={`/images/ellipse.png`} alt="" />
 
             <div style={{marginBottom:"20px"}} className='employer-right-sidebar-workshop container'>
             <div  >
-              <img  src={'./images/Employer/workshop.png'} alt="" />
+              <img  src={'/images/Employer/workshop.png'} alt="" />
               <p>Total workshops / Q1</p>
             </div>
               <p>4</p>
             </div>
              <div className='employer-right-sidebar-workshop container'>
             <div>
-              <img  src={'./images/Employer/session.png'} alt="" />
+              <img  src={'/images/Employer/session.png'} alt="" />
               <p>Total 1-1 sessions / Q1</p>
             </div>
               <p>50</p>

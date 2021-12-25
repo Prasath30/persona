@@ -1,5 +1,5 @@
 .admin-register {
-  margin-left: 250px;
+  margin-left: 0px;
 }
 /* .radio-register {
   display: flex;
@@ -13,4 +13,17 @@
   text-align: center;
 
   color: #7900bf;
+}
+.register-form {
+  width: 500px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 550px) {
+  .register-form {
+    width: 360px;
+  }
 }

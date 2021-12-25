@@ -5,3 +5,7 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+a {
+  color: white;
+  text-decoration: none;
+}

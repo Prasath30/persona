@@ -1,5 +1,27 @@
-.admin {
-  height: 100vh;
+/* .admin {
+  height: 100%;
   position: relative;
   background: #eff2f9;
 }
+.admin-card-wrap {
+  margin-left: 250px;
+}
+.admin-card {
+  width: 350px;
+  height: 250px;
+  text-align: center;
+}
+
+.admin-card button {
+  margin-top: 0px;
+  background-color: inherit;
+  color: #7700bb;
+  font-family: "roboto", sans-serif;
+  border: 3px solid #f5b14c;
+  border-radius: 10px;
+  margin-bottom: 0px;
+} */
+/* .admin-card div img {
+  width: 200px;
+  height: 200px;
+} */

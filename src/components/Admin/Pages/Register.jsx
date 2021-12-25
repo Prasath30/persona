@@ -16,25 +16,25 @@ const Register = () => {
         <div className='admin-register'>
 
             <h1>Register Form</h1>
-           <form className='login-form'>
+           <form className='register-form d-flex justify-content-center row'>
 
-            <div style={{width:"370px"}} className='row'>
+            <div  className='row'>
             <label htmlFor="username">Username:</label>
             <input className='login-form-text col' type="text" name='username' />
             </div>
 
-            <div style={{width:"370px"}}  className='row'>
+            <div   className='row'>
             <label htmlFor="passowrd">Password:</label>
          
                  <input  className='col login-form-password' type={passwordVisisbility ? "text" : "password"} name='password' /> 
             {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
             : <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
             </div>
-            <div style={{width:"370px"}} className='row'>
+            <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>
             <input className='login-form-text col' type="text" name='companyName' />
             </div>
-            <div className='radio-register'>
+            <div className='radio-registers'>
         
             <label htmlFor="employee" style={radioLabel} >Employee</label>
             <input type="radio" id='employee'  name='employee' />
