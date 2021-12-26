@@ -197,22 +197,33 @@
   height: 170px;
   margin-top: 30px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .review-text p {
-  margin-top: 30px;
+  margin-top: 0px;
+  min-width: 300px;
+  padding: 20px;
 }
 .session-review-stars {
   background-color: #bd70e9;
   height: 180px;
+  min-width: 300px;
+  max-width: 320px;
   text-align: center;
   border-radius: 20px;
-  margin-right: 30px;
-  margin-left: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.session-review-stars img {
+  width: 300px;
 }
 .session-review-stars h6 {
   padding-top: 30px;
   margin-bottom: 30px;
 }
+
 .employer-reports {
   position: relative;
   background-image: url("./images/employee-well-being.png");
@@ -262,5 +273,8 @@
   }
   .wellbeing-card-caption {
     padding-bottom: 20px;
+  }
+  .redglag-chart {
+    margin-bottom: 50px;
   }
 }

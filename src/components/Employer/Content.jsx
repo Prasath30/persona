@@ -177,11 +177,11 @@ const Content = ({setdisplay}) => {
      const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
          return(
              <div className='session-review row'>
-                 <div className='session-review-stars col '>
+                 <div className='session-review-stars col'>
                      <h6>{reviewTitle}</h6>
                      <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
                  </div>
-                 <div className='col-lg-8 review-text' style={{marginBottom:"80px"}}>
+                 <div className='col review-text' style={{marginBottom:"80px"}}>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
                  </div>
              </div>
@@ -307,8 +307,8 @@ const Content = ({setdisplay}) => {
                     
                 }} series={[10, 20, 30, 10, 15, 10, 10,10,10]}
                 
-                width="400px" 
-                  className='col'  
+                width={mobview < 500 ? "350px": "400px"  }
+                  className='col redglag-chart'  
                 />
                 <div className='col'>
                     <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt='rect'  />
@@ -363,9 +363,9 @@ const Content = ({setdisplay}) => {
                      <div className='col'>
                         <label htmlFor="type">Report Frequency:</label>
                         <select name="" id="">
-                            <option value="">Quarterly:</option>
-                            <option value="">Half-Yearly:</option>
-                            <option value="">Annualy:</option>
+                            <option value="">Quarterly</option>
+                            <option value="">Half-Yearly</option>
+                            <option value="">Annualy</option>
                         </select>
                     </div>
                 </form>

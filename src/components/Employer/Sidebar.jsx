@@ -19,6 +19,11 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
                 console.log(e)
     }
 
+      const handleNavigationBtnClick =()=>{
+        setleftdisplay("-500px")
+        document.body.style.overflow ='visible'; 
+      }
+
       const prevBtn = ()=> {
         return (
           <div style={{marginTop:"-10px"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
@@ -35,11 +40,11 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
           <section  className={mobview < "1150" ? "mob-employer-left-sidebar" : 'employer-left-sidebar' } style={mobview < "1150" ? {left:leftdisplay} : null }>
             <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" />
             <div className='btn-ic'>
-                <a href="#employer-metrics" onClick={()=>setleftdisplay("-500px")}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
-                <a href="#employer-redflags" onClick={()=>setleftdisplay("-500px")} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
-               <a href="#kjcnj" onClick={()=>setleftdisplay("-500px")} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
-                <a href="#employer-reports"  onClick={()=>setleftdisplay("-500px")}  ><button><i class="fas fa-file-contract fa-lg" onClick={()=>setleftdisplay("-500px")} ></i>Reports</button></a>
-                <a href="#employer-campaign"  onClick={()=>setleftdisplay("-500px")}><button><i class="fas fa-bullhorn fa-lg"></i>campaigns</button></a>
+                <a href="#employer-metrics" onClick={handleNavigationBtnClick}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
+                <a href="#employer-redflags" onClick={handleNavigationBtnClick} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
+               <a href="#kjcnj" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
+                <a href="#employer-reports"  onClick={handleNavigationBtnClick}  ><button><i class="fas fa-file-contract fa-lg" onClick={()=>setleftdisplay("-500px")} ></i>Reports</button></a>
+                <a href="#employer-campaign"  onClick={handleNavigationBtnClick} ><button><i class="fas fa-bullhorn fa-lg"></i>campaigns</button></a>
                 
             </div>
           </section> 

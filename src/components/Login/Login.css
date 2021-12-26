@@ -23,7 +23,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: */
+  transform: translate(-50%, -50%);
 }
 .login-form {
   margin-left: 90px;
@@ -123,6 +123,13 @@
   .login {
     padding-bottom: 5vh;
   }
+  .login {
+    margin: 0;
+  }
+  .login-form {
+    margin: 0;
+    padding: 20px;
+  }
   .login-form-text {
     width: 100%;
   }
@@ -136,8 +143,7 @@
     width: 70%;
   }
   .login-logo {
-    top: 50%;
-    left: 30%;
+    top: 70%;
     width: 100px;
     height: 100px;
   }
