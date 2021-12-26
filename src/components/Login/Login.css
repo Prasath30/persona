@@ -2,18 +2,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100vh;
 }
 
 .background-img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  padding: 0;
 }
 .login-left-sec {
   position: relative;
-  width: 70%;
+  width: 65%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .login-logo {
@@ -23,9 +26,9 @@
   /* transform: */
 }
 .login-form {
-  margin-left: 100px;
+  margin-left: 90px;
   /* margin-top: 10%; */
-  width: 30%;
+  width: 21%;
   text-align: center;
 }
 .login-form h2 {
@@ -95,6 +98,7 @@
     margin-left: 0px;
     padding-left: 40px;
     text-align: center;
+    margin: 0;
   }
   .login-form div {
     text-align: center;
@@ -111,8 +115,14 @@
   .login-form-password {
     width: 40%;
   }
+  .background-img {
+    height: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
+  .login {
+    padding-bottom: 5vh;
+  }
   .login-form-text {
     width: 100%;
   }
@@ -124,5 +134,11 @@
   }
   .login-form-password {
     width: 70%;
+  }
+  .login-logo {
+    top: 50%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
   }
 }

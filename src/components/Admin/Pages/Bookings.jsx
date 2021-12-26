@@ -29,13 +29,13 @@ const Bookings = () => {
     
     return (
         <>
-           <table {...getTableProps()}>
+           <table {...getTableProps()} >
                <thead >
                {headerGroups.map((headerGroup) => (
                  <tr {...headerGroup.getHeaderGroupProps()}>
                     {
                         headerGroup.headers.map((column)=>{
-                            return <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                            return <th {...column.getHeaderProps()} >{column.render("Header")}</th>
                         })}
                    
                 </tr>
@@ -46,10 +46,10 @@ const Bookings = () => {
                         {
                             rows.map((row)=>{
                                 prepareRow(row)
-                                return( <tr {...row.getRowProps()}>
+                                return( <tr {...row.getRowProps()}  >
                                     
                                       {  row.cells.map((cell)=>{
-                                         return <td {...cell.getCellProps()}>
+                                         return <td {...cell.getCellProps() }>
                                          {cell.render('Cell')}
 
                                          </td>
@@ -63,6 +63,7 @@ const Bookings = () => {
                     
                </tbody>
            </table> 
+
         </>
     )
 }

@@ -1,5 +1,6 @@
 .admin-register {
   margin-left: 0px;
+  height: 100vh;
 }
 /* .radio-register {
   display: flex;
@@ -23,6 +24,24 @@
   padding-bottom: 5vh;
 }
 .register-form label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 56px;
+  color: #000000;
+}
+.company-register-form {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.company-register-form button {
+  margin-top: 30px;
+}
+.company-register-form label {
+  text-align: left;
   display: block;
   font-family: "Roboto", sans-serif;
   font-style: normal;

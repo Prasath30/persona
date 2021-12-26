@@ -6,6 +6,7 @@ import "./Admin.css"
 import Employer from "./Employer/Employer"
 import Bookings from './Pages/Bookings'
 import AdminCard from './AdminCard'
+import Professional from './Pages/Professional'
 
 
 const Admin = () => {
@@ -47,6 +48,7 @@ const Admin = () => {
     if(!id){
         return(
             <div className='admin'>
+                      <Navbar />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} />  
                     <AdminCard />
                 </div>
@@ -78,6 +80,15 @@ const Admin = () => {
                     <Bookings /> 
                 </div>
                 </>)
+         case "professional" :
+            return (<>
+                <div className='admin'>
+                    
+                    <Navbar />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Professional />
+                </div>
+                </>)        
         default:
             return (<>
                 <div className='admin'>

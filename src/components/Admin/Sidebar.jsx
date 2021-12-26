@@ -11,7 +11,7 @@ const Sidebar = ({mobview,left,setleft}) => {
                 <Link className='admin-links' to="/admin/register" ><button   onClick={()=>setleft("-500px")} >Register </button></Link> 
                 <Link className='admin-links' to="/admin/booking" ><button    onClick={()=>setleft("-500px")} >Booking</button></Link>
                 <Link className='admin-links' to="/admin/employer" ><button   onClick={()=>setleft("-500px")} >Employers</button></Link>
-              <Link className='admin-links' to="/admin/professionals"><button onClick={()=>setleft("-500px")}    >Professionals</button></Link>
+              <Link className='admin-links' to="/admin/professional"><button onClick={()=>setleft("-500px")}    >Professionals</button></Link>
             </div>
           </section>  
         </>

@@ -1,0 +1,30 @@
+.admin-professional {
+  height: 100vh;
+  background: #eff2f9;
+}
+
+.professional-form {
+  width: 500px;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+.professional-form label {
+  text-align: left;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 56px;
+  color: #000000;
+}
+.professional-form input {
+  border-radius: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .professional-form {
+    width: 300px;
+  }
+}

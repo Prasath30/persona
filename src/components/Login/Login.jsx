@@ -23,7 +23,7 @@ const Login = () => {
         
         <div className='login-left-sec'>
             <div style={{position:"relative"}}>
-                <img src={`./images/background.png`} className='background-img img-fluid' style={{height:"100vh"}} alt="" />
+                <img src={`./images/background.png`} className='background-img'  alt="" />
             </div>
             
              <img className='login-logo' src={`./images/Logo-3.png`}  alt="logo"  />
