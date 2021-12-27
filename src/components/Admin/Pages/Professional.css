@@ -26,6 +26,7 @@
 }
 .tablur-column {
   overflow-x: auto;
+  min-width: 450px;
 }
 .tablur-column h2 {
   text-align: center;
