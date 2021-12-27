@@ -1,7 +1,8 @@
 .admin-professional {
-  height: 100vh;
+  height: 100%;
   background: #eff2f9;
   padding-top: 5vh;
+  background: #eff2f9;
 }
 
 .professional-form {
@@ -22,6 +23,9 @@
 .professional-form input {
   border-radius: 20px;
   width: 100%;
+}
+.tablur-column {
+  overflow-x: auto;
 }
 .tablur-column h2 {
   text-align: center;

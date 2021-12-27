@@ -107,7 +107,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Proffesional:</label>
                       <select name="" id="" required>
-                        <option value="">Proffesional 1</option>
+                        <option value="" selected>Proffesional 1</option>
                         <option value="">Proffesional 2</option>
                         <option value="">Proffesional 2</option>
                       </select>
