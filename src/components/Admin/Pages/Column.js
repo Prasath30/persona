@@ -31,6 +31,9 @@ export const Columns = [
     {
         Header:"Message",
         accessor:"message"
+    },{
+        Header:"Gmeet-link",
+        accessor:"gmeet-link"
     }
 
 ]

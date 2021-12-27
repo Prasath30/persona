@@ -21,48 +21,64 @@ const Professional = () => {
                     <label htmlFor="name">Professional Name:</label>
                     <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
                 </div>
+                 <div>
+                    <label htmlFor="name">Professional Email:</label>
+                    <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
+                </div>
+                 <div>
+                    <label htmlFor="name">Professional Mobile Number:</label>
+                    <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
+                </div>
                 <div style={{textAlign:"center"}}>
                     {add === true ? <button className='btn btn-primary btn-lg'>Add</button> : <button className='btn btn-success btn-lg'>Confirm </button> }
                     
                 </div>
                
             </form>
-            <div>
+            <div className='tablur-column'>
+                <h2>Professional Table</h2>
           <table>
               <thead>
                   <tr>
                       <th>
-                        Professional
+                        Professional Name
+                      </th>
+                         <th>
+                        Professional Email
+                      </th>
+                         <th>
+                        Professional Phn Number
                       </th>
                       <th>
-                        Edit
+                        Actions
                       </th>
-                      <th>
-                        Delete
-                      </th>
-                      <th>
-                        Add Dates
-                      </th>
+                     
                   </tr>
               </thead>
               <tbody>
                   <tr>
                       <td>{profName.one}</td>
-                      <td><button className='btn btn-dark'>Edit</button></td>
-                      <td><button className='btn btn-danger'>Delete</button></td>
-                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Dates</button></td>
+                      <td></td>
+                      <td></td>
+                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.two}</td>
-                      <td><button className='btn btn-dark'>Edit</button></td>
-                      <td><button className='btn btn-danger'>Delete</button></td>
-                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Dates</button></td>
+                      <td></td>
+                      <td></td>
+                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.three}</td>
-                      <td><button className='btn btn-dark'>Edit</button></td>
-                      <td><button className='btn btn-danger'>Delete</button></td>
-                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Dates</button></td>
+                      <td></td>
+                      <td></td>
+                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
 
               </tbody>

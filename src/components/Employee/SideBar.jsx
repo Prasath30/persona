@@ -7,6 +7,9 @@ import "./SideBar.css"
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+8));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
+
+    const [showBtn, setshowBtn] = useState(false)
+
     console.log(date)
 
    const [mobview, setmobview] = useState(window.innerWidth)
@@ -27,13 +30,13 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const nextBtn = () =>{
 
         return (
-            <div style={{backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}} ><i  className="fas fa-angle-right fa-lg"></i></div>
+            <div style={showBtn === false ? {backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}: {display:"none"}  } onClick={()=>setshowBtn(!showBtn)} ><i  className="fas fa-angle-right fa-lg"></i></div>
         )
     }
     const prevBtn = () =>{
   
         return (
-            <div style={{backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}} ><i  className="fas fa-angle-left fa-lg"></i></div>
+            <div style={showBtn === true ? {backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}:{display:"none"}} onClick={()=>setshowBtn(!showBtn)} ><i  className="fas fa-angle-left fa-lg"></i></div>
         )
     }
 
@@ -100,14 +103,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   </div>
                   <div className={mobview > "1140" ? null : "col-md-6 col-sm-12 time"}  >
 
-                 
-                  <div  style={{marginTop:"30px"}} >
-                    <label htmlFor="time">Time:</label>
-                    <input type="time"  name="time" required style={{width:"100px"}}  />
-                  </div>
-                
-                 
-                  
+
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Proffesional:</label>
                       <select name="" id="" required>
@@ -116,6 +112,62 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                         <option value="">Proffesional 2</option>
                       </select>
                   </div>
+          
+                 
+                  <div  style={{marginTop:"30px"}} >
+                    <label htmlFor="time">Time:</label>
+                      <select name="time">
+                      {/* <option value="00:00">12.00 AM</option>
+                      <option value="01:00">01.00 AM</option>
+                      <option value="02:00">02.00 AM</option>
+                      <option value="03:00">03.00 AM</option>
+                      
+                      <option value="04:00">04.00 AM</option>
+                      
+                      <option value="05:00">05.00 AM</option>
+                      
+                      <option value="06:00">06.00 AM</option>
+                      
+                      <option value="07:00">07.00 AM</option>
+                     
+                      <option value="08:00">08.00 AM</option> */}
+                      
+                      <option value="09:00">09.00 AM</option>
+                      
+                      <option value="10:00">10.00 AM</option>
+                      
+                      <option value="11:00">11.00 AM</option>
+                      
+                      <option value="12:00">12.00 PM</option>
+                      
+                      <option value="13:00">01.00 PM</option>
+                      
+                      <option value="14:00">02.00 PM</option>
+                      
+                      <option value="15:00">03.00 PM</option>
+                      
+                      <option value="16:00">04.00 PM</option>
+                      
+                      <option value="17:00">05.00 PM</option>
+                    
+                      <option value="18:00">06.00 PM</option>
+                     
+                      <option value="19:00" selected="">07.00 PM</option>
+                      
+                      <option value="20:00">08.00 PM</option>
+                      
+                      <option value="21:00">09.00 PM</option>
+                    
+                      {/* <option value="22:00">10.00 PM</option>
+                
+                      <option value="23:00">11.00 PM</option> */}
+                      
+                  </select>
+                  </div>
+                
+                 
+                  
+                  
                   <div style={{marginTop:"30px"}} >
                      <label htmlFor="category">Category:</label>
                       <select name="category" id="" value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} required >

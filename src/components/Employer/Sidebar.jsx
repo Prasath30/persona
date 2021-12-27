@@ -26,12 +26,12 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
 
       const prevBtn = ()=> {
         return (
-          <div style={{marginTop:"-10px"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
+          <div style={{marginTop:"0px"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
         
         )}
         const nextBtn = ()=> {
         return (
-          <div style={{marginTop:"-10px"}} ><i  className="fas fa-angle-right fa-2x"></i></div>
+          <div style={{marginTop:"0px"}} ><i  className="fas fa-angle-right fa-2x"></i></div>
         
         )}
 
@@ -42,7 +42,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
             <div className='btn-ic'>
                 <a href="#employer-metrics" onClick={handleNavigationBtnClick}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
                 <a href="#employer-redflags" onClick={handleNavigationBtnClick} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
-               <a href="#kjcnj" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
+               <a href="#employer-feedback" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
                 <a href="#employer-reports"  onClick={handleNavigationBtnClick}  ><button><i class="fas fa-file-contract fa-lg" onClick={()=>setleftdisplay("-500px")} ></i>Reports</button></a>
                 <a href="#employer-campaign"  onClick={handleNavigationBtnClick} ><button><i class="fas fa-bullhorn fa-lg"></i>campaigns</button></a>
                 

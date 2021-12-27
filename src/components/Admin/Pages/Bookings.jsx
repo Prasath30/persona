@@ -29,15 +29,16 @@ const Bookings = () => {
     
     return (
         <>
-           <table {...getTableProps()} >
+            <div className='wrap'>
+           <table {...getTableProps()}  >
                <thead >
                {headerGroups.map((headerGroup) => (
-                 <tr {...headerGroup.getHeaderGroupProps()}>
+                 <tr {...headerGroup.getHeaderGroupProps()} >
                     {
                         headerGroup.headers.map((column)=>{
                             return <th {...column.getHeaderProps()} >{column.render("Header")}</th>
                         })}
-                   
+                   <th>Actions</th>
                 </tr>
                ))}
                    
@@ -46,16 +47,23 @@ const Bookings = () => {
                         {
                             rows.map((row)=>{
                                 prepareRow(row)
-                                return( <tr {...row.getRowProps()}  >
+                                return(<><tr {...row.getRowProps()}  >
                                     
                                       {  row.cells.map((cell)=>{
-                                         return <td {...cell.getCellProps() }>
+                                         return<> <td {...cell.getCellProps() }>
                                          {cell.render('Cell')}
 
                                          </td>
-
+                                         
+                                        </>
                                         })}
-                                        </tr>)
+
+                                        <td>
+                                        <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                         
+                                         </>)
+
                                     
                             
                             })
@@ -63,7 +71,7 @@ const Bookings = () => {
                     
                </tbody>
            </table> 
-
+        </div>
         </>
     )
 }

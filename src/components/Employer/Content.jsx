@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
-import { type } from 'jquery'
+
 
 const Content = ({setdisplay}) => {
 
@@ -239,7 +239,7 @@ const Content = ({setdisplay}) => {
              <div>
                  
                 <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>setreportImg(imgSrc)} >
-                <img style={{marginLeft:"20px",width:"220px"}} src={imgSrc} alt='report'  />
+                <img style={{marginLeft:"20px",width:"220px"}} className='img-fluid' src={imgSrc} alt='report'  />
                 </button>
              </div>
          )
@@ -264,8 +264,24 @@ const Content = ({setdisplay}) => {
            </div>
 
            <div className='employer-package-sec row M-0'>
-            <PackageCard imgSrc={`./images/Employer/package/one.png`}   title="Wellness package" caption="Persona Enhance" />
-            <PackageCard imgSrc={`./images/Employer/package/two.png`}   title="Duration" caption="3 Months" />
+            <div className='package-card col'>
+                  <div>
+                     
+                      <img src={`./images/Employer/package/loan.png`} style={{color:"#753188"}} alt="" />
+                      <h6>Wellness package</h6>
+                  </div>
+                  <h6>Persona Enhance</h6>
+            </div> 
+             <div className='package-card col'>
+                  <div>
+                     
+                    <i class="far fa-calendar-alt fa-4x" style={{color:"#753188"}}></i>
+                      <h6>Duration</h6>
+                  </div>
+                  <h6>3 Months</h6>
+            </div> 
+            {/* <PackageCard imgSrc={`./images/Employer/package/loan.png`}   title="" caption="" />
+            <PackageCard imgSrc={`./images/Employer/package/one.png`}   title="" caption="" /> */}
             <PackageCard imgSrc={`./images/Employer/package/three.png`} title="Billing Date" caption="XX-XX-XXX" />     
             <PackageCard imgSrc={`./images/Employer/package/four.png`}  title="Billing Amount" caption="XX-XX-XXX" />
            </div>
@@ -314,11 +330,14 @@ const Content = ({setdisplay}) => {
                     <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt='rect'  />
                 </div>
            </div>
-           <div id="employer-campaign" className='employer-session M-0'>
+           <div id="employer-feedback" className='employer-session M-0'>
+            <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
+           <div className='employer-session-img-wrap'>
+            </div>
+                   
+               
                     <h2>1-1 Sessions Usage & Feedback</h2>
-                <div className='employer-session-img-wrap'>
-                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
-                </div>
+                
                 <div>
                     <Session 
                     cardTitle={cardTitle}
@@ -332,11 +351,12 @@ const Content = ({setdisplay}) => {
                 </div>
                 
            </div>
-        <div  className='employer-workshop M-0'>
-                <h2>Workshop Usage & Feedback</h2>
-                <div className='employer-session-img-wrap'>
-                    <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
+        <div id='employer-workshop' className='employer-workshop M-0'>
+         <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
+        <div className='employer-session-img-wrap'>
                 </div>
+                <h2>Workshop Usage & Feedback</h2>
+
                 <div>
                       <Session 
                 cardTitle={cardTitle}
@@ -354,14 +374,14 @@ const Content = ({setdisplay}) => {
                 <h2>Employee Mental Well-being Reports</h2>
                 <form className='row'>
                     <div className='col'>
-                        <label htmlFor="type">Report Type:</label>
+                        <label htmlFor="type" style={{paddingRight:"15px"}}>Report Type:</label>
                         <select name="" id="">
                             <option value=""></option>
                         </select>
                     </div>
 
                      <div className='col'>
-                        <label htmlFor="type">Report Frequency:</label>
+                        <label htmlFor="type" style={{paddingRight:"15px"}}>Report Frequency:</label>
                         <select name="" id="">
                             <option value="">Quarterly</option>
                             <option value="">Half-Yearly</option>
@@ -399,7 +419,7 @@ const Content = ({setdisplay}) => {
     </div>
   </div>
 </div>
-            <div style={{marginTop:"150px"}} className='employer-campaign M-0'>
+            <div id='employer-campaign' style={{marginTop:"150px"}} className='employer-campaign M-0'>
                         <h2>Employee Mental Well-being Campaigns</h2>
                  <Carousel breakPoints={breakPoints}>
                     

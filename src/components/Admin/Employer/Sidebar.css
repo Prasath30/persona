@@ -141,6 +141,23 @@
   text-align: center;
 }
 
+.admin-sidebar-logo-upload {
+  border: 0.5px solid rgba(128, 128, 128, 0.452);
+  box-shadow: 4px 4px 4px gray;
+  width: 160px;
+  height: 182px;
+  align-self: center;
+  margin-bottom: 70px;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 24px;
+  margin-bottom: 50px;
+}
+.admin-sidebar-logo-upload label {
+  width: 80px;
+  font-size: 10px;
+}
 @media screen and (max-width: 900px) {
   .employer-left-side-bar-logo {
     margin-bottom: 30px;

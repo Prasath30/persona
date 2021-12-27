@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import Slide from './Slide.jsx'
 import './Login.css';
 import { Link } from 'react-router-dom';
 
@@ -7,12 +6,7 @@ const Login = () => {
 
     const [passwordVisisbility, setpasswordVisisbility] = useState(false)
 
-    const radioBtnStyle ={
-        marginLeft:"15px",
-        marginRight:"20px",
-        fontSize:"18px",
 
-    }
 
     return (
         <>
@@ -35,11 +29,11 @@ const Login = () => {
             <div className='row'>
                 <div className='col-6'>
                 <input type="radio" name="position" id='employee' value="employee" checked/>
-                <label style={{display:"inline-block"}} htmlFor="employee">Employee</label>
+                <label style={{display:"inline-block",paddingLeft:"15px"}} htmlFor="employee">Employee</label>
                 </div>
                 <div className='col-6' >
                 <input type="radio" name="position" id='employer' value="employee" />
-                <label style={{display:"inline-block"}} htmlFor="employer">Employer</label>
+                <label style={{display:"inline-block",paddingLeft:"15px"}} htmlFor="employer">Employer</label>
                 </div>
             </div>
             <div  >
@@ -51,8 +45,8 @@ const Login = () => {
             <label htmlFor="passowrd">Password:</label>
          
             <input className='login-form-password'  type={passwordVisisbility ? "text" : "password"}  style={{borderRadius:"20px",border:"1px solid black"}} name='password' required /> 
-            {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
-            : <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
+            {passwordVisisbility ? <i style={{marginLeft:"5px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
+            : <i style={{marginLeft:"5px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
             </div>
             
             

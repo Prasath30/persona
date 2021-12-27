@@ -1,0 +1,46 @@
+.admin-campaign {
+  margin-left: 22%;
+  width: 78%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-campaign h2 {
+  font-family: Acme;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #7900bf;
+}
+.admin-campaign-form {
+  width: 500px;
+}
+.admin-campaign-form div label {
+  text-align: left;
+  display: block;
+}
+.admin-campaign-form div input {
+  width: 100%;
+  border-radius: 13px;
+}
+.admin-campaign-file-upload {
+  border: 0.5px solid rgba(128, 128, 128, 0.452);
+  box-shadow: 4px 4px 4px gray;
+  width: 100%;
+  text-align: center;
+  padding: 24px;
+}
+.admin-campaign-file-upload label:hover {
+  cursor: pointer;
+}
+.change-label {
+  border: 1px solid rgba(1, 4, 41, 0.925);
+  width: 110px;
+  text-align: center;
+  background: #7700bb;
+  color: white;
+  border-radius: 13px;
+  padding: 12px;
+  font-weight: 400;
+}

@@ -141,6 +141,18 @@
   text-align: center;
 }
 
+button.react-calendar__navigation__label:hover {
+  border-radius: 0px;
+}
+button.react-calendar__navigation__prev-button:hover {
+  border-radius: 0px;
+}
+button.react-calendar__navigation__next-button:hover {
+  border-radius: 0px;
+}
+
+/* react-calendar__navigation__arrow */
+
 @media screen and (max-width: 900px) {
   .employer-left-side-bar-logo {
     margin-bottom: 30px;

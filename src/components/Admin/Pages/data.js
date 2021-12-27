@@ -30,5 +30,5 @@ export const data = [
         date:"30-01-2020",
         professioanl:"sam",
         category:"despressed"
-    }
+    },
 ]

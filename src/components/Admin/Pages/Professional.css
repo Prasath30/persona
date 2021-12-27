@@ -15,12 +15,18 @@
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  line-height: 56px;
+  line-height: 36px;
   color: #000000;
 }
 .professional-form input {
   border-radius: 20px;
   width: 100%;
+}
+.tablur-column h2 {
+  text-align: center;
+  font-family: "Acme", sans-serif;
+  color: #7900bf;
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 500px) {

@@ -9,3 +9,6 @@ a {
   color: white;
   text-decoration: none;
 }
+textarea {
+  resize: none;
+}

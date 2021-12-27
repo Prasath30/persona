@@ -13,6 +13,9 @@ const Content = ({setdisplay}) => {
         two:"x% of Employees",
         three:"x% of Employees"
     })
+    const [uploaded, setuploaded] = useState(false);
+
+
         const [packageCard, setpackageCard] = useState({
             one:"Persona Enhance",
             two:"3 Months",
@@ -131,9 +134,9 @@ const Content = ({setdisplay}) => {
 
      const Averages = ({title,color}) =>{
          return(
-             <div className='col employer-averages'>
+             <>
                    <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
-                   {color === "green"? <Chart options={options} type="radialBar" series={series}  width="200px"  /> :
+                   {color === "green"? <div><Chart options={options} type="radialBar" series={series}  width="170px"  /></div>:
                    <Chart options={{
                        legend:{
                            show:false
@@ -150,9 +153,9 @@ const Content = ({setdisplay}) => {
                             }
                        },
                        colors:["#EA1300","#FFFFFF"]
-                   }} type="radialBar" series={series}  width="200px"  />
+                   }} type="radialBar" series={series}  width="170px"  />
                    }
-            </div>
+            </>
          )
      } 
 
@@ -163,7 +166,7 @@ const Content = ({setdisplay}) => {
     //  }
      const SessionChart = ({chartTitle,chartimgSrc})=>{
             return(
-                <div className='col session-chart'>
+                <>
                     <h6>{chartTitle}</h6>
                     <Chart options={{
                        legend:{
@@ -178,20 +181,21 @@ const Content = ({setdisplay}) => {
                                 typeof:"none"
                             }
                         },
-                      labels:["No","Yes"]
+                      labels:["Yes","No"]
                    }} type="pie"  series={[60,40]} width="180px"  />
-                </div>
+                </>
             )
      }
 
      const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
          return(
              <div className='session-review row'>
-                 <div className='session-review-stars col '>
+                 <div className='session-review-stars col ' style={{height:"200px"}}>
                      <h6>{reviewTitle}</h6>
                      <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
+                     <input type="number" style={{width:"90px"}} />
                  </div>
-                 <div className='col-lg-8 review-text' style={{marginBottom:"80px"}}>
+                 <div className='col review-text' style={{marginBottom:"0px"}}>
                      <textarea name="" id="" cols="20" rows="10"
                      value={sessionReview}
                      onChange={(e)=>setsessionReview(e.target.value)}
@@ -212,10 +216,33 @@ const Content = ({setdisplay}) => {
             </div> */}
 
             <div className='row M-0'>
-                <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
-                <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
+                <div className='col session-chart'>
+                    <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
+                    <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                   
+                </div>
+                <div  className='col session-chart' >
+                     <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
+                      <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                </div>
+                <div  className='col session-chart' > 
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
-                <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                 <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                </div>
+                 <div  className='col session-chart' >
+                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                  <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                 </div>
+               
+               
             </div>
 
             <div className='M-0'>
@@ -229,10 +256,32 @@ const Content = ({setdisplay}) => {
 
 
             <div className='row'>
-                <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
-                <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
+                 <div className='col session-chart'>
+                    <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
+                    <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                   
+                </div>
+                <div  className='col session-chart' >
+                     <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
+                      <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                </div>
+                <div  className='col session-chart' > 
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
-                <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                 <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                </div>
+                 <div  className='col session-chart' >
+                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                  <div>
+                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
+                    </div>
+                 </div>
+               
             </div>
 
              </>
@@ -257,7 +306,7 @@ const Content = ({setdisplay}) => {
     return (
         <> 
             
-           <section className='employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
+           <section className='admin-employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row M-0' style={mobview < "1150" ? {margin:"0"} : null} >
                 <img src={`/images/Employer/welcome-head.png`} className='img-fluid col-lg-5'  alt='welcome head' />
                 <div className='col'>
@@ -283,7 +332,9 @@ const Content = ({setdisplay}) => {
                   
                   <input type="text" 
                   value={packageCard.one} 
-                  onChange={(e)=>setpackageCard({...packageCard,one:e.target.value})}    
+                  onChange={(e)=>setpackageCard({...packageCard,one:e.target.value})}  
+
+                  style={{width:"150px"}}  
                   />
               </div> 
                <div className='package-card col'>
@@ -294,7 +345,9 @@ const Content = ({setdisplay}) => {
                   {/* <h6>{caption}</h6> */}
                   <input type="text" 
                   value={packageCard.two}
-                  onChange={(e)=>setpackageCard({...packageCard,two:e.target.value})}    />
+                  onChange={(e)=>setpackageCard({...packageCard,two:e.target.value})}  
+                  style={{width:"150px"}}   
+                   />
               </div> 
                <div className='package-card col'>
                   <div>
@@ -302,10 +355,12 @@ const Content = ({setdisplay}) => {
                       <h6>Billing Date</h6>
                   </div>
                   {/* <h6>{caption}</h6> */}
-                  <input type="text" 
-                  value={packageCard.three}
-                  onChange={(e)=>setpackageCard({...packageCard,three:e.target.value})}   
+                  <input type="date" 
+                //   value={packageCard.three}
+                //   onChange={(e)=>setpackageCard({...packageCard,three:e.target.value})}   
+                style={{width:"150px"}}  
                    />
+
               </div> 
                <div className='package-card col'>
                   <div>
@@ -315,7 +370,7 @@ const Content = ({setdisplay}) => {
                   {/* <h6>{caption}</h6> */}
                   <input type="text" 
                   value={packageCard.four}
-
+                    style={{width:"150px"}}  
                   onChange={(e)=>setpackageCard({...packageCard,four:e.target.value})}    />
               </div> 
            </div>
@@ -328,11 +383,12 @@ const Content = ({setdisplay}) => {
                     <img src={`/images/Employer/high-risk.png`}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>High-risk</h5>
                     </div>
-                    <input
-                    style={{color:"black"}}
-                     className='col  wellbeing-card-caption'  type="text" 
-                    value={wellbeing.one}  
-                    onChange={(e)=>setwellbeing({...wellbeing,one:e.target.value})}/>
+                    <div className='input-group' style={{width:"140px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">%</span>
+                        </div>
+                    </div>
                 </div>
 
                  <div  className={mobview < "1140" ? 'col-sm-6 col-md-6 row well-being' : 'col row well-being' } >
@@ -340,11 +396,12 @@ const Content = ({setdisplay}) => {
                     <img src={`/images/Employer/md-risk.png`}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>Medium-risk</h5>
                     </div>
-                      <input
-                    style={{color:"black"}}
-                     className='col  wellbeing-card-caption'  type="text" 
-                    value={wellbeing.one}  
-                    onChange={(e)=>setwellbeing({...wellbeing,two:e.target.value})}/>
+                      <div className='input-group' style={{width:"140px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">%</span>
+                        </div>
+                    </div>
                 </div>
 
                  <div  className={mobview < "1140" ? 'col-sm-6 col-md-6 row well-being' : 'col row well-being' } >
@@ -352,19 +409,36 @@ const Content = ({setdisplay}) => {
                     <img src={`/images/Employer/low-risk.png`}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>Low-risk</h5>
                     </div>
-                      <input
-                    style={{color:"black"}}
-                     className='col  wellbeing-card-caption'  type="text" 
-                    value={wellbeing.one}  
-                    onChange={(e)=>setwellbeing({...wellbeing,three:e.target.value})}/>
+                      <div className='input-group' style={{width:"140px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">%</span>
+                        </div>
+                    </div>
                 </div>
                
            </div>
+
            <div className='row M-0'>
+           <div className='col employer-averages' >
                <Averages color="green" title="Average well-being Levels"/>
-               <Averages color="red" title="Average Stress"/>
-               <Averages color="red" title="Average Fatigue"/>
-               <Averages color="red" title="Average Work-stress"/>
+               <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+            </div>
+            <div className='col employer-averages' >
+                 <Averages color="red" title="Average Stress"/>
+                 <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+            </div>
+            <div className='col employer-averages'  > 
+            <Averages color="red" title="Average Fatigue"/> 
+            <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+            </div>
+            <div className='col employer-averages'  >
+             <Averages color="red" title="Average Work-stress"/>
+             <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+              </div>
+              
+               
+               
            </div>
            </div>
 
@@ -387,7 +461,7 @@ const Content = ({setdisplay}) => {
                     labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"]
                     
                     
-                }} series={[10, 20, 30, 10, 15, 10, 10,10,10]}
+                }} series={[10, 20, 30, 10, 15, 10, 10]}
                 
                 width="400px" 
                   className='col'  
@@ -398,33 +472,33 @@ const Content = ({setdisplay}) => {
                 </div>
            </div>
            <div id="employer-campaign" className='employer-session M-0'>
-                    <h2>1-1 Sessions Usage & Feedback</h2>
-                <div className='employer-session-img-wrap' >
-                    <img className="employer-session-img" src={`/images/Employer/sess-work.png`} alt='sess-work' />
-                </div>
-
+                     <img className="employer-session-img" src={`/images/Employer/sess-work.png`} alt='sess-work' />
+                <div className='employer-session-img-wrap' > </div>
+                   
+               
+                     <h2>1-1 Sessions Usage & Feedback</h2>
                 <div className='row session-card-wrap'> 
               
                 <div className='session-card'>
                 <h6>{cardTitle.four}</h6>
-                <input type="text" value={sessionCard.one} 
-                    size={10}
+                <input type="number" value={sessionCard.one} 
+                    style={{width:"90px"}}
                     onChange={(e)=>{setsessionCard({...sessionCard,one:e.target.value})}}
                 /> 
               </div>
 
               <div className='session-card'>
                 <h6>{cardTitle.five}</h6>
-                <input type="text" value={sessionCard.two} 
-                size={10}
+                <input type="number" value={sessionCard.two} 
+                style={{width:"90px"}}
                     onChange={(e)=>setsessionCard({...sessionCard,two:e.target.value})}
                 />
              </div>
 
              <div className='session-card'>
                 <h6>{cardTitle.four}</h6>
-                <input type="text" value={sessionCard.three} 
-                size={10}
+                <input type="number" value={sessionCard.three} 
+                style={{width:"90px"}}
                     onChange={(e)=>{setsessionCard({...sessionCard,three:e.target.value})}}
                 />
                 
@@ -445,25 +519,27 @@ const Content = ({setdisplay}) => {
                 
            </div>
         <div  className='employer-workshop M-0'>
-                <h2>Workshop Usage & Feedback</h2>
-                <div className='employer-session-img-wrap'>
-                    <img className="employer-session-img" src={`/images/Employer/sess-work.png`} alt='sess-work' />
+        <img className="employer-session-img" src={`/images/Employer/sess-work.png`} alt='sess-work' />
+                
+                <div className='employer-session-img-wrap'>     
                 </div>
+                <h2>Workshop Usage & Feedback</h2>
                 {/* session card */}
                  <div className='row session-card-wrap'> 
               
                 <div className='session-card'>
                 <h6>{cardTitle.four}</h6>
-                <input type="text" value={workshopCard.one} 
-                    size={10}
+                <input type="number" value={workshopCard.one} 
+                    style={{width:"90px"}}
                     onChange={(e)=>{setsessionCard({...workshopCard,one:e.target.value})}}
                 /> 
               </div>
 
               <div className='session-card'>
                 <h6>{cardTitle.five}</h6>
-                <input type="text" value={sessionCard.two} 
-                size={10}
+                <input type="number" value={sessionCard.two} 
+                    
+                    style={{width:"90px"}}
                     onChange={(e)=>setsessionCard({...workshopCard,two:e.target.value})}
                 />
              </div>
@@ -471,7 +547,7 @@ const Content = ({setdisplay}) => {
             </div>      
 
                 <div>
-                      <Session 
+               <Session 
                 cardTitle={cardTitle}
                 chartTitle={chartTitle}
                 reviewTitle={reviewTitle}
@@ -479,15 +555,17 @@ const Content = ({setdisplay}) => {
                 bottomimgSrc={`/images/Employer/stars.png`}
                 number={35}
                 workshop="true"
-            />
+                />
                 </div>
+
                 <div className='session-review row'>
-                 <div className='session-review-stars col '>
+                 <div className='session-review-stars col ' style={{height:"200px"}} >
                      <h6>{reviewTitle.two}</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
+                     <input type="number" style={{width:"90px"}} />
                  </div>
-                 <div className='col-lg-8 review-text' style={{marginBottom:"80px"}}>
-                     <textarea name="" id="" cols="20" rows="10"
+                 <div className='col review-text' style={{marginBottom:"0px"}}>
+                     <textarea name="" id="" cols="10" rows="7"
                      value={workshopReview}
                      onChange={(e)=>workshopReview(e.target.value)}
                      ></textarea>
@@ -499,14 +577,12 @@ const Content = ({setdisplay}) => {
                 <h2>Employee Mental Well-being Reports</h2>
                 <form className='row'>
                     <div className='col'>
-                        <label htmlFor="type">Report Type:</label>
-                        <select name="" id="">
-                            <option value=""></option>
-                        </select>
+                        <label htmlFor="type" style={{paddingRight:"20px"}}>Report Type:</label>
+                        <input style={{borderRadius:"15px", backgroundColor: "#fffaf2"}} type="text" />
                     </div>
 
                      <div className='col'>
-                        <label htmlFor="type">Report Frequency:</label>
+                        <label htmlFor="type" style={{paddingRight:"20px"}}>Report Frequency:</label>
                         <select name="" id="">
                             <option value="">Quarterly</option>
                             <option value="">Half-Yearly</option>
@@ -515,12 +591,15 @@ const Content = ({setdisplay}) => {
                     </div>
                 </form>
                 <div style={{marginTop:"50px"}}>
-                     <Carousel breakPoints={breakPoints}>
-                        
-                        <CarouselImg imgSrc={`/images/Employer/employee-report.png`} /> 
-                         <CarouselImg imgSrc={`/images/Employer/employee-report.png`} /> 
-                          <CarouselImg imgSrc={`/images/Employer/employee-report.png`} /> 
-                </Carousel>
+                    <form action="">
+                <div className='admin-campaign-file-upload'>
+                   {uploaded === true ? null : <p>Upload Your Report here</p>}
+                  
+                   {uploaded === true ?  <p>Report Successfully Uploaded</p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-10x"></i></label> }
+                  {uploaded === true ? <label htmlFor="campaign-file" className='change-label'>Change File</label> : null }
+                  <input type="file" id='campaign-file' style={{display:"none"}}  onChange={()=>setuploaded(true)} multiple='false' />
+              </div>
+                    </form>
                 </div>
             </div>
             
@@ -544,16 +623,7 @@ const Content = ({setdisplay}) => {
     </div>
   </div>
 </div>
-            <div style={{marginTop:"150px"}} className='employer-campaign M-0'>
-                        <h2>Employee Mental Well-being Campaigns</h2>
-                 <Carousel breakPoints={breakPoints}>
-                    
-                          <Cardb date="Jan 2022" title="Why Mental illness" />
-                        <Cardb date="Feb 2022" title="Manage Your Stress" />
-                         <Cardb date="Mar 2022" title="Declutter Your Minf" />
-                    
-                </Carousel>
-            </div>
+            
            </section> 
 
         </>

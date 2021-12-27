@@ -4,6 +4,7 @@ import "./Register.css"
 const Register = () => {
       const [passwordVisisbility, setpasswordVisisbility] = useState(false)
       const [Company, setCompany] = useState(false)
+    
 
       const radioLabel = {
           margin:"0",
@@ -13,13 +14,26 @@ const Register = () => {
           marginLeft:"20px"
       }
 
-      if(Company === false){
+    //  OnSubmit Append @personaunplugged.com to username
             return (
         <div className='admin-register'>
+             {/* <div className='admin-register d-flex align-items-center'> */}
+            <form className='company-register-form '>
+                    <h2>Company Registration</h2>
+            <div  className='row'>
+            <label htmlFor="companyName">Company Name:</label>
+            <input type="text" className='login-form-text col' name='companyName' />
+            </div>
+            <button type='submit' >Submit</button>
+             </form>
+              {/* </div> */}
 
-            <h1>Register Form</h1>
+            <h2>Register Form</h2>
            <form className='register-form d-flex justify-content-center row'>
+                     
 
+            
+            
             <div  className='row'>
             <label htmlFor="username">Username:</label>
             <input className='login-form-text col' type="text" name='username' />
@@ -42,40 +56,20 @@ const Register = () => {
             </select>
             </div>
             <div className='radio-registers'>
-        
+            <input type="radio" id='employee'  name='employee' value="employee" checked />
             <label htmlFor="employee" style={radioLabel} >Employee</label>
-            <input type="radio" id='employee'  name='employee' />
+            <input type="radio" id='employee' name='employee' value="employee"/>   
              <label htmlFor="employee" style={radioLabel} >Employer</label>
-            <input type="radio" id='employee' name='employee'/>     
+              
             </div>   
             
             {/* <button type='submit' className='login-form-btn'>Sign In</button> */}
             <button type='button' className='login-form-btn' >Register</button>
-            <a href="#" onClick={()=>setCompany(!Company)} style={{color:"blue",fontSize:"20px"}} >Company Registeration ?</a>
+            
         </form>
         </div>
     )
-      }else{
-          return(
-              <div className='admin-register d-flex align-items-center'>
-                <form className='company-register-form '>
-                  <div  className='row'>
-            <label htmlFor="companyName">Company Name:</label>
-            <select name="companyname" className='company-register-form col' id="">
-                <option value="">Tcs</option>
-                <option value="">CTS</option>
-                <option value="">Wipro</option>
-                 <option value="">Accenture</option>
-            </select>
-            </div>
-
-            <button type='button' className='login-form-btn' >Submit</button>
-             <a href="#" onClick={()=>setCompany(!Company)} style={{color:"blue",fontSize:"20px",display:"block"}} >Employer Registeration ?</a>
-             </form>
-              </div>
-
-          )
-      }
+      
     
 }
 

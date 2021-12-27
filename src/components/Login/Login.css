@@ -65,7 +65,7 @@
 .login-form-password {
   display: inline-block;
   border: 1px solid black;
-  width: 70%;
+  width: 90%;
   height: 40px;
   border-radius: 15px;
 }
@@ -84,6 +84,13 @@
   text-align: center;
   color: #ffffff;
   border-radius: 25px;
+}
+.login-form-btn:hover {
+  color: white;
+}
+
+.login-form button:hover {
+  box-shadow: 3px 4px 3px gray;
 }
 
 @media screen and (max-width: 1000px) {

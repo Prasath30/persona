@@ -4,12 +4,17 @@ table {
   margin-left: 22%;
   width: 78%;
 }
+.wrap {
+  overflow-x: auto;
 
+  width: 100vw;
+}
 td,
 th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  min-width: 100px;
 }
 
 tr:nth-child(even) {

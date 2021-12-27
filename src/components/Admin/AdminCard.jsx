@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Admin.css"
+import { Link } from 'react-router-dom'
 
 const AdminCard = () => {
 
@@ -13,18 +14,21 @@ const AdminCard = () => {
                     <div>
                         <img src={`/images/Admin/booking.jpg`} alt="" />
                     </div>
-                    <button>
-                        Go to Register
-                    </button>
+                    
+                         
+                <Link className='admin-card-btn' to="/admin/booking" >Booking</Link>
+                
+           
+                    
+                    
                 </div>
                 
                 <div className='admin-card '>
                     <div>
                         <img src={`/images/Admin/register.png`}  alt="" />
                     </div>
-                    <button>
-                        Go to Register
-                    </button>
+                         <Link className='admin-card-btn' to="/admin/register" >Register</Link>
+                   
                 </div>
                 
      
@@ -32,17 +36,17 @@ const AdminCard = () => {
                     <div>
                         <img src={`/images/Admin/employer.jpg`} alt="" />
                     </div>
-                    <button>
-                        Go to Register
-                    </button>
+                
+                      <Link className='admin-card-btn' to="/admin/employer" >Employers</Link>
+                   
                 </div>
                 <div className='admin-card'>
                     <div>
                         <img src={`/images/Admin/professional.png`}  alt="" />
                     </div>
-                    <button>
-                        Go to Register
-                    </button>
+                   
+                           <Link className='admin-card-btn' to="/admin/professional">Professionals</Link>
+                   
                 </div>
             
             

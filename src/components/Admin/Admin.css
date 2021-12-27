@@ -20,20 +20,20 @@
   margin-left: 50px;
   margin-top: 50px;
 }
-
-img {
+.admin-card img {
   width: 200px;
   height: 200px;
+  margin-bottom: 30px;
 }
-
-.admin-card button {
+.admin-card-btn {
   background-color: inherit;
   color: #7700bb;
   font-family: "roboto", sans-serif;
   border: 3px solid #f5b14c;
   border-radius: 10px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  /* margin-bottom: 30px;
+  margin-top: 30px; */
+  padding: 10px;
 }
 
 @media screen and (max-width: 1150px) {

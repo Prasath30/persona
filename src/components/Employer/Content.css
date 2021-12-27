@@ -128,25 +128,31 @@
   padding-bottom: 80px;
 }
 .session-card-wrap {
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .employer-session h2 {
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
+  padding-top: 130px;
+  padding-right: 0px;
+  padding-left: 60px;
 }
 
 .employer-session-img {
-  float: right;
-  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 350px;
 }
 
 .employer-session-img-wrap {
   position: relative;
   margin-bottom: 20px;
-  width: 100%;
+  float: right;
+  width: 350px;
+  height: 226.95px;
 }
 /* jasnsjnsdj */
 .employer-workshop {
@@ -159,14 +165,21 @@
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
+  padding-top: 130px;
+  padding-left: 60px;
 }
 .employer-workshop-img {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 350px;
 }
 .employer-workshop-img-wrap {
-  /* position: relative;
-  margin-bottom: 20px; */
+  position: relative;
+  margin-bottom: 20px;
+  float: right;
+  width: 350px;
+  height: 226.95px;
 }
 /* SJSNDNsdn */
 .session-chart {
@@ -276,5 +289,20 @@
   }
   .redglag-chart {
     margin-bottom: 50px;
+  }
+  .employer-session h2 {
+    float: none;
+    padding-right: 0;
+    padding-top: 250px;
+    padding-left: 0;
+  }
+  .employer-workshop h2 {
+    float: none;
+    padding-right: 0;
+    padding-top: 250px;
+    padding-left: 0;
+  }
+  .session-card-wrap {
+    margin-top: 50px;
   }
 }

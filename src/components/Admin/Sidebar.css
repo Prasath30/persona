@@ -9,14 +9,15 @@
   height: 100%;
   background-color: blanchedalmond;
   transition: 1s;
-  /* text-align: center;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  z-index: 9999;
 }
 
 .admin-sidebar div {
-  margin-top: 200px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -30,7 +31,8 @@
   border: none;
   outline: none;
   border-radius: 20px;
-  width: 180px;
+  width: 200px;
+  height: 40px;
 }
 
 @media screen and (max-width: 1150px) {

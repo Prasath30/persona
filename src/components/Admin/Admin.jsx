@@ -7,6 +7,7 @@ import Employer from "./Employer/Employer"
 import Bookings from './Pages/Bookings'
 import AdminCard from './AdminCard'
 import Professional from './Pages/Professional'
+import Campaign from './Pages/Campaign'
 
 
 const Admin = () => {
@@ -60,7 +61,9 @@ const Admin = () => {
         case "employer":
              return (<>
                 <div className='admin'>
-                    <Employer />   
+                    <Navbar />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                   <Employer />    
                 </div>
                 </>)
          case "register":       
@@ -88,7 +91,19 @@ const Admin = () => {
                     <Sidebar mobview={mobview} left={left} setleft={setleft} />
                     <Professional />
                 </div>
-                </>)        
+                </>) 
+                
+        case "campaign":
+            return (
+                <>
+                   <div className='admin'>
+                    
+                    <Navbar />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Campaign />
+                </div>  
+                </>
+            )
         default:
             return (<>
                 <div className='admin'>
