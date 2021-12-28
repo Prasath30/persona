@@ -32,7 +32,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
 
       const prevBtn = ()=> {
         return (
-          <div style={{marginTop:"0px"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
+          <div style={{marginTop:"0px",backgrounColor: "#e7e4e4"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
         
         )}
         const nextBtn = ()=> {
