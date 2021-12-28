@@ -158,6 +158,10 @@
   width: 80px;
   font-size: 10px;
 }
+div.react-calendar__navigation button {
+  background-color: #f0f0f0;
+}
+
 @media screen and (max-width: 900px) {
   .employer-left-side-bar-logo {
     margin-bottom: 30px;
