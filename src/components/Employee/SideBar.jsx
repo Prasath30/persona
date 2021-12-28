@@ -30,7 +30,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const nextBtn = () =>{
 
         return (
-            <div style={showBtn === false ? {backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}: {display:"none"}  } onClick={()=>setshowBtn(!showBtn)} ><i  className="fas fa-angle-right fa-lg"></i></div>
+            <div  style={showBtn === false ? {backgroundColor:"white",width:"40px",height:"30px",borderRadius:"10px",paddingTop:"7px",boxShadow:"1px 1px 1px gray"}: {display:"none"}  } onClick={()=>setshowBtn(!showBtn)} ><i  className="fas fa-angle-right fa-lg"></i></div>
         )
     }
     const prevBtn = () =>{
@@ -107,9 +107,9 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Proffesional:</label>
                       <select name="" id="" required>
-                        <option value="" selected>Proffesional 1</option>
-                        <option value="">Proffesional 2</option>
-                        <option value="">Proffesional 2</option>
+                        <option value="professional-one" selected>Proffesional 1</option>
+                        <option value="professional-two">Proffesional 2</option>
+                        <option value="professional-three">Proffesional 2</option>
                       </select>
                   </div>
           
@@ -132,7 +132,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                      
                       <option value="08:00">08.00 AM</option> */}
                       
-                      <option value="09:00">09.00 AM</option>
+                      <option value="09:00" selected>09.00 AM</option>
                       
                       <option value="10:00">10.00 AM</option>
                       
@@ -152,7 +152,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                     
                       <option value="18:00">06.00 PM</option>
                      
-                      <option value="19:00" selected="">07.00 PM</option>
+                      <option value="19:00">07.00 PM</option>
                       
                       <option value="20:00">08.00 PM</option>
                       
@@ -171,7 +171,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div style={{marginTop:"30px"}} >
                      <label htmlFor="category">Category:</label>
                       <select name="category" id="" value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} required >
-                          <option value={category.one} >Feeling Stressed</option>
+                          <option value={category.one} selected >Feeling Stressed</option>
                           <option value={category.two}>Manage Burnout</option>
                           <option value={category.three}>Relationship/People Problems</option>
                           <option value={category.four}>Wish to Feel Good</option>

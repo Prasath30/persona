@@ -229,5 +229,6 @@ input {
   color: rgb(0, 208, 255);
   font-weight: 600;
 }
+
 @media screen and (max-width: 1140px) {
 }

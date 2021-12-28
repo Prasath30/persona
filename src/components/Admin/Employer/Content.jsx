@@ -444,7 +444,7 @@ const Content = ({setdisplay}) => {
 
            <div id="employer-redflags" className='employer-redflags row M-0'>
                  <h3>Employee Mental Health Red Flags</h3>
-                <Chart type='polarArea' className="text-start" options={{
+                {/* <Chart type='polarArea' className="text-start" options={{
                     stroke: {
                    colors: ['#fff']
                    },
@@ -465,8 +465,39 @@ const Content = ({setdisplay}) => {
                 
                 width="400px" 
                   className='col'  
-                />
-                <div className='col'>
+                /> */}
+                <form action="" className='admin-chart-input col-lg-6 col-sm-12 col-md-12'>
+                    <div  className='row'>
+                        <label className='col' htmlFor="chart">Sleep Issues</label>
+                        <input className='col' type="number"  />
+                    </div>
+                    <div  className='row' >
+                        <label className='col' htmlFor="chart">Work Stress:</label>
+                        <input className='col' type="number"  />
+                    </div>
+                    <div  className='row' >
+                        <label className='col' htmlFor="chart">Conflict with Colleagues:</label>
+                         <input className='col' type="number"  />
+                    </div>
+                    <div  className='row' >
+                        <label className='col'htmlFor="chart">Lack of Motivation:</label>
+                        <input className='col' type="number"  />
+                    </div>
+                    <div  className='row' >
+                        <label className='col'htmlFor="chart">Feeling Overwhelmed:</label>
+                         <input className='col' type="number"  />
+                    </div>
+                    <div  className='row' >
+                        <label className='col' htmlFor="chart">Low Mood:</label>
+                        <input className='col' type="number"  />
+                    </div>
+
+                    <div  className='row' >
+                        <label className='col' htmlFor="chart">Physical Fatigue:</label>
+                         <input className='col' type="number"  />
+                    </div>
+                </form>
+                <div className='col-lg-6 col-sm-12 col-md-12' style={{paddingLeft:"30px"}}>
                    
                     <textarea name="" id="" cols="10" rows="10"></textarea>
                 </div>

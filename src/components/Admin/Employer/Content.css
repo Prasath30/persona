@@ -250,6 +250,18 @@
   text-align: center;
   margin-bottom: 40px;
 }
+.admin-chart-input {
+  /* margin-right: 400px; */
+}
+.admin-chart-input div label {
+  display: block;
+  float: left;
+  /* width: 100%; */
+}
+.admin-chart-input div input {
+  width: 90px;
+  display: block;
+}
 
 @media screen and (max-width: 500px) {
   .employer-session {

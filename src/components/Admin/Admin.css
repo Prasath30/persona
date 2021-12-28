@@ -10,6 +10,9 @@
   grid-template-columns: 2fr 2fr;
   padding-bottom: 7vh;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .admin-card {
   width: 300px;
   height: 300px;

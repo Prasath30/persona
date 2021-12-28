@@ -29,6 +29,7 @@ const Bookings = () => {
     
     return (
         <>
+        <section className='booking'>
             <div className='wrap'>
            <table {...getTableProps()}  >
                <thead >
@@ -72,6 +73,7 @@ const Bookings = () => {
                </tbody>
            </table> 
         </div>
+        </section>
         </>
     )
 }
