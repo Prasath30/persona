@@ -15,7 +15,7 @@ const AdminCard = ({user}) => {
     return (
         <>  
             <div className='admin-panel-navbar'>
-                <i class="fas fa-user-circle fa-3x" style={{color:"white",padding:"10px 30px 10px 10px"}}></i>
+                <i class="fas fa-user-circle fa-3x" style={{padding:"10px 30px 10px 10px"}}></i>
             </div>
 
             <section className='admin-card-wrap container'>

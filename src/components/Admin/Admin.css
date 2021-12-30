@@ -48,11 +48,19 @@
 }
 .admin-panel-navbar i {
   float: right;
+  color: white;
 }
 
 @media screen and (max-width: 1150px) {
   .admin-card-wrap {
     margin-left: 0;
+    width: 100%;
+  }
+  .admin-panel-navbar {
+    background-color: rgba(255, 239, 213, 0.3);
+  }
+  .admin-panel-navbar i {
+    color: #7700bb;
   }
 }
 @media screen and (max-width: 740px) {
