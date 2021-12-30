@@ -19,6 +19,14 @@
 .admin-campaign-form div label {
   text-align: left;
   display: block;
+  text-align: left;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
 }
 .admin-campaign-form div input {
   width: 100%;

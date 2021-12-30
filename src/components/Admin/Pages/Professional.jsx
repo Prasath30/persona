@@ -17,20 +17,22 @@ const Professional = () => {
         <>
             <section className='admin-professional'>
                  <form action=""  className='professional-form'  >
+                    <h2>Professional Form</h2>
                 <div>
-                    <label htmlFor="name">Professional Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
                 </div>
                  <div>
-                    <label htmlFor="name">Professional Email:</label>
+                    <label htmlFor="name">Email:</label>
                     <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
                 </div>
                  <div>
-                    <label htmlFor="name">Professional Mobile Number:</label>
+                    <label htmlFor="name">Mobile Number:</label>
                     <input type="text" value={formValue} onChange={(e)=>setformValue(e.target.value)} />
                 </div>
                 <div style={{textAlign:"center"}}>
                     {add === true ? <button className='btn btn-primary btn-lg'>Add</button> : <button className='btn btn-success btn-lg'>Confirm </button> }
+                    <button className='btn btn-secondary btn-lg' style={{marginLeft:"40px"}}>Clear</button>
                     
                 </div>
                
@@ -41,13 +43,13 @@ const Professional = () => {
               <thead>
                   <tr>
                       <th>
-                        Professional Name
+                        Name
                       </th>
                          <th>
-                        Professional Email
+                        Email
                       </th>
                          <th>
-                        Professional Phn Number
+                            Phn Number
                       </th>
                       <th>
                         Actions
@@ -94,20 +96,24 @@ const Professional = () => {
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Add Dates</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button"  class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form action="">
                     <div>
-                    <label htmlFor="date">Date:</label>
-                    <input type="date"  name="time" required style={{width:"100px"}}  />
+                    <label htmlFor="date" style={{paddingRight:"25px"}}>Date:</label>
+                    <input type="date"  name="time" required style={{width:"130px" }}  />
+                    <span style={{paddingLeft:"25px",paddingRight:"25px"}}>To</span>
+                    <input type="date"  name="time" required style={{width:"130px"}}  />
                     </div>
                     
                     <div  style={{marginTop:"30px"}} >
-                    <label htmlFor="time">Time:</label>
-                    <input type="time"  name="time" required style={{width:"100px"}}  />
+                    <label htmlFor="time" style={{paddingRight:"25px"}}>Time:</label>
+                    <input type="time"  name="time" required style={{width:"130px"}}  />
+                    <span style={{paddingLeft:"25px",paddingRight:"25px"}} >To</span>
+                    <input type="time"  name="time" required style={{width:"130px"}}  />
                   </div>
                     
                 </form>

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
 // import 'react-calendar/dist/Calendar.css';
@@ -9,6 +9,9 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
      const [mobview, setmobview] = useState(window.innerWidth)
      const [events, setevents] = useState([])
      const [upload, setupload] = useState(false)
+     const [uploadedFileName, setuploadedFileName] = useState('')
+     const [imgPreview, setimgPreview] = useState('')
+      const ref = useRef()
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -29,7 +32,21 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
 
                     
     }
-
+        const handleFileChallenge = (e)=>{
+        console.log("ndjnjajn")
+        setupload(true)
+        var  Files = e.target.files
+        if(Files[1]){
+            return true
+        }
+        setuploadedFileName(Files[0].name)
+       
+    }
+ 
+      const handleRemoveFile = ()=>{
+        ref.current.value = "";
+        setupload(false)
+    }
       const prevBtn = ()=> {
         return (
           <div style={{marginTop:"0px",backgrounColor: "#e7e4e4"}}><i  className="fas fa-angle-left fa-2x" ></i></div>
@@ -37,7 +54,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
         )}
         const nextBtn = ()=> {
         return (
-          <div style={{marginTop:"0px"}} ><i  className="fas fa-angle-right fa-2x"></i></div>
+          <div style={{marginTop:"0px"}} > <i  className="fas fa-angle-right fa-2x"></i></div>
         
         )}
 
@@ -50,10 +67,11 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
              <div className='admin-sidebar-logo-upload'>
                    {upload === true ? null : <p>Upload Logo here</p>}
                   
-                   {upload === true ?  <p>Logo Successfully upload</p> :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
-                  {upload === true ? <label htmlFor="logo-file" className='change-label'>Change File</label> : null }
-                  <input type="file" id='logo-file' style={{display:"none"}}  onChange={()=>setupload(true)} multiple='false' />
+                   {upload === true ?  <p>Logo Successfully upload  <span className='admin-upload-file'>{uploadedFileName}</span> </p> :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
+                   {upload === true ? <button className='change-label' onClick={()=>handleRemoveFile()} >Remove file</button>: null }
+                  <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple='false' />
               </div>
+                
                     
 
             <div style={{marginBottom:"20px"}} className='employer-right-sidebar-workshop container'  style={{height:"130px"}}>
@@ -90,6 +108,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
 
                  
             </div>
+            
             <div style={{marginTop:"60px"}}>
               <label htmlFor="event">Event Info/Name:</label>
                <textarea name="" id="" cols="5" rows="5"></textarea>

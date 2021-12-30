@@ -36,7 +36,7 @@
 .company-register-form {
   width: 450px;
   margin: auto;
-  text-align: center;
+  text-align: right;
   margin-bottom: 30px;
 }
 .company-register-form button {
@@ -45,9 +45,6 @@
   height: 49px;
   background: #7700bb;
   font-family: Open Sans;
-  /* text-align: right;
-  display: flex;
-  align-items: flex-start; */
   font-style: normal;
   font-weight: bold;
   font-size: 1.3rem;
@@ -72,6 +69,22 @@
   font-size: 22px;
   line-height: 56px;
   color: #000000;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.register-form div select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 10px;
+  right: 7%;
+  position: absolute;
 }
 
 @media screen and (max-width: 550px) {

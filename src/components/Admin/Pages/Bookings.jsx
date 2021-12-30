@@ -30,6 +30,7 @@ const Bookings = () => {
     return (
         <>
         <section className='booking'>
+             <h1>Booking</h1>
             <div className='wrap'>
            <table {...getTableProps()}  >
                <thead >
@@ -59,8 +60,9 @@ const Bookings = () => {
                                         </>
                                         })}
 
-                                        <td>
-                                        <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button></td>
+                                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                                       <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                                         </tr>
                                          
                                          </>)
@@ -72,7 +74,49 @@ const Bookings = () => {
                     
                </tbody>
            </table> 
-        </div>
+         </div>
+                       
+                 <form action=""  className='professional-form'  >
+                        <h2>Booking form</h2>
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Email:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Date:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Time:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Professional:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Category:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Message:</label>
+                    <input type="text"  />
+                </div>
+                 <div>
+                    <label htmlFor="name">Gmeet-Link:</label>
+                    <input type="text"  />
+                </div>
+                <div style={{textAlign:"center"}}>
+                 <button className='btn btn-primary btn-lg'>Add</button> 
+                    
+                </div>
+               
+            </form>
+       
         </section>
         </>
     )

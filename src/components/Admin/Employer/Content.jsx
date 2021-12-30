@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
@@ -6,14 +6,23 @@ import { type } from 'jquery'
 
 const Content = ({setdisplay}) => {
 
-         const [mobview, setmobview] = useState(window.innerWidth)
-         const [reportImg, setreportImg] = useState('')
-         const [wellbeing, setwellbeing] = useState({
-        one:"x% of Employees",
-        two:"x% of Employees",
-        three:"x% of Employees"
+    const [mobview, setmobview] = useState(window.innerWidth)
+    const [reportImg, setreportImg] = useState('')
+    const [wellbeing, setwellbeing] = useState({
+    one:"x% of Employees",
+    two:"x% of Employees",
+    three:"x% of Employees"
     })
+
     const [uploaded, setuploaded] = useState(false);
+    const [uploadedFileName, setuploadedFileName] = useState()
+    const ref = useRef()
+
+    const handleRemoveFile = ()=>{
+        ref.current.value = "";
+        setuploaded(false)
+    }
+    
 
 
         const [packageCard, setpackageCard] = useState({
@@ -40,6 +49,19 @@ const Content = ({setdisplay}) => {
             setmobview(window.innerWidth)
         });
     }, [])
+    const handleFileChallenge = (e)=>{
+        console.log("ndjnjajn")
+        setuploaded(true)
+        var  Files = e.target.files
+        if(Files[1]){
+            return true
+        }
+        setuploadedFileName(Files[0].name)
+          
+    }
+
+
+
 
  
 
@@ -68,10 +90,7 @@ const Content = ({setdisplay}) => {
         {width:768, itemsToShow:3}
     ]
 
-    const reviewTitle ={
-        one:"Average Session Rating / Q1",
-        two:"Average Workshop Rating / Q1"
-    }
+
 
     // jasncsCN
       const series = [66];
@@ -187,25 +206,13 @@ const Content = ({setdisplay}) => {
             )
      }
 
-     const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
-         return(
-             <div className='session-review row'>
-                 <div className='session-review-stars col ' style={{height:"200px"}}>
-                     <h6>{reviewTitle}</h6>
-                     <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px"}} />
-                 </div>
-                 <div className='col review-text' style={{marginBottom:"0px"}}>
-                     <textarea name="" id="" cols="20" rows="10"
-                     value={sessionReview}
-                     onChange={(e)=>setsessionReview(e.target.value)}
-                     ></textarea>
-                 </div>
-             </div>
-         )
-     }
+    //  const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
+    //      return(
+            
+    //      )
+    //  }
 
-     const Session = ({cardTitle,number,reviewTitle,bottomimgSrc,chartimgSrc,chartTitle,workshop})=>{
+     const Session = ({cardTitle,number,bottomimgSrc,chartimgSrc,chartTitle,workshop})=>{
         if(workshop !== "true"){
              return(
             <>
@@ -218,36 +225,46 @@ const Content = ({setdisplay}) => {
             <div className='row M-0'>
                 <div className='col session-chart'>
                     <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
-                    <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                      <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                    
                 </div>
                 <div  className='col session-chart' >
                      <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
-                      <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                       <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                 </div>
                 <div  className='col session-chart' > 
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
-                 <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                 <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                 </div>
                  <div  className='col session-chart' >
                  <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
-                  <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                  </div>
                
                
             </div>
 
-            <div className='M-0'>
-                <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
-            </div>
+            
              </>
         )
         }
@@ -258,28 +275,40 @@ const Content = ({setdisplay}) => {
             <div className='row'>
                  <div className='col session-chart'>
                     <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
-                    <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                    
                 </div>
                 <div  className='col session-chart' >
                      <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
-                      <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                       <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                 </div>
                 <div  className='col session-chart' > 
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
-                 <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                  <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                 </div>
                  <div  className='col session-chart' >
                  <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
-                  <div>
-                         <input type="number" style={{width:"60px"}} />  <input type="number" style={{width:"60px"}} />
-                    </div>
+                  <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                  </div>
                
             </div>
@@ -325,7 +354,7 @@ const Content = ({setdisplay}) => {
            
              <div className='package-card col'>
                   <div>
-                      <img src={`/images/Employer/package/one.png`} alt="package" /> 
+                      <img src={`/images/Employer/package/loan.png`} style={{color:"#753188"}} alt="" />
                       <h6>Wellness package</h6>
                   </div>
                   {/* <h6>{caption}</h6> */}
@@ -339,7 +368,7 @@ const Content = ({setdisplay}) => {
               </div> 
                <div className='package-card col'>
                   <div>
-                      <img src={`/images/Employer/package/two.png`} alt="package" /> 
+                      <i class="far fa-calendar-alt fa-4x" style={{color:"#753188"}}></i>
                       <h6>Duration</h6>
                   </div>
                   {/* <h6>{caption}</h6> */}
@@ -383,10 +412,10 @@ const Content = ({setdisplay}) => {
                     <img src={`/images/Employer/high-risk.png`}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>High-risk</h5>
                     </div>
-                    <div className='input-group' style={{width:"140px"}} >
+                    <div className='input-group' style={{width:"120px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">%</span>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
                     </div>
                 </div>
@@ -399,7 +428,7 @@ const Content = ({setdisplay}) => {
                       <div className='input-group' style={{width:"140px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">%</span>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
                     </div>
                 </div>
@@ -412,7 +441,7 @@ const Content = ({setdisplay}) => {
                       <div className='input-group' style={{width:"140px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">%</span>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
                     </div>
                 </div>
@@ -422,19 +451,40 @@ const Content = ({setdisplay}) => {
            <div className='row M-0'>
            <div className='col employer-averages' >
                <Averages color="green" title="Average well-being Levels"/>
-               <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+               {/* <input type="number" style={{width:"90px",marginTop:"-50px"}} /> */}
+                <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                    </div>
             </div>
             <div className='col employer-averages' >
                  <Averages color="red" title="Average Stress"/>
-                 <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+                  <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                    </div>
             </div>
             <div className='col employer-averages'  > 
             <Averages color="red" title="Average Fatigue"/> 
-            <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+             <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                    </div>
             </div>
             <div className='col employer-averages'  >
              <Averages color="red" title="Average Work-stress"/>
-             <input type="number" style={{width:"90px",marginTop:"-50px"}} />
+              <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                    </div>
               </div>
               
                
@@ -469,32 +519,67 @@ const Content = ({setdisplay}) => {
                 <form action="" className='admin-chart-input col-lg-6 col-sm-12 col-md-12'>
                     <div  className='row'>
                         <label className='col' htmlFor="chart">Sleep Issues</label>
-                        <input className='col' type="number"  />
+                        <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                    </div>
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Work Stress:</label>
-                        <input className='col' type="number"  />
+                        <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Conflict with Colleagues:</label>
-                         <input className='col' type="number"  />
+                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
                     <div  className='row' >
                         <label className='col'htmlFor="chart">Lack of Motivation:</label>
-                        <input className='col' type="number"  />
+                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
                     <div  className='row' >
                         <label className='col'htmlFor="chart">Feeling Overwhelmed:</label>
-                         <input className='col' type="number"  />
+                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Low Mood:</label>
-                        <input className='col' type="number"  />
+                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
 
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Physical Fatigue:</label>
-                         <input className='col' type="number"  />
+                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <input type="number" className='form-control' />
+                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                            <span class="input-group-text" id="basic-addon2">/100</span>
+                        </div>
+                        </div>
                     </div>
                 </form>
                 <div className='col-lg-6 col-sm-12 col-md-12' style={{paddingLeft:"30px"}}>
@@ -540,13 +625,25 @@ const Content = ({setdisplay}) => {
                     <Session 
                     cardTitle={cardTitle}
                     chartTitle={chartTitle}
-                    reviewTitle={reviewTitle}
+                   
                     chartimgSrc={`/images/Employer/chart-img.png`}
                     bottomimgSrc={`/images/Employer/stars.png`}
                     number={35}
                     workshop="false"
                 />
                 </div>
+                 <div className='session-review row'>
+                 <div className='session-review-stars col ' style={{height:"200px"}}>
+                     <h6>"Average Session Rating / Q1"</h6>
+                     <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
+                     <input type="number" style={{width:"90px"}} />
+                 </div>
+                 <div className='col review-text' style={{marginBottom:"0px"}}>
+                     <textarea name="" id="" cols="20" rows="10"
+                     
+                     ></textarea>
+                 </div>
+             </div>
                 
            </div>
         <div  className='employer-workshop M-0'>
@@ -581,9 +678,9 @@ const Content = ({setdisplay}) => {
                <Session 
                 cardTitle={cardTitle}
                 chartTitle={chartTitle}
-                reviewTitle={reviewTitle}
+                
                 chartimgSrc={`/images/Employer/chart-img.png`}
-                bottomimgSrc={`/images/Employer/stars.png`}
+                // bottomimgSrc={}
                 number={35}
                 workshop="true"
                 />
@@ -591,15 +688,14 @@ const Content = ({setdisplay}) => {
 
                 <div className='session-review row'>
                  <div className='session-review-stars col ' style={{height:"200px"}} >
-                     <h6>{reviewTitle.two}</h6>
+                     <h6>Average Session Rating / Q1</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
                      <input type="number" style={{width:"90px"}} />
                  </div>
                  <div className='col review-text' style={{marginBottom:"0px"}}>
                      <textarea name="" id="" cols="10" rows="7"
-                     value={workshopReview}
-                     onChange={(e)=>workshopReview(e.target.value)}
-                     ></textarea>
+                    
+                    ></textarea>
                  </div>
              </div>
           
@@ -613,47 +709,51 @@ const Content = ({setdisplay}) => {
                     </div>
 
                      <div className='col'>
-                        <label htmlFor="type" style={{paddingRight:"20px"}}>Report Frequency:</label>
-                        <select name="" id="">
+                        <label htmlFor="type" style={{paddingRight:"20px"}}>Date:</label>
+                        {/* <select name="" id="">
                             <option value="">Quarterly</option>
                             <option value="">Half-Yearly</option>
                             <option value="">Annualy</option>
-                        </select>
+                        </select> */}
+                        <input type="date" />
                     </div>
                 </form>
+
                 <div style={{marginTop:"50px"}}>
+                <label htmlFor="campaign-file" className='campaign-file-label' style={{width:"100%"}}>
                     <form action="">
                 <div className='admin-campaign-file-upload'>
-                   {uploaded === true ? null : <p>Upload Your Report here</p>}
+                   {uploaded === true ? null : <p style={{fontSize:"20px",fontWeight:"500"}} >Upload Your Report here</p>}
                   
-                   {uploaded === true ?  <p>Report Successfully Uploaded</p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-10x"></i></label> }
-                  {uploaded === true ? <label htmlFor="campaign-file" className='change-label'>Change File</label> : null }
-                  <input type="file" id='campaign-file' style={{display:"none"}}  onChange={()=>setuploaded(true)} multiple='false' />
+                   {uploaded === true ?  <p style={{fontSize:"20px",fontWeight:"500"}} >Report Successfully Uploaded <span className='admin-upload-file'>{uploadedFileName}</span></p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-10x"></i></label> }
+                    {uploaded === true ? <button className='change-label' onClick={()=>handleRemoveFile()} >Remove file</button>: null }
+                  <input type="file" ref={ref} id='campaign-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)}   multiple />
               </div>
                     </form>
+                </label>                    
                 </div>
             </div>
             
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <img src={reportImg} alt="" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <img src={reportImg} alt="" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
+            </div>
+            </div>
+        </div>
+        </div>
             
            </section> 
 

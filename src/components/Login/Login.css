@@ -67,7 +67,7 @@
   border: 1px solid black;
   width: 90%;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 .login-form div i:hover {
   cursor: pointer;

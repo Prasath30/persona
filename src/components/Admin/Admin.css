@@ -8,35 +8,46 @@
   width: 78%;
   display: grid;
   grid-template-columns: 2fr 2fr;
+  padding-top: 5vh;
   padding-bottom: 7vh;
 }
-::-webkit-scrollbar {
-  display: none;
+.admin-card-wrap {
+  text-align: center;
 }
 .admin-card {
-  width: 300px;
+  width: 330px;
   height: 300px;
   text-align: center;
-  border: 1px gray solid;
-  box-shadow: 3px 3px 3px gray;
+  border: 1px rgb(63, 53, 53) solid;
   border-radius: 20px;
   margin-left: 50px;
   margin-top: 50px;
 }
+.admin-card:hover {
+  box-shadow: 5px 5px 4px rgb(206, 201, 201);
+  cursor: pointer;
+}
 .admin-card img {
-  width: 200px;
+  width: 100%;
+  border-radius: 20px;
   height: 200px;
   margin-bottom: 30px;
 }
 .admin-card-btn {
   background-color: inherit;
   color: #7700bb;
-  font-family: "roboto", sans-serif;
-  border: 3px solid #f5b14c;
-  border-radius: 10px;
-  /* margin-bottom: 30px;
-  margin-top: 30px; */
-  padding: 10px;
+  font-family: "Acme", sans-serif;
+}
+
+.admin-panel-navbar {
+  width: 100%;
+  z-index: 99999;
+  background-color: #7700bb;
+  position: absolute;
+  top: 0;
+}
+.admin-panel-navbar i {
+  float: right;
 }
 
 @media screen and (max-width: 1150px) {

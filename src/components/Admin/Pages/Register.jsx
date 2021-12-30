@@ -4,6 +4,7 @@ import "./Register.css"
 const Register = () => {
       const [passwordVisisbility, setpasswordVisisbility] = useState(false)
       const [Company, setCompany] = useState(false)
+      
     
 
       const radioLabel = {
@@ -18,7 +19,7 @@ const Register = () => {
             return (
         <div className='admin-register'>
              {/* <div className='admin-register d-flex align-items-center'> */}
-            <form className='company-register-form '>
+            <form className='company-register-form'>
                     <h2>Company Registration</h2>
             <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>
@@ -27,13 +28,9 @@ const Register = () => {
             <button type='submit' >Submit</button>
              </form>
               {/* </div> */}
-
+                    <hr />
             <h2>Register Form</h2>
-           <form className='register-form d-flex justify-content-center row'>
-                     
-
-            
-            
+           <form className='register-form d-flex justify-content-center row'>   
             <div  className='row'>
             <label htmlFor="username">Username:</label>
             <input className='login-form-text col' type="text" name='username' />
@@ -48,12 +45,16 @@ const Register = () => {
             </div>
             <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>
-            <select name="companyname" className='login-form-text col' id="">
+            <div className='select-wrapper'>
+
+            
+            <select name="companyname" className='login-form-text  col' style={{width:"100%"}}  id="">
                 <option value="">Tcs</option>
                 <option value="">CTS</option>
                 <option value="">Wipro</option>
                  <option value="">Accenture</option>
             </select>
+            </div>
             </div>
             <div className='radio-registers'>
             <input type="radio" id='employee'  name='employee' value="employee" checked />

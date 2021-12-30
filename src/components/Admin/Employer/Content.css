@@ -216,7 +216,7 @@
   margin-top: 30px;
 }
 .session-review-stars {
-  background-color: #bd70e9;
+  background-color: #eedcf8;
   height: 180px;
   text-align: center;
   border-radius: 20px;
@@ -226,6 +226,9 @@
 .session-review-stars h6 {
   padding-top: 30px;
   margin-bottom: 30px;
+}
+.review-text textarea {
+  overflow-y: scroll;
 }
 .employer-reports {
   position: relative;
@@ -261,6 +264,13 @@
 .admin-chart-input div input {
   width: 90px;
   display: block;
+}
+.campaign-file-label:hover {
+  cursor: pointer;
+}
+.admin-upload-file {
+  color: #7900bf;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 500px) {

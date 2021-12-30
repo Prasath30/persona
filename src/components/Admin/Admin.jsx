@@ -16,6 +16,7 @@ const Admin = () => {
     const [left, setleft] = useState("-500px")
     const [leftShow, setleftShow] = useState(false)
     const [mobview, setmobview] = useState(window.innerWidth)
+    const [user, setuser] = useState(true)
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -44,14 +45,15 @@ const Admin = () => {
             </div>
         )
     }
-    // console.log(id)
+
+    console.log(user)
 
     if(!id){
         return(
             <div className='admin'>
                       <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />  
-                    <AdminCard />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser} />  
+                    <AdminCard user={user} />
                 </div>
         )
     }
@@ -62,7 +64,7 @@ const Admin = () => {
              return (<>
                 <div className='admin'>
                     <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                    <Employer />    
                 </div>
                 </>)
@@ -70,7 +72,7 @@ const Admin = () => {
             return (<>
                 <div className='admin'>
                     <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                     <Register />   
                 </div>
                 </>)
@@ -79,7 +81,7 @@ const Admin = () => {
                 <div className='admin'>
                     
                     <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                     <Bookings /> 
                 </div>
                 </>)
@@ -88,7 +90,7 @@ const Admin = () => {
                 <div className='admin'>
                     
                     <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser} />
                     <Professional />
                 </div>
                 </>) 
@@ -99,16 +101,17 @@ const Admin = () => {
                    <div className='admin'>
                     
                     <Navbar />
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft}  user={user} setuser={setuser} />
                     <Campaign />
                 </div>  
                 </>
             )
         default:
-            return (<>
+            return (
+            <>
                 <div className='admin'>
-                    <Sidebar mobview={mobview} left={left} setleft={setleft} />  
-                    <AdminCard />
+                    <Sidebar mobview={mobview} left={left} setleft={setleft}  user={user} setuser={setuser} />  
+                    <AdminCard user={user} />
                 </div>
                 </>)
     }

@@ -11,6 +11,9 @@ table {
   overflow-x: auto;
   scrollbar-width: none;
 }
+.wrap::-webkit-scrollbar {
+  display: none;
+}
 
 td,
 th {
@@ -23,7 +26,25 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-
+.booking {
+  background: #eff2f9;
+  margin-top: 0;
+  padding-bottom: 7vh;
+}
+.booking h1 {
+  color: #7700bb;
+  font-family: "Acme", sans-serif;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.professional-form h2 {
+  color: #7700bb;
+  font-family: "Acme", sans-serif;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
 @media screen and (max-width: 1150px) {
   table {
     width: 100%;

@@ -321,7 +321,7 @@ const Content = ({setdisplay}) => {
                     labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"]
                     
                     
-                }} series={[10, 20, 30, 10, 15, 10, 10,10,10]}
+                }} series={[10, 20, 30, 10, 15, 10, 10]}
                 
                 width={mobview < 500 ? "350px": "400px"  }
                   className='col redglag-chart'  
