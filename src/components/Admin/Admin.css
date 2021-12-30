@@ -58,6 +58,7 @@
   }
   .admin-panel-navbar {
     background-color: rgba(255, 239, 213, 0.3);
+    display: none;
   }
   .admin-panel-navbar i {
     color: #7700bb;
