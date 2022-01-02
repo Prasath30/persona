@@ -45,6 +45,11 @@
   top: 0;
   right: 0;
   padding: 20px;
+  scrollbar-width: none;
+}
+
+.employee-right-side-bar::-webkit-scrollbar {
+  display: none;
 }
 .employee-right-side-bar-logo {
   align-self: center;

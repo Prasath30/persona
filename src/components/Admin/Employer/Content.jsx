@@ -3,7 +3,7 @@ import "./Content.css"
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
 import { type } from 'jquery'
-
+import axios from "axios"
 const Content = ({setdisplay}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
@@ -16,6 +16,26 @@ const Content = ({setdisplay}) => {
 
     const [uploaded, setuploaded] = useState(false);
     const [uploadedFileName, setuploadedFileName] = useState()
+    const [topform, settopform] = useState({
+        
+    uid:"7JWs625GhTSLtb7878tnVkcMMgr2",
+    wellnessPackage:"",
+    duration:"",
+    billingDate:"",
+    billingAmount:"",
+    highRisk:"",
+    mediumRisk:"",
+    lowRisk:""
+
+    })
+
+    const handleTopFormSubmit = (e)=>{
+        e.preventDefault();
+        axios.post("http://localhost:5000/employer",topform)
+        .then((res)=>console.log(res))
+        .catch((err)=>console.log(err))
+    }
+
     const ref = useRef()
 
     const handleRemoveFile = ()=>{
@@ -360,8 +380,8 @@ const Content = ({setdisplay}) => {
                   {/* <h6>{caption}</h6> */}
                   
                   <input type="text" 
-                  value={packageCard.one} 
-                  onChange={(e)=>setpackageCard({...packageCard,one:e.target.value})}  
+                  value={topform.wellnessPackage}
+                  onChange={(e)=>settopform({...topform,wellnessPackage:e.target.value})}
 
                   style={{width:"150px"}}  
                   />
@@ -373,8 +393,8 @@ const Content = ({setdisplay}) => {
                   </div>
                   {/* <h6>{caption}</h6> */}
                   <input type="text" 
-                  value={packageCard.two}
-                  onChange={(e)=>setpackageCard({...packageCard,two:e.target.value})}  
+                  value={topform.duration}
+                  onChange={(e)=>settopform({...topform,duration:e.target.value})}
                   style={{width:"150px"}}   
                    />
               </div> 
@@ -385,8 +405,8 @@ const Content = ({setdisplay}) => {
                   </div>
                   {/* <h6>{caption}</h6> */}
                   <input type="date" 
-                //   value={packageCard.three}
-                //   onChange={(e)=>setpackageCard({...packageCard,three:e.target.value})}   
+                value={topform.billingDate}
+                  onChange={(e)=>settopform({...topform,billingDate:e.target.value})}  
                 style={{width:"150px"}}  
                    />
 
@@ -398,9 +418,11 @@ const Content = ({setdisplay}) => {
                   </div>
                   {/* <h6>{caption}</h6> */}
                   <input type="text" 
-                  value={packageCard.four}
+                  
                     style={{width:"150px"}}  
-                  onChange={(e)=>setpackageCard({...packageCard,four:e.target.value})}    />
+                  value={topform.billingAmount}
+                  onChange={(e)=>settopform({...topform,billingAmount:e.target.value})}   
+                   />
               </div> 
            </div>
             
@@ -413,7 +435,12 @@ const Content = ({setdisplay}) => {
                     <h5 className='wellbeing-card-title'>High-risk</h5>
                     </div>
                     <div className='input-group' style={{width:"120px"}} >
-                        <input type="number" className='form-control' />
+                        <input type="number" 
+                        className='form-control'
+                        value={topform.highRisk}
+                        onChange={(e)=>settopform({...topform,highRisk:e.target.value})} 
+
+                        />
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
@@ -427,7 +454,11 @@ const Content = ({setdisplay}) => {
                     </div>
                       <div className='input-group' style={{width:"140px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append">
+                        <div 
+                        class="input-group-append"
+                        value={topform.mediumRisk}
+                        onChange={(e)=>settopform({...topform,mediumRisk:e.target.value})} 
+                        >
                             <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
                     </div>
@@ -439,11 +470,16 @@ const Content = ({setdisplay}) => {
                     <h5 className='wellbeing-card-title'>Low-risk</h5>
                     </div>
                       <div className='input-group' style={{width:"140px"}} >
-                        <input type="number" className='form-control' />
-                        <div class="input-group-append">
+                        <input type="number"
+                         className='form-control'
+                          value={topform.lowRisk}
+                        onChange={(e)=>settopform({...topform,lowRisk:e.target.value})} 
+                          />
+                        <div class="input-group-append" onClick={(e)=>handleTopFormSubmit(e)} >
                             <span class="input-group-text" id="basic-addon2">/100</span>
                         </div>
                     </div>
+                    {/* <button onClick={(e)=>handleTopFormSubmit(e)}>Submit</button> */}
                 </div>
                
            </div>

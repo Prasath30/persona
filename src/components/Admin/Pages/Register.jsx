@@ -1,9 +1,13 @@
 import React,{useState} from 'react'
 import "./Register.css"
+import axios from "axios";
 
 const Register = () => {
       const [passwordVisisbility, setpasswordVisisbility] = useState(false)
       const [Company, setCompany] = useState(false)
+      const [regCompany, setregCompany] = useState({
+          companyName:""
+      })
       
     
 
@@ -15,6 +19,14 @@ const Register = () => {
           marginLeft:"20px"
       }
 
+      const handleCompanyRegistration = (e)=>{
+        e.preventDefault();
+        axios.post("http://localhost:5000/company",regCompany)
+        .then((res)=>console.log(res))
+        .catch((err)=> console.log(err))
+      }
+
+
     //  OnSubmit Append @personaunplugged.com to username
             return (
         <div className='admin-register'>
@@ -23,9 +35,14 @@ const Register = () => {
                     <h2>Company Registration</h2>
             <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>
-            <input type="text" className='login-form-text col' name='companyName' />
+            <input type="text" 
+            className='login-form-text col' 
+            name='companyName' 
+            value={regCompany.companyName}  
+            onChange={(e)=> setregCompany(e.target.value)}  
+            />
             </div>
-            <button type='submit' >Submit</button>
+            <button type='submit' onClick={(e)=>handleCompanyRegistration(e)} >Submit</button>
              </form>
               {/* </div> */}
                     <hr />

@@ -3,14 +3,22 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import TimePicker from 'react-time-picker';
 import "./SideBar.css"
+import axios from "axios"
 
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+8));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
+    const [form, setform] = useState({
+     name: "",
+    email: "",
+    date: "",
+    time: "",
+    message: ""
+    })
 
     const [showBtn, setshowBtn] = useState(false)
 
-    console.log(date)
+    // console.log(date)
 
    const [mobview, setmobview] = useState(window.innerWidth)
    
@@ -24,9 +32,15 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
 
 
     const handleClick = (e) =>{
-                console.log(e)
+                // console.log(e)
     }
-
+    const handleFormSubmit = (e) =>{
+      e.preventDefault();
+      axios.post("http://localhost:5000/booking",form)
+      .then((res)=>console.log(res))
+      .catch((err)=>console.log(err))
+      
+    }
     const nextBtn = () =>{
 
         return (
@@ -76,11 +90,23 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
               <div className='row mob-employee-right-side-bar-inputs'>
                 <div className={ mobview > "1140" ? null  : 'form-group col-md-6 col-sm-12' }>
                     <label htmlFor="name">Name</label>
-                  <input type="text"  name='name' required  size={30}/>
+                  <input type="text" 
+                   name='name' 
+                   required  
+                   size={30}
+                   value={form.name}
+                   onChange={(e)=>setform({...form,name:e.target.value})}
+
+                   />
                 </div>
                  <div className={ mobview > "1140" ? null  : 'form-group col-md-6 col-sm-12' }>
                     <label htmlFor="email">Email id</label>
-                  <input type="email"  name='email' required size={30} />
+                  <input type="email"  
+                  name='email' 
+                  required size={30}
+                   value={form.email}
+                   onChange={(e)=>setform({...form,email:e.target.value})}
+                   />
                  </div> 
               </div>
                 <div className={mobview > "1140" ? null : "row"} style={mobview > "1140" ? null : {marginBottom:"30px"}} >
@@ -106,7 +132,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
 
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Proffesional:</label>
-                      <select name="" id="" required>
+                      <select name="" id="" required  >
                         <option value="professional-one" selected>Proffesional 1</option>
                         <option value="professional-two">Proffesional 2</option>
                         <option value="professional-three">Proffesional 2</option>
@@ -116,7 +142,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                  
                   <div  style={{marginTop:"30px"}} >
                     <label htmlFor="time">Time:</label>
-                      <select name="time">
+                      <select name="time"  onChange={(e)=>setform({...form,time:e.target.value})} >
                       {/* <option value="00:00">12.00 AM</option>
                       <option value="01:00">01.00 AM</option>
                       <option value="02:00">02.00 AM</option>
@@ -184,10 +210,13 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div className={mobview > "1140" ? null : "form-group"} style={{marginTop:"30px"}}>
                    
                   <label htmlFor="message">Any Message ?</label>
-                  <textarea name="" id="" cols="30" rows="5" required className={mobview > "1140" ? null : "form-control"} style={mobview < "1140" ? {background:"#f3f3f3"} : {background:"rgba(241, 234, 234, 0.562)"}}></textarea>
+                  <textarea name="" id="" cols="30" rows="5" required className={mobview > "1140" ? null : "form-control"}
+                    value={form.message}
+                   onChange={(e)=>setform({...form,message:e.target.value})}
+                   style={mobview < "1140" ? {background:"#f3f3f3"} : {background:"rgba(241, 234, 234, 0.562)"}}></textarea>
                   </div>
                   <div  className='sidebar-form-btn' >
-                    <button type='submit' >Submit</button> 
+                    <button type='submit'  onClick={(e)=>handleFormSubmit(e)}>Submit</button> 
                   </div>
                      
               </form>

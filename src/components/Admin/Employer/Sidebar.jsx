@@ -69,7 +69,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
                   
                    {upload === true ?  <p>Logo Successfully upload  <span className='admin-upload-file'>{uploadedFileName}</span> </p> :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
                    {upload === true ? <button className='change-label' onClick={()=>handleRemoveFile()} >Remove file</button>: null }
-                  <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple='false' />
+                  <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple={false} />
               </div>
                 
                     
