@@ -165,6 +165,9 @@ div.react-calendar__navigation button {
 .react-calendar__navigation button[disabled] {
   background-color: #e7e4e4;
 }
+.admin-sidebar-logo-upload {
+  margin-bottom: 0;
+}
 
 @media screen and (max-width: 900px) {
   .employer-left-side-bar-logo {

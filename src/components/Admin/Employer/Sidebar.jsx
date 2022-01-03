@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useRef} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
+import { render } from '@testing-library/react';
 // import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
@@ -28,11 +29,11 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
                       month: "2-digit", 
                       day: "2-digit"
                     }).format(v)
-                    console.log(e)
-
+                    // console.log(e)
+                    console.log(vr)
                     
     }
-        const handleFileChallenge = (e)=>{
+    const handleFileChallenge = (e)=>{
         console.log("ndjnjajn")
         setupload(true)
         var  Files = e.target.files
@@ -40,12 +41,18 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
             return true
         }
         setuploadedFileName(Files[0].name)
-       
+        let reader = new FileReader();
+         reader.onloadend = () =>{
+           setimgPreview(reader.result)
+         }
+        reader.readAsDataURL(Files[0])
+
     }
  
       const handleRemoveFile = ()=>{
         ref.current.value = "";
         setupload(false)
+        setimgPreview("")
     }
       const prevBtn = ()=> {
         return (
@@ -64,14 +71,15 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
 
           <section  className={mobview < "1150" ? "mob-employer-right-sidebar" : 'employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
 
-             <div className='admin-sidebar-logo-upload'>
+             <div className='admin-sidebar-logo-upload' style={{background: imgPreview ? `url("${imgPreview}") no-repeat center/cover`: "inherit"}}>
                    {upload === true ? null : <p>Upload Logo here</p>}
                   
-                   {upload === true ?  <p>Logo Successfully upload  <span className='admin-upload-file'>{uploadedFileName}</span> </p> :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
-                   {upload === true ? <button className='change-label' onClick={()=>handleRemoveFile()} >Remove file</button>: null }
+                   {upload === true ?  null :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
+                   
                   <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple={false} />
               </div>
                 
+                {upload === true ? <button className='change-label' onClick={()=>handleRemoveFile()} style={{margin:"auto",marginBottom:"30px"}} >Remove file</button>: null }
                     
 
             <div style={{marginBottom:"20px"}} className='employer-right-sidebar-workshop container'  style={{height:"130px"}}>
@@ -84,6 +92,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
              <div className='employer-right-sidebar-workshop container' style={{height:"130px"}} >
             <div>
               <img  src={'/images/Employer/session.png'} alt="" />
+              <i class="fas fa-users-class"></i>
               <p>Total 1-1 sessions / Q1</p>
             </div>
               <input type="number" style={{width:"90px"}} />

@@ -237,7 +237,8 @@ const Content = ({setdisplay}) => {
      const CarouselImg = ({imgSrc})=>{
          return(
              <div>
-                 
+                 {/* <a class="my-link" href="image01-big.jpg"><img src="image01-small.jpg" alt="image alt"/></a>
+<a class="my-link" data-vbtype="iframe" href="http://example.com/">open iFrame</a> */}
                 <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>setreportImg(imgSrc)} >
                 <img style={{marginLeft:"20px",width:"220px"}} className='img-fluid' src={imgSrc} alt='report'  />
                 </button>

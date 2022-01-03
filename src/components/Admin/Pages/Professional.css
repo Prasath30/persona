@@ -8,7 +8,8 @@
 
 .professional-form {
   width: 500px;
-  margin: auto;
+
+  margin-left: 40%;
   margin-bottom: 10vh;
 }
 .professional-form label {
@@ -25,6 +26,18 @@
   border-radius: 20px;
   width: 100%;
 }
+.professional-form h2 {
+  color: #7700bb;
+  font-family: "Acme", sans-serif;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.professional-form input,
+select,
+textarea {
+  font-size: 20px;
+}
 .tablur-column {
   overflow-x: auto;
   min-width: 370px;
@@ -35,6 +48,13 @@
   font-family: "Acme", sans-serif;
   color: #7900bf;
   margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1150px) {
+  .professional-form {
+    margin: auto;
+    padding-bottom: 10vh;
+  }
 }
 
 @media screen and (max-width: 500px) {

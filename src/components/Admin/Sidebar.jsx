@@ -30,7 +30,7 @@ const Sidebar = ({mobview,left,setleft,user,setuser}) => {
         <>
           <section className='admin-sidebar' style={mobview < 1150 ? {left:left}: null}>
           <div>
-            <label htmlFor="admin">For:</label>
+            <label htmlFor="admin" className='admin-sidebar-label'>For:</label>
             <select name="" onChange={(e)=>handleSelectChnage(e)}>
               <option value="admin" selected>Admin</option>
               <option value="company-one">Company-one</option>

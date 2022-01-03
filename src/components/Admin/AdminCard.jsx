@@ -14,15 +14,13 @@ const AdminCard = ({user}) => {
 
     return (
         <>  
-            <div className='admin-panel-navbar'>
-                <i class="fas fa-user-circle fa-3x" style={{padding:"10px 30px 10px 10px"}}></i>
-            </div>
+            
 
             <section className='admin-card-wrap container'>
 
                  <div className='admin-card' onClick={()=>handleClick("/admin/booking")}>
                     <div>
-                        <img src={`/images/Admin/booking.jpg`} alt="" />
+                        <img src={`/images/Admin/book.png`} alt="" />
                     </div>
                     
                          
@@ -35,7 +33,7 @@ const AdminCard = ({user}) => {
                 
                 <div className='admin-card ' onClick={()=>handleClick("/admin/register")} >
                     <div>
-                        <img src={`/images/Admin/register.png`}  alt="" />
+                        <img src={`/images/Admin/reg.jpg`}  alt="" />
                     </div>
                          <h3 className='admin-card-btn' >Register</h3>
                 </div>

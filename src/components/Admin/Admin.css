@@ -6,6 +6,7 @@
 .admin-card-wrap {
   margin-left: 22%;
   width: 78%;
+  height: 100vh;
   display: grid;
   grid-template-columns: 2fr 2fr;
   padding-top: 5vh;
@@ -39,12 +40,20 @@
   font-family: "Acme", sans-serif;
 }
 
-.admin-panel-navbar {
+.admin-panel-navba {
   width: 100%;
   z-index: 99999;
-  background-color: #7700bb;
+  background-color: #e5d9ec;
   position: absolute;
   top: 0;
+  height: 70px;
+  position: relative;
+}
+.admin-panel-navbar-img {
+  height: 70px;
+  padding-left: 10%;
+  margin-top: -10px;
+  padding-bottom: 10px;
 }
 .admin-panel-navbar i {
   float: right;

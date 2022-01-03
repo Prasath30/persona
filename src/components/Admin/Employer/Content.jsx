@@ -248,7 +248,7 @@ const Content = ({setdisplay}) => {
                       <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                    
@@ -258,7 +258,7 @@ const Content = ({setdisplay}) => {
                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                 </div>
@@ -267,7 +267,7 @@ const Content = ({setdisplay}) => {
                  <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                 </div>
@@ -276,7 +276,7 @@ const Content = ({setdisplay}) => {
                    <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                  </div>
@@ -298,7 +298,7 @@ const Content = ({setdisplay}) => {
                         <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                    
@@ -308,7 +308,7 @@ const Content = ({setdisplay}) => {
                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                 </div>
@@ -317,7 +317,7 @@ const Content = ({setdisplay}) => {
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                 </div>
@@ -326,7 +326,7 @@ const Content = ({setdisplay}) => {
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                  </div>
@@ -442,7 +442,7 @@ const Content = ({setdisplay}) => {
 
                         />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">%</span>
                         </div>
                     </div>
                 </div>
@@ -459,7 +459,7 @@ const Content = ({setdisplay}) => {
                         value={topform.mediumRisk}
                         onChange={(e)=>settopform({...topform,mediumRisk:e.target.value})} 
                         >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">%</span>
                         </div>
                     </div>
                 </div>
@@ -476,7 +476,7 @@ const Content = ({setdisplay}) => {
                         onChange={(e)=>settopform({...topform,lowRisk:e.target.value})} 
                           />
                         <div class="input-group-append" onClick={(e)=>handleTopFormSubmit(e)} >
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">%</span>
                         </div>
                     </div>
                     {/* <button onClick={(e)=>handleTopFormSubmit(e)}>Submit</button> */}
@@ -491,7 +491,7 @@ const Content = ({setdisplay}) => {
                 <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
             </div>
@@ -500,7 +500,7 @@ const Content = ({setdisplay}) => {
                   <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
             </div>
@@ -509,7 +509,7 @@ const Content = ({setdisplay}) => {
              <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
             </div>
@@ -518,7 +518,7 @@ const Content = ({setdisplay}) => {
               <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
               </div>
@@ -558,7 +558,7 @@ const Content = ({setdisplay}) => {
                         <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
                     </div>
@@ -567,7 +567,7 @@ const Content = ({setdisplay}) => {
                         <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -576,7 +576,7 @@ const Content = ({setdisplay}) => {
                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -585,7 +585,7 @@ const Content = ({setdisplay}) => {
                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -594,7 +594,7 @@ const Content = ({setdisplay}) => {
                            <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -603,7 +603,7 @@ const Content = ({setdisplay}) => {
                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -613,7 +613,7 @@ const Content = ({setdisplay}) => {
                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
-                            <span class="input-group-text" id="basic-addon2">/100</span>
+                            <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
                     </div>
@@ -672,12 +672,10 @@ const Content = ({setdisplay}) => {
                  <div className='session-review-stars col ' style={{height:"200px"}}>
                      <h6>"Average Session Rating / Q1"</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px"}} />
+                     <input type="number" style={{width:"90px",marginTop:"15px"}} />
                  </div>
                  <div className='col review-text' style={{marginBottom:"0px"}}>
-                     <textarea name="" id="" cols="20" rows="10"
-                     
-                     ></textarea>
+                     <textarea name="" id="" cols="20" rows="10"></textarea>
                  </div>
              </div>
                 
@@ -726,7 +724,7 @@ const Content = ({setdisplay}) => {
                  <div className='session-review-stars col ' style={{height:"200px"}} >
                      <h6>Average Session Rating / Q1</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px"}} />
+                     <input type="number" style={{width:"90px",marginTop:"15px"}} />
                  </div>
                  <div className='col review-text' style={{marginBottom:"0px"}}>
                      <textarea name="" id="" cols="10" rows="7"
@@ -758,7 +756,7 @@ const Content = ({setdisplay}) => {
                 <div style={{marginTop:"50px"}}>
                 <label htmlFor="campaign-file" className='campaign-file-label' style={{width:"100%"}}>
                     <form action="">
-                <div className='admin-campaign-file-upload'>
+                <div className='admin-campaign-file-upload' style={{height:"255px"}}>
                    {uploaded === true ? null : <p style={{fontSize:"20px",fontWeight:"500"}} >Upload Your Report here</p>}
                   
                    {uploaded === true ?  <p style={{fontSize:"20px",fontWeight:"500"}} >Report Successfully Uploaded <span className='admin-upload-file'>{uploadedFileName}</span></p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-10x"></i></label> }

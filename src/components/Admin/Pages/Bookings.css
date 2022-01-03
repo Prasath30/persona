@@ -2,12 +2,12 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   margin-left: 22%;
-  width: 78%;
+  width: 76%;
   scrollbar-width: none;
 }
 
 .wrap {
-  width: 100vw;
+  width: 98vw;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -20,34 +20,95 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  min-width: 100px;
+  min-width: 150px;
 }
-
+/* .wide {
+  width: 200px;
+} */
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 .booking {
   background: #eff2f9;
   margin-top: 0;
-  padding-bottom: 7vh;
+  /* padding-bottom: 7vh; */
+  min-height: 100vh;
+  height: 100%;
 }
 .booking h1 {
   color: #7700bb;
   font-family: "Acme", sans-serif;
-  text-align: center;
+  /* text-align: center; */
   padding-top: 5vh;
   padding-bottom: 5vh;
+  padding-left: 52%;
 }
-.professional-form h2 {
+.booking-add-booking-btn {
+  float: right;
+  margin-left: -50px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 49px;
+  background: #7700bb;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 25px;
+}
+.admin-booking-form h2 {
   color: #7700bb;
   font-family: "Acme", sans-serif;
   text-align: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+
+.admin-booking-form {
+  width: 76%;
+
+  margin-left: 22%;
+  margin-bottom: 10vh;
+}
+.admin-booking-form label {
+  text-align: left;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
+}
+.admin-booking-form input {
+  border-radius: 20px;
+  width: 100%;
+}
+.admin-booking-form input,
+select,
+textarea {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1150px) {
   table {
     width: 100%;
     margin-left: 0;
+  }
+  .booking h1 {
+    text-align: center;
+    padding-left: 0;
+  }
+  .admin-booking-form {
+    margin: auto;
+    /* padding-bottom: 10vh; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .admin-booking-form {
+    width: 300px;
   }
 }

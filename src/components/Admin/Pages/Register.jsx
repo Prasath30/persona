@@ -46,8 +46,9 @@ const Register = () => {
              </form>
               {/* </div> */}
                     <hr />
-            <h2>Register Form</h2>
-           <form className='register-form d-flex justify-content-center row'>   
+            
+           <form className='register-form d-flex justify-content-center row'>  
+                <h2>Register Form</h2>
             <div  className='row'>
             <label htmlFor="username">Username:</label>
             <input className='login-form-text col' type="text" name='username' />

@@ -33,6 +33,13 @@
   height: 40px;
 }
 
+.admin-sidebar-label {
+  background-color: inherit;
+  color: #7700bb;
+  font-family: "Acme", sans-serif;
+  font-size: 29px;
+}
+
 @media screen and (max-width: 1150px) {
   .admin-sidebar {
     width: 250px;
