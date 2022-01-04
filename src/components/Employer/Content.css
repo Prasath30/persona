@@ -5,6 +5,9 @@
   margin-right: 350px;
   padding: 0px;
 }
+/* body {
+  background-color: #eff2f9;
+} */
 .employer-welcome-head {
   margin-right: 350px;
   background-color: white;
@@ -259,6 +262,15 @@
   color: #7900bf;
   text-align: center;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1150px) {
+  .employer-content {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (max-width: 500px) {

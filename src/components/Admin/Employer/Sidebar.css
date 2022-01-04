@@ -59,9 +59,9 @@
 }
 
 /* right side bar */
-.employer-right-sidebar {
+.admin-employer-right-sidebar {
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 0;
   width: 350px;
   padding: 20px;
@@ -70,11 +70,10 @@
   background: rgba(255, 239, 213, 0.3);
   overflow-y: auto;
 }
-.mob-employer-right-sidebar {
+.admin-mob-employer-right-sidebar {
   position: fixed;
-  top: 60px;
+  top: 70px;
   right: 0;
-  bottom: 0;
   width: 350px;
   padding: 20px;
   display: flex;
@@ -143,17 +142,20 @@
 
 .admin-sidebar-logo-upload {
   border: 0.5px solid rgba(128, 128, 128, 0.452);
-  box-shadow: 4px 4px 4px gray;
-  width: 190px;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.322);
+  width: 182px;
   height: 182px;
   align-self: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 70px;
   border-radius: 50%;
   text-align: center;
   margin: auto;
-  padding: 24px;
-  margin-bottom: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.admin-sidebar-logo-upload:hover {
+  cursor: pointer;
 }
 .admin-sidebar-logo-upload label {
   width: 80px;
@@ -165,8 +167,11 @@ div.react-calendar__navigation button {
 .react-calendar__navigation button[disabled] {
   background-color: #e7e4e4;
 }
-.admin-sidebar-logo-upload {
-  margin-bottom: 0;
+
+@media screen and (max-width: 1150px) {
+  .admin-sidebar-logo-upload {
+    width: 160px;
+  }
 }
 
 @media screen and (max-width: 900px) {

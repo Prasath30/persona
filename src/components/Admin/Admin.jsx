@@ -45,12 +45,11 @@ const Admin = () => {
             //     <img src={`/images/Logo-3.png`} className='img-fluid' alt="" />
             //     <i class="fas fa-user-circle fa-3x" style={{padding:"10px 30px 10px 10px"}}></i>
             // </div>
-              <div style={{height:"70px",marginBottom:"10px",background:"rgba(255, 239, 213, 0.3)"}}>
-                  <div className='mob-navbar' id="navbar" style={{display:"block",height:"80px",position:"fixed",top:"0",left:"0",right:"0",zIndex:"999",width:"100%",paddingBottom:"15px",}} >
-                   <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
-                   <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img' style={mobview < "1150" ? {paddingLeft:"38%"}: {paddingLeft:"50%"}} alt="" />
-                  <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i>
-               
+              <div >
+                  <div className='mob-navbar' id="navbar" className='admin-panel-navba' >
+                   {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
+                   <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
+                  <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
             </div>
               
             </div> 

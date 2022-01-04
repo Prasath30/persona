@@ -1,12 +1,14 @@
-.admin-campaign {
+.admin-campaig {
   margin-left: 22%;
   width: 78%;
-  height: 100vh;
+  height: 100%;
+  min-height: 89vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  padding-top: 5vh;
 }
-.admin-campaign h2 {
+.admin-campaig h2 {
   font-family: Acme;
   font-style: normal;
   font-weight: normal;
@@ -15,6 +17,8 @@
 }
 .admin-campaign-form {
   width: 500px;
+  /* padding-top: vh; */
+  /* margin: auto; */
 }
 .admin-campaign-form div label {
   text-align: left;
@@ -34,12 +38,16 @@
 }
 .admin-campaign-file-upload {
   border: 0.5px solid rgba(128, 128, 128, 0.452);
-  box-shadow: 4px 4px 4px gray;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.24);
   width: 100%;
   text-align: center;
   padding: 24px;
+  height: 210px;
 }
 .admin-campaign-file-upload label:hover {
+  cursor: pointer;
+}
+.admin-campaign-file-upload:hover {
   cursor: pointer;
 }
 .change-label {
@@ -51,4 +59,23 @@
   border-radius: 13px;
   padding: 12px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 1150px) {
+  .admin-campaig {
+    margin: auto;
+  }
+  .admin-campaign-form {
+    margin: auto;
+    /* padding-bottom: 10vh; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .admin-campaign-form {
+    width: 300px;
+  }
+  .admin-campaign-file-upload {
+    width: 300px;
+  }
 }

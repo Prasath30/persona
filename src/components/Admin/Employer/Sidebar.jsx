@@ -69,22 +69,24 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
         <>
          
 
-          <section  className={mobview < "1150" ? "mob-employer-right-sidebar" : 'employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
-
-             <div className='admin-sidebar-logo-upload' style={{background: imgPreview ? `url("${imgPreview}") no-repeat center/cover`: "inherit"}}>
+          <section  className={mobview < "1150" ? "admin-mob-employer-right-sidebar" : 'admin-employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
+            <label htmlFor="logo-file"style={{textAlign:"center"}} className='admin-sidebar-logo-upload' style={{background: imgPreview ? `url("${imgPreview}") no-repeat center/cover`: "inherit",height:"182px"}}>
+              <div>
                    {upload === true ? null : <p>Upload Logo here</p>}
                   
                    {upload === true ?  null :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
                    
                   <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple={false} />
+                   {/* <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" /> */}
               </div>
+            </label>
+             
                 
                 {upload === true ? <button className='change-label' onClick={()=>handleRemoveFile()} style={{margin:"auto",marginBottom:"30px"}} >Remove file</button>: null }
-                    
 
-            <div style={{marginBottom:"20px"}} className='employer-right-sidebar-workshop container'  style={{height:"130px"}}>
-            <div  >
-              <img  src={'/images/Employer/workshop.png'} alt="" />
+            <div style={{marginBottom:"20px",height:"130px",marginTop:"40px"}} className='employer-right-sidebar-workshop container' >
+            <div>
+              <img  src={'/images/Employer/workshop.png'} style={{color:"white"}} alt="" />
               <p>Total workshops / Q1</p>
             </div>
               <input type="number" style={{width:"90px"}} />

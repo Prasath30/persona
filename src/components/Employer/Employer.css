@@ -1,10 +1,11 @@
 .employer {
   position: relative;
   background: rgba(255, 239, 213, 0.3);
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
+
 .employer-wrap {
   background: #eff2f9;
 }

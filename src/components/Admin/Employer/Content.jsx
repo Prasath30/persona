@@ -669,12 +669,12 @@ const Content = ({setdisplay}) => {
                 />
                 </div>
                  <div className='session-review row'>
-                 <div className='session-review-stars col ' style={{height:"200px"}}>
+                 <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}}>
                      <h6>"Average Session Rating / Q1"</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
                      <input type="number" style={{width:"90px",marginTop:"15px"}} />
                  </div>
-                 <div className='col review-text' style={{marginBottom:"0px"}}>
+                 <div className='col-lg-6 col-sm-12 review-text' style={{marginBottom:"0px"}}>
                      <textarea name="" id="" cols="20" rows="10"></textarea>
                  </div>
              </div>
@@ -721,12 +721,12 @@ const Content = ({setdisplay}) => {
                 </div>
 
                 <div className='session-review row'>
-                 <div className='session-review-stars col ' style={{height:"200px"}} >
+                 <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}} >
                      <h6>Average Session Rating / Q1</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
                      <input type="number" style={{width:"90px",marginTop:"15px"}} />
                  </div>
-                 <div className='col review-text' style={{marginBottom:"0px"}}>
+                 <div className='col-lg-6 col-sm-12 review-text' style={{marginBottom:"0px"}}>
                      <textarea name="" id="" cols="10" rows="7"
                     
                     ></textarea>
@@ -749,7 +749,7 @@ const Content = ({setdisplay}) => {
                             <option value="">Half-Yearly</option>
                             <option value="">Annualy</option>
                         </select> */}
-                        <input type="date" />
+                        <input type="date" style={{borderRadius:"15px", backgroundColor: "#fffaf2",padding:"10px"}} />
                     </div>
                 </form>
 

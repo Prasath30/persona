@@ -30,7 +30,7 @@ const Campaign = () => {
         setuploaded(false)
     }
     return (
-        <div className='admin-campaign'>
+        <div className='admin-campaig'>
                 
           <form className='admin-campaign-form'>
           <h2>Campaign Form</h2>
@@ -42,11 +42,11 @@ const Campaign = () => {
                   <label htmlFor="name">Name:</label>
                   <input type="text" name='name' />
               </div>
-              <label htmlFor="campaign-file" style={{width:"500px"}} >
-                   <div className='admin-campaign-file-upload' >
+              <label htmlFor="campaign-file" className='admin-campaign-file-upload' >
+                   <div>
                    {uploaded === true ? null : <p style={{fontSize:"20px",fontWeight:"500"}}>Upload Your File here</p>}
                   
-                   {uploaded === true ?  <p style={{fontSize:"20px",fontWeight:"500"}}>File Successfully Uploaded <span className='admin-upload-file'>{uploadedFileName}</span> </p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-10x"></i></label> }
+                   {uploaded === true ?  <p style={{fontSize:"20px",fontWeight:"500"}}>File Successfully Uploaded <span className='admin-upload-file'>{uploadedFileName}</span> </p> :  <label htmlFor="campaign-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-4x"></i></label> }
                      {uploaded === true ? <button className='change-label' onClick={()=>handleRemoveFile()} >Remove file</button>: null }
                   <input ref={ref} type="file" id='campaign-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple='false' />
               </div>
