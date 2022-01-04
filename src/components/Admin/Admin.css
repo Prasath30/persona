@@ -47,7 +47,7 @@
   /* position: absolute; */
   top: 0;
   height: 70px;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
 }

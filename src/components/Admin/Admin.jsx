@@ -45,11 +45,12 @@ const Admin = () => {
             //     <img src={`/images/Logo-3.png`} className='img-fluid' alt="" />
             //     <i class="fas fa-user-circle fa-3x" style={{padding:"10px 30px 10px 10px"}}></i>
             // </div>
-              <div >
+              <div style={{position:"relative",height:"70px"}} >
                   <div className='mob-navbar' id="navbar" className='admin-panel-navba' >
                    {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
                    <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
                   <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
+                  
             </div>
               
             </div> 
