@@ -331,7 +331,7 @@
     margin-right: 0;
   }
   .employer-reports {
-    margin-top: 250px;
+    /* margin-top: 250px; */
     text-align: center;
   }
   .employer-reports form div label {
@@ -348,13 +348,13 @@
   .employer-session h2 {
     float: none;
     padding-right: 0;
-    padding-top: 250px;
+    /* padding-top: 250px; */
     padding-left: 0;
   }
   .employer-workshop h2 {
     float: none;
     padding-right: 0;
-    padding-top: 250px;
+    /* padding-top: 250px; */
     padding-left: 0;
   }
   .session-card-wrap {
