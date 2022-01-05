@@ -54,7 +54,6 @@
 .admin-panel-navbar-img {
   margin: auto;
   height: 70px;
-  padding-left: 27%;
 }
 .admin-panel-navbar i {
   float: right;
@@ -80,9 +79,6 @@
   .admin-panel-navbar-img {
     padding-left: 40%;
   } */
-  .admin-panel-navbar-img {
-    padding: 0;
-  }
 }
 @media screen and (max-width: 880px) {
   /* .admin-panel-navbar-img {

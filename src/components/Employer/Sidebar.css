@@ -19,7 +19,7 @@
   overflow-y: auto;
   flex-direction: column;
   text-align: center;
-  background: rgb(255, 239, 213);
+  background: rgba(255, 239, 213, 0.3);
   z-index: 99;
   transition: 1s;
 }
@@ -42,17 +42,19 @@
   padding-right: 0px;
   padding-top: 15px;
   float: left;
+  color: gray;
 }
 .btn-ic button {
   width: 200px;
   height: 55px;
-  background-color: #7700bb;
+  background: #eff2f9;
   border-radius: 20px;
-  color: white;
+  color: #7700bb;
   font-size: 25px;
   font-family: "Acme", sans-serif;
   margin-bottom: 30px;
   padding: 10px;
+  border: none;
 }
 .btn-ic button img {
   color: white;
@@ -80,7 +82,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  background: rgb(255, 239, 213);
+  background: rgba(255, 239, 213, 0.3);
   z-index: 99;
   transition: 1s;
   max-height: 100%;
@@ -94,8 +96,8 @@
 }
 .employer-right-sidebar-workshop {
   height: 110px;
-  background-color: #7700bb;
-  color: white;
+  background: #eff2f9;
+  color: #7700bb;
   padding-top: 20px;
   text-align: center;
   font-size: 18px;
@@ -107,7 +109,7 @@
   justify-content: space-around;
 }
 .employer-right-sidebar-workshop div p {
-  font-weight: 400;
+  font-weight: 500;
 }
 .employer-right-sidebar-workshop p {
   font-weight: 700;

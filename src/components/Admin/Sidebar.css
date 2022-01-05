@@ -20,6 +20,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 .admin-sidebar div button {
   margin-bottom: 30px;
   background-color: #7900bf;

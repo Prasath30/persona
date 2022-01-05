@@ -18,8 +18,8 @@ const Content = ({setdisplay}) => {
  
 
     const cardTitle ={
-        one:"No. of Sessions availed / Q1 ",
-        two:"No. of first time consults / Q1 ",
+        one:"Total Sessions Availed",
+        two:"Total First Time Consults",
         three:"No. of employees in therapy / Q1 ",
         four:"Total Hours of wellness Training / Q1 ",
         five:"Total Hours of wellness Training / Q1 "
@@ -94,9 +94,9 @@ const Content = ({setdisplay}) => {
 
     const PackageCard = ({imgSrc , title,caption}) =>{
         return (
-                 <div className='package-card col'>
+                 <div className={mobview < "1360" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
-                      <img src={imgSrc} alt="package" /> 
+                      <img src={imgSrc} className='img-fluid' alt="package" /> 
                       <h6>{title}</h6>
                   </div>
                   <h6>{caption}</h6>
@@ -105,7 +105,7 @@ const Content = ({setdisplay}) => {
     }
      const WellbeingCard = ({imgSrc,title,caption,color}) => {
          return(
-                <div  className={mobview < "1140" ? 'col-sm-6 col-md-6 row well-being' : 'col row well-being' } >
+                <div  className={mobview < "1140" ? 'col-sm-6 col-md-4 row well-being' : 'col-sm row well-being' } >
                     <div className='col'>
                     <img src={imgSrc}  alt='well-being' className='img-fluid' />
                     <h5 className='wellbeing-card-title'>{title}</h5>
@@ -118,7 +118,7 @@ const Content = ({setdisplay}) => {
 
      const Averages = ({title,color}) =>{
          return(
-             <div className='col employer-averages'>
+             <div className='col-lg-3 col-md-6 col-sm-12 employer-averages'>
                    <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
                    {color === "green"? <Chart options={options} type="radialBar" series={series}  width="200px"  /> :
                    <Chart options={{
@@ -145,7 +145,7 @@ const Content = ({setdisplay}) => {
 
           const SessionCard = ({cardTitle,number})=>{
         return(
-            <div className='session-card'>
+            <div className='session-card col-sm'>
                 <h6>{cardTitle}</h6>
                 <p>{number}</p>
             </div>
@@ -153,7 +153,7 @@ const Content = ({setdisplay}) => {
      }
      const SessionChart = ({chartTitle,chartimgSrc})=>{
             return(
-                <div className='col session-chart'>
+                <div className='col-lg-3 col-md-6 col-sm-12 session-chart'>
                     <h6>{chartTitle}</h6>
                     <Chart options={{
                        legend:{
@@ -176,15 +176,10 @@ const Content = ({setdisplay}) => {
 
      const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
          return(
-             <div className='session-review row'>
-                 <div className='session-review-stars col'>
+            <div className='session-review-stars col-sm'>
                      <h6>{reviewTitle}</h6>
                      <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
-                 </div>
-                 <div className='col review-text' style={{marginBottom:"80px"}}>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
-                 </div>
-             </div>
+            </div>
          )
      }
 
@@ -195,7 +190,8 @@ const Content = ({setdisplay}) => {
             <div className='row session-card-wrap M-0'>
                 <SessionCard cardTitle={cardTitle.one}   number={number} />   
                 <SessionCard cardTitle={cardTitle.two}   number={number} />
-                <SessionCard cardTitle={cardTitle.three} number={number} />
+                <SessionBottom reviewTitle={reviewTitle.two} bottomimgSrc={bottomimgSrc} />
+                
             </div>
 
             <div className='row M-0'>
@@ -205,9 +201,9 @@ const Content = ({setdisplay}) => {
                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
             </div>
 
-            <div className='M-0'>
+            {/* <div className='M-0'>
                 <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
-            </div>
+            </div> */}
              </>
         )
         }
@@ -216,6 +212,7 @@ const Content = ({setdisplay}) => {
             <div className='row session-card-wrap'>
                 <SessionCard cardTitle={cardTitle.four}   number={number} />   
                 <SessionCard cardTitle={cardTitle.five}   number={number} />
+                <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
             </div>
 
             <div className='row'>
@@ -225,9 +222,7 @@ const Content = ({setdisplay}) => {
                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
             </div>
 
-            <div>
-                <SessionBottom reviewTitle={reviewTitle.two} bottomimgSrc={bottomimgSrc} />
-            </div>
+
              </>
         )
        
@@ -265,15 +260,15 @@ const Content = ({setdisplay}) => {
            </div>
 
            <div className='employer-package-sec row M-0'>
-            <div className='package-card col'>
+            <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
-                      <img src={`./images/Employer/package/loan.png`} style={{color:"#753188"}} alt="" />
+                      <img src={`./images/Employer/package/loan.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
                       <h6>Wellness package</h6>
                   </div>
                   <h6>Persona Enhance</h6>
             </div> 
-             <div className='package-card col'>
+             <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
                     <i class="far fa-calendar-alt fa-4x" style={{color:"#753188"}}></i>
@@ -305,7 +300,7 @@ const Content = ({setdisplay}) => {
 
            <div id="employer-redflags" className='employer-redflags row M-0'>
                  <h3>Employee Mental Health Red Flags</h3>
-                <Chart type='polarArea' className="text-start" options={{
+                <Chart type='pie' className="text-start" options={{
                     stroke: {
                    colors: ['#fff']
                    },
@@ -317,7 +312,7 @@ const Content = ({setdisplay}) => {
                         position: 'left',
                         horizontalAlign: 'center',  
                     },
-                    
+                    colors:["#2A3067","#4D73CF","#DA9133","#666666","#D2CA26","#7892FF","#76A355"],
                     
                     labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"]
                     
@@ -332,11 +327,7 @@ const Content = ({setdisplay}) => {
                 </div>
            </div>
            <div id="employer-feedback" className='employer-session M-0'>
-            <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
-           <div className='employer-session-img-wrap'>
-            </div>
-                   
-               
+
                     <h2>1-1 Sessions Usage & Feedback</h2>
                 
                 <div>
@@ -353,9 +344,6 @@ const Content = ({setdisplay}) => {
                 
            </div>
         <div id='employer-workshop' className='employer-workshop M-0'>
-         <img className="employer-session-img" src={`./images/Employer/sess-work.png`} alt='sess-work' />
-        <div className='employer-session-img-wrap'>
-                </div>
                 <h2>Workshop Usage & Feedback</h2>
 
                 <div>
@@ -371,7 +359,8 @@ const Content = ({setdisplay}) => {
                 </div>
           
             </div>
-            <div id="employer-reports" className='employer-reports M-0'>
+            <div className='employer-bottom'>
+                <div id="employer-reports" className='employer-reports M-0'>
                 <h2>Employee Mental Well-being Reports</h2>
                 <form className='row'>
                     <div className='col'>
@@ -430,6 +419,8 @@ const Content = ({setdisplay}) => {
                     
                 </Carousel>
             </div>
+            </div>
+            
            </section> 
 
         </>

@@ -1,63 +1,3 @@
-.employer-left-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 239, 213, 0.3);
-}
-
-.mob-employer-left-sidebar {
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  width: 250px;
-  padding: 10px;
-  display: flex;
-  overflow-y: auto;
-  flex-direction: column;
-  text-align: center;
-  background: rgb(255, 239, 213);
-  z-index: 99;
-  transition: 1s;
-}
-.employer-left-side-bar-logo {
-  width: 140px;
-  height: 152px;
-  align-self: center;
-  margin-bottom: 70px;
-}
-.btn-ic button img {
-  width: 39.41px;
-  height: 37px;
-  float: left;
-}
-.btn-ic {
-  display: flex;
-  flex-direction: column;
-}
-.btn-ic button i {
-  padding-right: 0px;
-  padding-top: 15px;
-  float: left;
-}
-.btn-ic button {
-  width: 200px;
-  height: 55px;
-  background-color: #7700bb;
-  border-radius: 20px;
-  color: white;
-  font-size: 25px;
-  font-family: "Acme", sans-serif;
-  margin-bottom: 30px;
-  padding: 10px;
-}
-.btn-ic button img {
-  color: white;
-}
-
 /* right side bar */
 .admin-employer-right-sidebar {
   position: absolute;
@@ -79,7 +19,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  background: rgb(255, 239, 213);
+  background: rgba(255, 239, 213, 0.3);
   z-index: 99;
   transition: 1s;
   max-height: 100%;
@@ -93,8 +33,8 @@
 }
 .employer-right-sidebar-workshop {
   height: 110px;
-  background-color: #7700bb;
-  color: white;
+  background: #eff2f9;
+  color: #7700bb;
   padding-top: 20px;
   text-align: center;
   font-size: 18px;
@@ -106,7 +46,7 @@
   justify-content: space-around;
 }
 .employer-right-sidebar-workshop div p {
-  font-weight: 400;
+  font-weight: 500;
 }
 .employer-right-sidebar-workshop p {
   font-weight: 700;

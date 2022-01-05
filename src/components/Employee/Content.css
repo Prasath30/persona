@@ -23,6 +23,7 @@
 .category-card:hover {
   cursor: pointer;
 }
+
 .category-card div {
   position: absolute;
   bottom: 0.5px;
@@ -32,9 +33,12 @@
   font-weight: 600;
   padding: 10px;
   width: 200px;
+  height: 30%;
 }
 .category-card div i {
-  float: right;
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
 }
 
 .category-img {
@@ -44,6 +48,8 @@
 .categories h2 {
   font-family: "caveat", cursive;
   text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 6vh;
 }
 .employee-newsletter {
   padding-bottom: 50px;
