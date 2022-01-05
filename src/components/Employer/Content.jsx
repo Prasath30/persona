@@ -263,7 +263,7 @@ const Content = ({setdisplay}) => {
             <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
-                      <img src={`./images/Employer/package/loan.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
+                      <img src={`./images/Employer/package/personal.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
                       <h6>Wellness package</h6>
                   </div>
                   <h6>Persona Enhance</h6>
@@ -271,7 +271,7 @@ const Content = ({setdisplay}) => {
              <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
-                    <i class="far fa-calendar-alt fa-4x" style={{color:"#753188"}}></i>
+                     <img src={`./images/Employer/package/duration.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
                       <h6>Duration</h6>
                   </div>
                   <h6>3 Months</h6>
