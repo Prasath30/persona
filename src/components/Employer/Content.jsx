@@ -157,7 +157,7 @@ const Content = ({setdisplay}) => {
                     <h6>{chartTitle}</h6>
                     <Chart options={{
                        legend:{
-                           show:false
+                           show:false,
                        },
                        stroke:{
                            show:false
@@ -172,7 +172,7 @@ const Content = ({setdisplay}) => {
                        dataLabels: {
                             enabled: true,
                             formatter: function (val) {
-                             console.log(val)   
+                             
                             if(val === 60) return `Yes ${val}%`
 
                             return `No ${val}%`
@@ -333,8 +333,15 @@ const Content = ({setdisplay}) => {
                     },
                     legend:{
                         show:true,
+                         showForSingleSeries: true,
+      
                         position: 'left',
-                        horizontalAlign: 'center',  
+                        horizontalAlign: 'left', 
+                        floating:false,
+                        offsetX:10,
+                        onItemHover: {
+                        highlightDataSeries: true
+                        },
                     },
                     colors:["#2A3067","#4D73CF","#DA9133","#666666","#D2CA26","#7892FF","#76A355"],
                     
