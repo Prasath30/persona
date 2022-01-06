@@ -27,12 +27,13 @@
 .package-card {
   background-color: white;
   min-width: 155px;
+  max-width: 170px;
   height: 180px;
   padding-right: 20px;
   padding-top: 10px;
   padding-left: 10px;
   margin-top: 30px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   margin-right: 0px;
   border-radius: 20px;
   text-align: center;
@@ -63,11 +64,12 @@
   padding-left: 0px;
 }
 .employer-package-sec {
-  margin-right: 3px;
   width: 100%;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
 .employe-well-being {
   margin-right: 3px;
@@ -234,11 +236,16 @@
   color: rgb(104, 104, 104);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .session-card p {
-  padding-top: 30%;
+  margin-top: 30%;
   font-size: 24px;
   font-weight: 700;
+}
+.session-card input {
+  margin-top: 30%;
 }
 .session-review {
   height: 170px;
@@ -314,6 +321,7 @@
 .campaign-file-label:hover {
   cursor: pointer;
 }
+
 .admin-upload-file {
   color: #7900bf;
   font-weight: 500;
@@ -359,5 +367,10 @@
   }
   .session-card-wrap {
     margin-top: 50px;
+  }
+  .campaign-file-label {
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }

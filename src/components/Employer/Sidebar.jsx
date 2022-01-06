@@ -57,14 +57,14 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
               <img  src={'./images/Employer/workshop.png'} alt="" />
               <p>Total workshops / Q1</p>
             </div>
-              <p>4</p>
+              <p style={{paddingLeft:"40px"}}>4</p>
             </div>
              <div className='employer-right-sidebar-workshop container'>
             <div>
               <img  src={'./images/Employer/session.png'} alt="" />
               <p>Total 1-1 sessions / Q1</p>
             </div>
-              <p>50</p>
+              <p style={{paddingLeft:"40px"}}>50</p>
             </div>
 
             <div>

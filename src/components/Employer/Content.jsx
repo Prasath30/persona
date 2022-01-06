@@ -20,16 +20,16 @@ const Content = ({setdisplay}) => {
     const cardTitle ={
         one:"Total Sessions Availed",
         two:"Total First Time Consults",
-        three:"No. of employees in therapy / Q1 ",
-        four:"Total Hours of wellness Training / Q1 ",
-        five:"Total Hours of wellness Training / Q1 "
+        three:" Total Hours of Training ",
+        four:"No. of Employees attended",
+        // five:"Total Hours of wellness Training / Q1 "
     }
 
     const chartTitle = {
-        one:"“I found the workshop topic to be relevant”",
-        two:"“I have the tools to tackle tough situations”",
-        three:"“I gained good perspective on mental health”",
-        four:"“The workshop motivates me to work better”"
+        one:"“I felt better after the session” ",
+        two:"“I gained more clarity on my problems” ",
+        three:"“I know strategies to handle my problems”",
+        four:"“I feel motivated to improve my well-being”"
     }
 
     const breakPoints = [
@@ -162,13 +162,13 @@ const Content = ({setdisplay}) => {
                        stroke:{
                            show:false
                        },
-                       colors:["#FFAB7F","#CEADEA"],
+                       colors:["#CEADEA","#FFAB7F"],
                         states:{
                             hover:{
                                 typeof:"none"
                             }
                         },
-                      labels:["No","Yes"]
+                      labels:["Yes","No"]
                    }} type="pie"  series={[60,40]} width="180px"  />
                 </div>
             )
@@ -190,7 +190,7 @@ const Content = ({setdisplay}) => {
             <div className='row session-card-wrap M-0'>
                 <SessionCard cardTitle={cardTitle.one}   number={number} />   
                 <SessionCard cardTitle={cardTitle.two}   number={number} />
-                <SessionBottom reviewTitle={reviewTitle.two} bottomimgSrc={bottomimgSrc} />
+                <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
                 
             </div>
 
@@ -210,16 +210,20 @@ const Content = ({setdisplay}) => {
         return(
                 <>
             <div className='row session-card-wrap'>
-                <SessionCard cardTitle={cardTitle.four}   number={number} />   
-                <SessionCard cardTitle={cardTitle.five}   number={number} />
-                <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
+
+                <SessionCard cardTitle={cardTitle.three}   number={number} />   
+                <SessionCard cardTitle={cardTitle.four}   number={number} />
+                <SessionBottom reviewTitle={reviewTitle.two} bottomimgSrc={bottomimgSrc} />
+
             </div>
 
             <div className='row'>
+
                 <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
                 <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                
             </div>
 
 
@@ -263,7 +267,7 @@ const Content = ({setdisplay}) => {
             <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
-                      <img src={`./images/Employer/package/personal.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
+                      <img src={`./images/Employer/package/duration.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
                       <h6>Wellness package</h6>
                   </div>
                   <h6>Persona Enhance</h6>
@@ -271,7 +275,7 @@ const Content = ({setdisplay}) => {
              <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
                   <div>
                      
-                     <img src={`./images/Employer/package/duration.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
+                     <img src={`./images/Employer/package/personal.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
                       <h6>Duration</h6>
                   </div>
                   <h6>3 Months</h6>

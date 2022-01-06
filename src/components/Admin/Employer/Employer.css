@@ -2,6 +2,8 @@
   position: relative;
   background: rgba(255, 239, 213, 0.3);
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .employer-wrap {
   background: #eff2f9;

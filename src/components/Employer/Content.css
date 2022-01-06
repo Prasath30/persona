@@ -5,6 +5,7 @@
   margin-right: 350px;
   padding: 50px;
   padding-top: 10px;
+  overflow: hidden;
 }
 /* body {
   background-color: #eff2f9;
@@ -66,7 +67,6 @@
   padding-left: 0px;
 }
 .employer-package-sec {
-  margin-right: 3px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -238,6 +238,7 @@
   color: rgb(104, 104, 104);
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 .session-card p {
   padding-top: 30%;
@@ -303,7 +304,7 @@
 
 @media screen and (max-width: 1150px) {
   .employer-content {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
