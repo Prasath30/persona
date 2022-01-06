@@ -167,9 +167,17 @@ const Content = ({setdisplay}) => {
                             hover:{
                                 typeof:"none"
                             }
-                        },
-                      labels:["Yes","No"]
-                   }} type="pie"  series={[60,40]} width="180px"  />
+                        }, 
+                      labels:["Yes","No"],
+                      tooltip:{
+                          y:{
+                              formatter: (labels) =>{
+                                return "yes"
+                              }
+                          }
+                      }
+                   }} type="pie"  series={[60,40]}   width="180px"  />
+                   
                 </div>
             )
      }
@@ -223,7 +231,7 @@ const Content = ({setdisplay}) => {
                 <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
-                
+
             </div>
 
 

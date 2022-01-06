@@ -19,7 +19,7 @@
   overflow-y: auto;
   flex-direction: column;
   text-align: center;
-  background: rgba(255, 239, 213, 0.3);
+  background: rgba(255, 239, 213, 1);
   z-index: 99;
   transition: 1s;
 }
@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  background: rgba(255, 239, 213, 0.3);
+  background: rgba(255, 239, 213, 1);
   z-index: 99;
   transition: 1s;
   max-height: 100%;
