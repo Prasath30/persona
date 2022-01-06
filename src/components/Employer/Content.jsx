@@ -169,13 +169,6 @@ const Content = ({setdisplay}) => {
                             }
                         }, 
                       labels:["Yes","No"],
-                      tooltip:{
-                          y:{
-                              formatter: (labels) =>{
-                                return "yes"
-                              }
-                          }
-                      }
                    }} type="pie"  series={[60,40]}   width="180px"  />
                    
                 </div>
