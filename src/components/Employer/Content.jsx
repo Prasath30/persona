@@ -172,12 +172,22 @@ const Content = ({setdisplay}) => {
                        dataLabels: {
                             enabled: true,
                             formatter: function (val) {
-                                
-                            if(val === 60) return "Yes"
+                             console.log(val)   
+                            if(val === 60) return `Yes ${val}%`
 
-                            return "No"
+                            return `No ${val}%`
                         },
+                        style:{
+                            colors:["#000000"],
+                        fontWeight:400,
+                        fontFamily:"sans-serif",   
+                        },
+                         dropShadow: {
+                        enabled: false,
+                            
+                            }
                        }
+                       
                    }} type="pie"  series={[60,40]}   width="180px"  />
                    
                 </div>
