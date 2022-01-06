@@ -169,6 +169,15 @@ const Content = ({setdisplay}) => {
                             }
                         }, 
                       labels:["Yes","No"],
+                       dataLabels: {
+                            enabled: true,
+                            formatter: function (val) {
+                                
+                            if(val === 60) return "Yes"
+
+                            return "No"
+                        },
+                       }
                    }} type="pie"  series={[60,40]}   width="180px"  />
                    
                 </div>
