@@ -48,6 +48,9 @@
 .employer-right-sidebar-workshop div p {
   font-weight: 500;
 }
+.employer-right-sidebar-workshop input {
+  margin-left: 40px;
+}
 .employer-right-sidebar-workshop p {
   font-weight: 700;
 }
