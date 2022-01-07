@@ -111,7 +111,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
 
     const PackageCard = ({imgSrc , title,caption}) =>{
         return (
-                 <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+                 <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
                   <div className='row'>
                       <img className='col' src={imgSrc} className='img-fluid' alt="package" /> 
                       <h6 className='col'>{title}</h6>
@@ -301,7 +301,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
            </div>
 
            <div className='employer-package-sec row M-0'>
-            <div  className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+            <div  className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
                   <div className='row'>
                      
                       <img className='col' src={`./images/Employer/package/duration.png`} className='img-fluid' 
@@ -313,7 +313,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
                   <h6>Persona Enhance</h6>
             </div> 
             {/* className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}> */}
-             <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+             <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '}   style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null}>
                   <div className='row'>
                      
                      <img className='col' src={`./images/Employer/package/personal.png`} className='img-fluid'
@@ -445,25 +445,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
             </div>
             
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <img src={reportImg} alt="" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
-      </div>
-    </div>
-  </div>
-</div>
+
             <div id='employer-campaign' style={{marginTop:"150px"}} className='employer-campaign M-0'>
                         <h1>Employee Mental Well-being Campaigns</h1>
                  <Carousel breakPoints={breakPointNewsLetter}>
@@ -477,6 +459,26 @@ const Content = ({leftdisplay,rightdisplay}) => {
             </div>
             
            </section> 
+
+    <div style={{width:"100vw",margin:"0",padding:"0",overflowX:"auto"}} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div style={{width:"100vw",position:"absolute",left:"0"}} class="modal-dialog modal-dialog-centered" role="document">
+    <div style={{width:"100vw"}} class="modal-content">
+      <div style={{width:"100vw"}} class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+         <button type="button"  class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div style={{width:"100vw"}} class="modal-body">
+       <img style={{maxWidth:"100%",width:"100%"}} src={reportImg} alt="" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
+      </div>
+    </div>
+  </div>
+</div>
 
         </>
     )
