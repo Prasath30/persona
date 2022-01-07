@@ -31,13 +31,26 @@ const Content = ({setdisplay}) => {
         three:"“I know strategies to handle my problems”",
         four:"“I feel motivated to improve my well-being”"
     }
+    const chartTitleTwo = {
+        one:"“I found the workshop topic to be relevant”",
+        two:"“I have the tools to tackle tough situations”",
+        three:"“I gained good perspective on mental health”",
+        four:"“The workshop motivates me to work better”",
+    }
 
-    const breakPoints = [
+    const breakPointsCarousel = [
          {width:1, 
         itemsToShow:1},
-        {width:550, itemsToShow:1},
+        {width:400, itemsToShow:1},
+        {width:500, itemsToShow:2},
+         {width:600, itemsToShow:3}, 
+    ]
+    const breakPointNewsLetter = [
+        {width:1, 
+        itemsToShow:1},
+        {width:450, itemsToShow:1},
         {width:600, itemsToShow:2},
-         {width:768, itemsToShow:3}, 
+         {width:705, itemsToShow:3}, 
     ]
 
     const reviewTitle ={
@@ -105,7 +118,7 @@ const Content = ({setdisplay}) => {
     }
      const WellbeingCard = ({imgSrc,title,caption,color}) => {
          return(
-                <div  className={mobview < "1140" ? 'col-sm-6 col-md-4 row well-being' : 'col-sm row well-being' } >
+                <div  className={mobview < "1140" ? 'col-sm col-lg-3 row well-being' : 'col-sm row well-being' } >
                     <div className='col'>
                     <img src={imgSrc}  alt='well-being' className='img-fluid' />
                     <h5 className='wellbeing-card-title'>{title}</h5>
@@ -118,7 +131,7 @@ const Content = ({setdisplay}) => {
 
      const Averages = ({title,color}) =>{
          return(
-             <div className='col-lg-3 col-md-6 col-sm-12 employer-averages'>
+             <div className='col-sm-3 employer-averages'>
                    <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
                    {color === "green"? <Chart options={options} type="radialBar" series={series}  width="200px"  /> :
                    <Chart options={{
@@ -153,7 +166,7 @@ const Content = ({setdisplay}) => {
      }
      const SessionChart = ({chartTitle,chartimgSrc})=>{
             return(
-                <div className='col-lg-3 col-md-6 col-sm-12 session-chart'>
+                <div className='col-sm-3 session-chart'>
                     <h6>{chartTitle}</h6>
                     <Chart options={{
                        legend:{
@@ -239,10 +252,10 @@ const Content = ({setdisplay}) => {
 
             <div className='row'>
 
-                <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
-                <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
-                <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
-                <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                <SessionChart chartTitle={chartTitleTwo.one}   chartimgSrc={chartimgSrc} />
+                <SessionChart chartTitle={chartTitleTwo.two}   chartimgSrc={chartimgSrc}  />
+                <SessionChart chartTitle={chartTitleTwo.three} chartimgSrc={chartimgSrc}  />
+                <SessionChart chartTitle={chartTitleTwo.four}  chartimgSrc={chartimgSrc} />
 
             </div>
 
@@ -272,12 +285,12 @@ const Content = ({setdisplay}) => {
             
            <section className='employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row M-0' style={mobview < "1150" ? {margin:"0"} : null} >
-                <img src={`./images/Employer/welcome-head.png`} className='img-fluid col-lg-5'  alt='welcome head' />
-                <div className='col'>
+                <img src={`./images/Employer/welcome-head.png`} className='col-sm welcome-head-img' alt='welcome head' />
+                <div className='col-sm col-lg-6' style={mobview < "577" ? {textAlign:"center"}: {textAlign:"left"}}>
                     <h6>
                        Hi! Welcome back to your 
                     </h6>
-                    <h2>
+                    <h2  >
                         Mental Well-being Suite
                     </h2>
                 </div>
@@ -308,7 +321,7 @@ const Content = ({setdisplay}) => {
             
             <div id="employer-metrics" className='employer-wellbeing M-0'>
            <div className='employe-well-being row M-0'>
-
+                    <h1>Employee Mental Well-being Metrics</h1>
                 <WellbeingCard color="#F30909" imgSrc={`./images/Employer/high-risk.png`} title="High-risk" caption="x% of Employees" />
                 <WellbeingCard color="#FCD423" imgSrc={`./images/Employer/md-risk.png`} title="Medium-risk" caption="x% of Employees" />
                 <WellbeingCard color="#53BB2F" imgSrc={`./images/Employer/low-risk.png`} title="Low-risk" caption="x% of Employees" />
@@ -323,7 +336,7 @@ const Content = ({setdisplay}) => {
            </div>
 
            <div id="employer-redflags" className='employer-redflags row M-0'>
-                 <h3>Employee Mental Health Red Flags</h3>
+                 <h1>Employee Mental Health Red Flags</h1>
                 <Chart type='pie' className="text-start" options={{
                     stroke: {
                    colors: ['#fff']
@@ -359,7 +372,7 @@ const Content = ({setdisplay}) => {
            </div>
            <div id="employer-feedback" className='employer-session M-0'>
 
-                    <h2>1-1 Sessions Usage & Feedback</h2>
+                    <h1>1-1 Sessions Usage & Feedback</h1>
                 
                 <div>
                     <Session 
@@ -375,7 +388,7 @@ const Content = ({setdisplay}) => {
                 
            </div>
         <div id='employer-workshop' className='employer-workshop M-0'>
-                <h2>Workshop Usage & Feedback</h2>
+                <h1>Workshop Usage & Feedback</h1>
 
                 <div>
                       <Session 
@@ -392,7 +405,7 @@ const Content = ({setdisplay}) => {
             </div>
             <div className='employer-bottom'>
                 <div id="employer-reports" className='employer-reports M-0'>
-                <h2>Employee Mental Well-being Reports</h2>
+                <h1>Employee Mental Well-being Reports</h1>
                 <form className='row'>
                     <div className='col'>
                         <label htmlFor="type" style={{paddingRight:"15px"}}>Report Type:</label>
@@ -411,7 +424,7 @@ const Content = ({setdisplay}) => {
                     </div>
                 </form>
                 <div style={{marginTop:"50px"}}>
-                     <Carousel breakPoints={breakPoints}>
+                     <Carousel breakPoints={breakPointsCarousel}>
                         
                         <CarouselImg imgSrc={`./images/Employer/employee-report.png`} /> 
                          <CarouselImg imgSrc={`./images/Employer/employee-report.png`} /> 
@@ -441,8 +454,8 @@ const Content = ({setdisplay}) => {
   </div>
 </div>
             <div id='employer-campaign' style={{marginTop:"150px"}} className='employer-campaign M-0'>
-                        <h2>Employee Mental Well-being Campaigns</h2>
-                 <Carousel breakPoints={breakPoints}>
+                        <h1>Employee Mental Well-being Campaigns</h1>
+                 <Carousel breakPoints={breakPointNewsLetter}>
                     
                           <Cardb date="Jan 2022" title="Why Mental illness" />
                         <Cardb date="Feb 2022" title="Manage Your Stress" />

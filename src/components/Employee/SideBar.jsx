@@ -143,20 +143,6 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <div  style={{marginTop:"30px"}} >
                     <label htmlFor="time">Time:</label>
                       <select name="time"  onChange={(e)=>setform({...form,time:e.target.value})} >
-                      {/* <option value="00:00">12.00 AM</option>
-                      <option value="01:00">01.00 AM</option>
-                      <option value="02:00">02.00 AM</option>
-                      <option value="03:00">03.00 AM</option>
-                      
-                      <option value="04:00">04.00 AM</option>
-                      
-                      <option value="05:00">05.00 AM</option>
-                      
-                      <option value="06:00">06.00 AM</option>
-                      
-                      <option value="07:00">07.00 AM</option>
-                     
-                      <option value="08:00">08.00 AM</option> */}
                       
                       <option value="09:00" selected>09.00 AM</option>
                       

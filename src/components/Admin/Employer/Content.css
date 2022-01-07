@@ -13,6 +13,9 @@
   margin-left: 0px;
   width: 100%;
   min-height: 200px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
 }
 .employer-welcome-head div {
   margin-top: 50px;
@@ -321,6 +324,11 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 1150px) {
+  .employer-welcome-head {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 500px) {
   .employer-session {
     margin-bottom: 50px;

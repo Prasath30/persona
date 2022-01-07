@@ -7,13 +7,12 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
 
-     const breakPoints = [
+       const breakPointNewsLetter = [
         {width:1, 
         itemsToShow:1},
-        {width:550, itemsToShow:1},
-        {width:600, itemsToShow:2},
-         {width:768, itemsToShow:3}, 
-
+        {width:350, itemsToShow:1},
+        {width:450, itemsToShow:2},
+         {width:605, itemsToShow:3}, 
     ]
 
     
@@ -81,7 +80,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         </div>
           <div className='wellness-campaign' >
                 <h2>Wellness Campaigns</h2>
-                <Carousel breakPoints={breakPoints}>
+                <Carousel breakPoints={ breakPointNewsLetter}>
                     
                           <Cardb date="Jan 2022" title="Why Mental illness" />
                         <Cardb date="Feb 2022" title="Manage Your Stress" />

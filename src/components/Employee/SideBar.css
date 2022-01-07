@@ -16,7 +16,7 @@
   width: 140px;
   height: 152px;
   align-self: center;
-  margin-bottom: 190px;
+  margin-bottom: 80px;
 }
 .employee-left-side-bar div h6 {
   color: #7700bb;
@@ -53,6 +53,7 @@
 }
 .employee-right-side-bar-logo {
   align-self: center;
+  margin-bottom: 70px;
 }
 .employee-right-side-bar form {
   margin-bottom: 10vh;
@@ -236,4 +237,10 @@ input {
 }
 
 @media screen and (max-width: 1140px) {
+}
+
+@media screen and (max-width: 500px) {
+  .mob-employee-right-side-bar form {
+    text-align: center;
+  }
 }

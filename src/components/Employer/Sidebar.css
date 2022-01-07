@@ -37,6 +37,7 @@
 .btn-ic {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 .btn-ic button i {
   padding-right: 0px;
@@ -92,7 +93,7 @@
   width: 140px;
   height: 152px;
   align-self: center;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 }
 .employer-right-sidebar-workshop {
   height: 110px;

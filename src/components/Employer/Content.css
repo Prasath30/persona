@@ -3,7 +3,7 @@
   position: relative;
   margin-left: 250px;
   margin-right: 350px;
-  padding: 50px;
+  padding: 20px;
   padding-top: 10px;
   overflow: hidden;
 }
@@ -17,6 +17,14 @@
   margin-left: 0px;
   width: 100%;
   min-height: 200px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.welcome-head-img {
+  min-width: 200px;
+  max-width: 300px;
+  max-height: 220px;
 }
 .employer-welcome-head div {
   margin-top: 50px;
@@ -79,6 +87,15 @@
   justify-content: center;
   justify-content: space-between;
 }
+.employe-well-being h1 {
+  font-family: Acme;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: #7900bf;
+}
 .well-being {
   text-align: center;
   display: flex;
@@ -132,11 +149,15 @@
   justify-content: center;
   align-items: center;
 }
-.employer-redflags h3 {
+.employer-redflags h1 {
   font-family: "Acme", sans-serif;
   color: #7900bf;
   text-align: center;
   margin-bottom: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }
 .employer-session {
   position: relative;
@@ -157,13 +178,17 @@
   padding: 20px;
 }
 
-.employer-session h2 {
+.employer-session h1 {
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
   padding-top: 3vh;
   padding-right: 30px;
   padding-left: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }
 
 .employer-session-img {
@@ -190,12 +215,16 @@
   margin-top: 100px;
   padding-bottom: 80px;
 }
-.employer-workshop h2 {
+.employer-workshop h1 {
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
   /* padding-top: 130px; */
   padding-left: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }
 .employer-workshop-img {
   position: absolute;
@@ -291,17 +320,25 @@
   background-color: #fffaf2;
   margin-bottom: 30px;
 }
-.employer-reports h2 {
+.employer-reports h1 {
   text-align: center;
   font-family: "Acme", sans-serif;
   color: #7900bf;
   margin-bottom: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }
-.employer-campaign h2 {
+.employer-campaign h1 {
   font-family: "Acme", sans-serif;
   color: #7900bf;
   text-align: center;
   margin-bottom: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -318,9 +355,21 @@
   }
 }
 
+@media screen and (max-width: 1150px) {
+  .employer-welcome-head {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .employe-well-being {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .employer-welcome-head {
+    text-align: center;
   }
 }
 
@@ -353,12 +402,12 @@
   .redglag-chart {
     margin-bottom: 50px;
   }
-  .employer-session h2 {
+  .employer-session h1 {
     float: none;
     padding-right: 0;
     padding-left: 0;
   }
-  .employer-workshop h2 {
+  .employer-workshop h1 {
     float: none;
     padding-right: 0;
     padding-left: 0;

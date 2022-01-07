@@ -99,7 +99,12 @@ const Content = ({setdisplay}) => {
         three:"“I know strategies to handle my problems”",
         four:"“I feel motivated to improve my well-being”"
     }
-
+const chartTitleTwo = {
+        one:"“I found the workshop topic to be relevant”",
+        two:"“I have the tools to tackle tough situations”",
+        three:"“I gained good perspective on mental health”",
+        four:"“The workshop motivates me to work better”",
+    }
     
 
     const breakPoints = [
@@ -298,7 +303,7 @@ const Content = ({setdisplay}) => {
 
             <div className='row'>
                  <div className='col-lg-3 col-md-6 col-sm-12 session-chart'>
-                    <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
+                    <SessionChart chartTitle={chartTitleTwo.one}   chartimgSrc={chartimgSrc} />
                         <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
@@ -308,7 +313,7 @@ const Content = ({setdisplay}) => {
                    
                 </div>
                 <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
-                     <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
+                     <SessionChart chartTitle={chartTitleTwo.two}   chartimgSrc={chartimgSrc}  />
                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
@@ -317,7 +322,7 @@ const Content = ({setdisplay}) => {
                         </div>
                 </div>
                 <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' > 
-                <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
+                <SessionChart chartTitle={chartTitleTwo.three} chartimgSrc={chartimgSrc}  />
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
@@ -326,7 +331,7 @@ const Content = ({setdisplay}) => {
                         </div>
                 </div>
                  <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
-                 <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
+                 <SessionChart chartTitle={chartTitleTwo.four}  chartimgSrc={chartimgSrc} />
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" >
