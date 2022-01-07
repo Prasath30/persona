@@ -44,7 +44,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
             width:"231px", 
             position: "relative",
             textAlign: "center",
-            background: "#eaebef",
+            background:"#fdf7ef",
             borderRadius:"18px",
             padding: "0"
 
@@ -92,6 +92,10 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
             
            
         </div>
+        </div>
+
+        <div className='div'>
+            Hello World
         </div>
       
         </>

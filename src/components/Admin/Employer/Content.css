@@ -80,6 +80,7 @@
   display: flex;
   justify-content: center;
   justify-content: space-between;
+  margin-top: 50px;
 }
 .well-being {
   text-align: center;
@@ -104,7 +105,7 @@
 }
 .employer-wellbeing {
   background-image: url("./images/employee-well-being.png");
-  margin-top: 40px;
+  margin-top: 100px;
 }
 .employer-wellbeing div {
   margin-bottom: 20px;

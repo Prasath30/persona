@@ -4,7 +4,7 @@ import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
 
 
-const Content = ({setdisplay}) => {
+const Content = ({leftdisplay,rightdisplay}) => {
 
          const [mobview, setmobview] = useState(window.innerWidth)
          const [reportImg, setreportImg] = useState('')
@@ -82,11 +82,11 @@ const Content = ({setdisplay}) => {
   },
     
   };
-      const CardbStyle = {
+        const CardbStyle = {
             width:"231px", 
             position: "relative",
             textAlign: "center",
-            background: "#eaebef",
+            background:"#fdf7ef",
             borderRadius:"18px",
             padding: "0"
 
@@ -104,13 +104,17 @@ const Content = ({setdisplay}) => {
             </div>
         )
     }
+    // className={mobview < "1360" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}
+
+
+
 
     const PackageCard = ({imgSrc , title,caption}) =>{
         return (
-                 <div className={mobview < "1360" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
-                  <div>
-                      <img src={imgSrc} className='img-fluid' alt="package" /> 
-                      <h6>{title}</h6>
+                 <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+                  <div className='row'>
+                      <img className='col' src={imgSrc} className='img-fluid' alt="package" /> 
+                      <h6 className='col'>{title}</h6>
                   </div>
                   <h6>{caption}</h6>
               </div> 
@@ -283,7 +287,7 @@ const Content = ({setdisplay}) => {
     return (
         <> 
             
-           <section className='employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
+           <section className={leftdisplay == "0" || rightdisplay ==0 ? "blur" : 'employer-content'} style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row M-0' style={mobview < "1150" ? {margin:"0"} : null} >
                 <img src={`./images/Employer/welcome-head.png`} className='col-sm welcome-head-img' alt='welcome head' />
                 <div className='col-sm col-lg-6' style={mobview < "577" ? {textAlign:"center"}: {textAlign:"left"}}>
@@ -297,19 +301,26 @@ const Content = ({setdisplay}) => {
            </div>
 
            <div className='employer-package-sec row M-0'>
-            <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
-                  <div>
+            <div  className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+                  <div className='row'>
                      
-                      <img src={`./images/Employer/package/duration.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
-                      <h6>Wellness package</h6>
+                      <img className='col' src={`./images/Employer/package/duration.png`} className='img-fluid' 
+                      style={{color:"#753188"}} 
+                      
+                      alt="" />
+                      <h6 className='col' >Wellness package</h6>
                   </div>
                   <h6>Persona Enhance</h6>
             </div> 
-             <div className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}>
-                  <div>
+            {/* className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}> */}
+             <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-2 package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
+                  <div className='row'>
                      
-                     <img src={`./images/Employer/package/personal.png`} className='img-fluid' style={{color:"#753188"}} alt="" />
-                      <h6>Duration</h6>
+                     <img className='col' src={`./images/Employer/package/personal.png`} className='img-fluid'
+                      style={{color:"#753188"}} 
+                     
+                      alt="" />
+                      <h6 className='col' >Duration</h6>
                   </div>
                   <h6>3 Months</h6>
             </div> 

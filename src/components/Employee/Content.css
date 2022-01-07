@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .category-card:hover {
@@ -52,7 +53,7 @@
   padding-bottom: 6vh;
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 45px;
   line-height: 76px;
 
   color: #000000;
@@ -68,6 +69,8 @@
 .employee-newsletter div {
   width: 231px;
   text-align: center;
+  background: #fdf7ef;
+  border-radius: 0 0px 20px 20px;
 }
 .employee-newsletter div button {
   background-color: inherit;

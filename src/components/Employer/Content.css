@@ -10,6 +10,10 @@
 /* body {
   background-color: #eff2f9;
 } */
+.blur {
+  filter: blur(10px);
+  transform: 2s;
+}
 .employer-welcome-head {
   margin-right: 350px;
   background-color: white;
@@ -86,6 +90,8 @@
   display: flex;
   justify-content: center;
   justify-content: space-between;
+  /* margin-top: 50px; */
+  padding-bottom: 60px;
 }
 .employe-well-being h1 {
   font-family: Acme;
@@ -94,6 +100,8 @@
   font-size: 36px;
   line-height: 46px;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
   color: #7900bf;
 }
 .well-being {
@@ -158,6 +166,8 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 46px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 .employer-session {
   position: relative;

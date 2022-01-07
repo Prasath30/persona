@@ -63,7 +63,7 @@ const Employer = () => {
                 
             </div>
          <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} openLeftSidebar={openLeftSidebar} />
-         <Content />   
+         <Content  leftdisplay={leftdisplay} rightdisplay={rightdisplay}  />   
          </div>
          </div>
         </>
