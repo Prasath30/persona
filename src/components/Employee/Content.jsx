@@ -94,9 +94,6 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
         </div>
         </div>
 
-        <div className='div'>
-            Hello World
-        </div>
       
         </>
     )

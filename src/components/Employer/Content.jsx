@@ -464,7 +464,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
   <div style={{width:"100vw",position:"absolute",left:"0"}} class="modal-dialog modal-dialog-centered" role="document">
     <div style={{width:"100vw"}} class="modal-content">
       <div style={{width:"100vw"}} class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Report</h5>
          <button type="button"  class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

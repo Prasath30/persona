@@ -22,6 +22,7 @@
   background: rgba(255, 239, 213, 1);
   z-index: 99;
   transition: 1s;
+  max-height: 100%;
 }
 .employer-left-side-bar-logo {
   width: 140px;

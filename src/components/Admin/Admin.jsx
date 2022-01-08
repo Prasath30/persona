@@ -37,7 +37,7 @@ const Admin = () => {
     }
     
     const Navbar = () =>{
-        return(
+        return(<></>)
             // <div className='admin-panel-navbar' style={mobview < "1150" ? {height:"70px",marginBottom:"10px",background:"rgba(255, 239, 213, 0.3)"} : {display:'none'}} >
             //        <div className='mob-navbar' id="navbar" style={mobview < "1150" ?{display:"block",position:"fixed",top:"0",left:"0",right:"0",zIndex:"999",width:"100%",paddingBottom:"15px",} : {display:"none"}} >
             //     <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
@@ -45,16 +45,16 @@ const Admin = () => {
             //     <img src={`/images/Logo-3.png`} className='img-fluid' alt="" />
             //     <i class="fas fa-user-circle fa-3x" style={{padding:"10px 30px 10px 10px"}}></i>
             // </div>
-              <div style={{position:"relative",height:"70px"}} >
-                  <div className='mob-navbar' id="navbar" className='admin-panel-navba' >
-                   {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
-                   <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
-                  <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
+            //   <div style={{position:"relative",height:"70px"}} >
+            //       <div className='mob-navbar' id="navbar" className='admin-panel-navba' >
+            //        {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
+            //        <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
+            //       <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
                   
-            </div>
+            // </div>
               
-            </div> 
-        )
+            // </div> 
+        
     }
 
     console.log(user)
