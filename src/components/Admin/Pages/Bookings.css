@@ -92,6 +92,14 @@ textarea {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.admin-users-title {
+  color: #7700bb;
+  font-family: "Acme", sans-serif;
+  /* text-align: center; */
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  text-align: center;
+}
 @media screen and (max-width: 1150px) {
   table {
     width: 100%;

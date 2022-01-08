@@ -29,7 +29,9 @@ const Users = () => {
 
 
 
-    return (
+    return (<>
+
+        <h1 className='admin-users-title'>Users </h1>
       <div className='wrap'>
            <table {...getTableProps()}  >
                <thead >
@@ -68,6 +70,7 @@ const Users = () => {
                </tbody>
            </table> 
          </div>
+         </>
     )
 }
 
