@@ -2,6 +2,7 @@
   height: 100%;
   position: relative;
   background: #eff2f9;
+  overflow: hidden;
 }
 .admin-card-wrap {
   margin-left: 22%;

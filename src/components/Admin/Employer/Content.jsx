@@ -252,7 +252,7 @@ const chartTitleTwo = {
             </div> */}
 
             <div className='row M-0'>
-                <div className='col-lg-3 col-md-6 col-sm-12 session-chart'>
+                <div className='col-sm-3 session-chart'>
                     <SessionChart chartTitle={chartTitle.one}   chartimgSrc={chartimgSrc} />
                       <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -262,7 +262,7 @@ const chartTitleTwo = {
                         </div>
                    
                 </div>
-                <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
+                <div  className='col-sm-3 session-chart' >
                      <SessionChart chartTitle={chartTitle.two}   chartimgSrc={chartimgSrc}  />
                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -271,7 +271,7 @@ const chartTitleTwo = {
                         </div>
                         </div>
                 </div>
-                <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' > 
+                <div  className='col-sm-3 session-chart'> 
                 <SessionChart chartTitle={chartTitle.three} chartimgSrc={chartimgSrc}  />
                  <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -280,7 +280,7 @@ const chartTitleTwo = {
                         </div>
                         </div>
                 </div>
-                 <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
+                 <div  className='col-sm-3 session-chart' >
                  <SessionChart chartTitle={chartTitle.four}  chartimgSrc={chartimgSrc} />
                    <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -302,7 +302,7 @@ const chartTitleTwo = {
 
 
             <div className='row'>
-                 <div className='col-lg-3 col-md-6 col-sm-12 session-chart'>
+                 <div className='col-sm-3 session-chart' >
                     <SessionChart chartTitle={chartTitleTwo.one}   chartimgSrc={chartimgSrc} />
                         <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -312,7 +312,7 @@ const chartTitleTwo = {
                         </div>
                    
                 </div>
-                <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
+                <div className='col-sm-3 session-chart'>
                      <SessionChart chartTitle={chartTitleTwo.two}   chartimgSrc={chartimgSrc}  />
                        <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -321,7 +321,7 @@ const chartTitleTwo = {
                         </div>
                         </div>
                 </div>
-                <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' > 
+                <div  className='col-sm-3 session-chart' > 
                 <SessionChart chartTitle={chartTitleTwo.three} chartimgSrc={chartimgSrc}  />
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -330,7 +330,7 @@ const chartTitleTwo = {
                         </div>
                         </div>
                 </div>
-                 <div  className='col-lg-3 col-md-6 col-sm-12 session-chart' >
+                 <div  className='col-sm-3 session-chart' >
                  <SessionChart chartTitle={chartTitleTwo.four}  chartimgSrc={chartimgSrc} />
                   <div className='input-group'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
@@ -366,8 +366,8 @@ const chartTitleTwo = {
             
            <section className='admin-employer-content' style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row M-0' style={mobview < "1150" ? {margin:"0"} : null} >
-                <img src={`/images/Employer/welcome-head.png`} className='img-fluid col-lg-5'  alt='welcome head' />
-                <div className='col'>
+                <img src={`/images/Employer/welcome-head.png`} className='col-sm welcome-head-img'   alt='welcome head' />
+                <div className='col-sm col-lg-6' style={mobview < "577" ? {textAlign:"center"}: {textAlign:"left"}}>
                     <h6>
                        Hi! Welcome back to your 
                     </h6>

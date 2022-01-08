@@ -1,0 +1,26 @@
+export const data = [
+    {
+        id:1,
+        name:"Karthi",
+        email:"test@gmail.com",
+        companyName:"Tcs"
+    },
+    {
+        id:2,
+        name:"Karthi",
+        email:"test@gmail.com",
+         companyName:"CTS"
+    },
+    {
+        id:3,
+        name:"Karthi",
+        email:"test@gmail.com",
+        companyName:"Infosys"
+    },
+    {
+        id:4,
+        name:"Karthi",
+        email:"test@gmail.com",
+        companyName:"Infosys"
+    },
+]

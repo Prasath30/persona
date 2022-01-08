@@ -43,7 +43,7 @@ const Sidebar = ({mobview,left,setleft,user,setuser}) => {
                 {/* <Link className='admin-links' to="/admin/employer" ><button   onClick={handleClick} >Employers</button></Link> */}
               <Link className='admin-links' to="/admin/professional"><button onClick={handleClick}    >Professionals</button></Link>
               <Link className='admin-links' to="/admin/campaign"><button onClick={handleClick}    >Campaign</button></Link>
-              <Link className='admin-links' to="/admin/employer" ><button   onClick={handleClick} >Users</button></Link>
+              <Link className='admin-links' to="/admin/users" ><button   onClick={handleClick} >Users</button></Link>
             </div> : 
             <div>
                {/* <Link className='admin-links' to="/admin/register" ><button   onClick={handleClick} >Register </button></Link>  */}
