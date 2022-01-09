@@ -418,14 +418,14 @@ const Content = ({leftdisplay,rightdisplay}) => {
                 <div id="employer-reports" className='employer-reports M-0'>
                 <h1>Employee Mental Well-being Reports</h1>
                 <form className='row'>
-                    <div className='col'>
+                    <div className='col emplyer-report-form-input'>
                         <label htmlFor="type" style={{paddingRight:"15px"}}>Report Type:</label>
                         <select name="" id="">
                             <option value=""></option>
                         </select>
                     </div>
 
-                     <div className='col'>
+                     <div className='col emplyer-report-form-input'>
                         <label htmlFor="type" style={{paddingRight:"15px"}}>Report Frequency:</label>
                         <select name="" id="">
                             <option value="">Quarterly</option>

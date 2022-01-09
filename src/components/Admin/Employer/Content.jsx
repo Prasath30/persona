@@ -779,7 +779,9 @@ const chartTitleTwo = {
             </div>
         </div>
         </div>
-            
+            <div className='admin-employer-submitbtn'>
+            <button  >Submit</button>
+            </div>
            </section> 
 
         </>

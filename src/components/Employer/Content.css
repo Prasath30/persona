@@ -400,6 +400,7 @@
     display: block;
     font-weight: 500;
   }
+
   .well-being {
     display: flex;
     flex-direction: row;
@@ -422,5 +423,11 @@
   }
   .session-card-wrap {
     margin-top: 50px;
+  }
+  .emplyer-report-form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }

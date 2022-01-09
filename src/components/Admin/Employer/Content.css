@@ -327,6 +327,27 @@
   font-weight: 500;
 }
 
+.admin-employer-submitbtn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-employer-submitbtn button {
+  margin-top: 60px;
+  background-color: #7900bf;
+  padding: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 50px;
+}
+
 @media screen and (max-width: 1150px) {
   .employer-welcome-head {
     justify-content: center;

@@ -12,6 +12,10 @@ export const Columns = [
         accessor:"email"
     },
     {
+        Header:"Type",
+        accessor:"type"
+    },
+    {
         Header:"companyName",
         accessor:"date"
     }
