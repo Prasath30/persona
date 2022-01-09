@@ -62,25 +62,25 @@ const Professional = () => {
                       <td>{profName.one}</td>
                       <td></td>
                       <td></td>
-                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                       <td className='row table-cols'><button  className='btn btn-dark col-3'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger col-3'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary col-3" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.two}</td>
                       <td></td>
                       <td></td>
-                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                      <td className='row table-cols'><button  className='btn btn-dark col-3'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger col-3'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary col-3" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.three}</td>
                       <td></td>
                       <td></td>
-                      <td><button className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                      <td className='row table-cols'><button  className='btn btn-dark col-3'><i class="fas fa-edit"></i></button>
+                      <button className='btn btn-danger col-3'><i class="fas fa-trash-alt"></i></button>
+                      <button type="button" class="btn btn-primary col-3" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
                   </tr>
 
               </tbody>
@@ -102,18 +102,82 @@ const Professional = () => {
             </div>
             <div class="modal-body">
                 <form action="">
-                    <div>
-                    <label htmlFor="date" style={{paddingRight:"25px"}}>Date:</label>
-                    <input type="date"  name="time" required style={{width:"130px" }}  />
-                    <span style={{paddingLeft:"25px",paddingRight:"25px"}}>To</span>
-                    <input type="date"  name="time" required style={{width:"130px"}}  />
+                    <div className='admin-proffesional-modal-form'>
+                    <label htmlFor="date" >Date:</label>
+                    <input type="date"  name="time" required  />
+                    <span >To</span>
+                    <input type="date"  name="time" required  />
                     </div>
                     
-                    <div  style={{marginTop:"30px"}} >
-                    <label htmlFor="time" style={{paddingRight:"25px"}}>Time:</label>
-                    <input type="time"  name="time" required style={{width:"130px"}}  />
-                    <span style={{paddingLeft:"25px",paddingRight:"25px"}} >To</span>
-                    <input type="time"  name="time" required style={{width:"130px"}}  />
+                    <div  style={{marginTop:"30px"}} className='admin-proffesional-modal-form' >
+                     <label htmlFor="time">Time:</label>
+                      <select name="time"  >
+                      
+                      <option value="09:00" selected>09.00 AM</option>
+                      
+                      <option value="10:00">10.00 AM</option>
+                      
+                      <option value="11:00">11.00 AM</option>
+                      
+                      <option value="12:00">12.00 PM</option>
+                      
+                      <option value="13:00">01.00 PM</option>
+                      
+                      <option value="14:00">02.00 PM</option>
+                      
+                      <option value="15:00">03.00 PM</option>
+                      
+                      <option value="16:00">04.00 PM</option>
+                      
+                      <option value="17:00">05.00 PM</option>
+                    
+                      <option value="18:00">06.00 PM</option>
+                     
+                      <option value="19:00">07.00 PM</option>
+                      
+                      <option value="20:00">08.00 PM</option>
+                      
+                      <option value="21:00">09.00 PM</option>
+                    
+                      {/* <option value="22:00">10.00 PM</option>
+                
+                      <option value="23:00">11.00 PM</option> */}
+                      
+                  </select>
+                       <span >To</span>
+                      <select name="time"   >
+                      
+                      <option value="09:00" selected>09.00 AM</option>
+                      
+                      <option value="10:00">10.00 AM</option>
+                      
+                      <option value="11:00">11.00 AM</option>
+                      
+                      <option value="12:00">12.00 PM</option>
+                      
+                      <option value="13:00">01.00 PM</option>
+                      
+                      <option value="14:00">02.00 PM</option>
+                      
+                      <option value="15:00">03.00 PM</option>
+                      
+                      <option value="16:00">04.00 PM</option>
+                      
+                      <option value="17:00">05.00 PM</option>
+                    
+                      <option value="18:00">06.00 PM</option>
+                     
+                      <option value="19:00">07.00 PM</option>
+                      
+                      <option value="20:00">08.00 PM</option>
+                      
+                      <option value="21:00">09.00 PM</option>
+                    
+                      {/* <option value="22:00">10.00 PM</option>
+                
+                      <option value="23:00">11.00 PM</option> */}
+                      
+                  </select>
                   </div>
                     
                 </form>

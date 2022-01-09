@@ -460,7 +460,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
             
            </section> 
 
-    <div style={{width:"100vw",margin:"0",padding:"0",overflowX:"auto"}} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div style={{width:"100vw",margin:"0",padding:"0"}} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div style={{width:"100vw",position:"absolute",left:"0"}} class="modal-dialog modal-dialog-centered" role="document">
     <div style={{width:"100vw"}} class="modal-content">
       <div style={{width:"100vw"}} class="modal-header">

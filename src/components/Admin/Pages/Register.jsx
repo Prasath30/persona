@@ -63,16 +63,17 @@ const Register = () => {
             </div>
             <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>
-            <div className='select-wrapper'>
+            {/* <div className='select-wrapper'> */}
 
             
-            <select name="companyname" className='login-form-text  col' style={{width:"100%"}}  id="">
+            <select name="companyName"  className='login-form-text  col' style={{width:"100%"}}  id="">
                 <option value="">Tcs</option>
                 <option value="">CTS</option>
                 <option value="">Wipro</option>
                  <option value="">Accenture</option>
             </select>
-            </div>
+            {/* </div> */}
+            
             </div>
             <div className='radio-registers'>
             <input type="radio" id='employee'  name='employee' value="employee" checked />

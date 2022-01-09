@@ -18,6 +18,7 @@ const Admin = () => {
     const [leftShow, setleftShow] = useState(false)
     const [mobview, setmobview] = useState(window.innerWidth)
     const [user, setuser] = useState(true)
+    const [rightSideDropDown, setrightSideDropDown] = useState("-500px")
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -36,6 +37,11 @@ const Admin = () => {
            document.body.style.overflow ='visible'; 
         }
     }
+
+    const openRightDropdownForm = () =>{
+        console.log("clicked")
+        rightSideDropDown === "-500px" ? setrightSideDropDown("0px") : setrightSideDropDown("-500px")
+    }
     
     const Navbar = () =>{
         return(<>
@@ -44,12 +50,29 @@ const Admin = () => {
                   <div className='mob-navbar' id="navbar" className='admin-panel-navba' >
                    {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
                    <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
-                  <i class="fas fa-user-circle fa-3x"  style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
+                  <i class="fas fa-user-circle fa-3x" onClick={()=>openRightDropdownForm()} style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
                   
             </div>
               
             </div> 
         </>)
+    }
+
+    const AdminForm = ()=>{
+        return(
+            <>
+                <div className='admin-dropdown-form' style={{right:rightSideDropDown}}>
+                    <div>
+                        <label htmlFor="username">Username:</label>
+                        <input type="text" name='username' />
+                    </div>
+                    <div>
+                      <label htmlFor="password">Password:</label>
+                      <input type="password" name='password' />
+                    </div>
+                </div>
+            </>
+        )
     }
 
     console.log(user)
@@ -58,6 +81,7 @@ const Admin = () => {
         return(
             <div className='admin'>
                       <Navbar />
+                      <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser} />  
                     <AdminCard user={user} />
                 </div>
@@ -70,6 +94,7 @@ const Admin = () => {
              return (<>
                 <div className='admin'>
                     <Navbar />
+                    <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                    <Employer />    
                 </div>
@@ -78,6 +103,7 @@ const Admin = () => {
             return (<>
                 <div className='admin'>
                     <Navbar />
+                    <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                     <Register />   
                 </div>
@@ -87,6 +113,7 @@ const Admin = () => {
                 <div className='admin'>
                     
                     <Navbar />
+                    <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser}  />
                     <Bookings /> 
                 </div>
@@ -96,6 +123,7 @@ const Admin = () => {
                 <div className='admin'>
                     
                     <Navbar />
+                    <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft} user={user} setuser={setuser} />
                     <Professional />
                 </div>
@@ -107,6 +135,7 @@ const Admin = () => {
                    <div className='admin'>
                     
                     <Navbar />
+                     <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft}  user={user} setuser={setuser} />
                     <Campaign />
                 </div>  
@@ -118,6 +147,7 @@ const Admin = () => {
                    <div className='admin'>
                     
                     <Navbar />
+                     <AdminForm />
                     <Sidebar mobview={mobview} left={left} setleft={setleft}  user={user} setuser={setuser} />
                     <Users />
                 </div>  

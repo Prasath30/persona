@@ -76,7 +76,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
                   
                    {upload === true ?  null :  <label htmlFor="logo-file"style={{textAlign:"center"}}><i class="fas fa-file-upload fa-6x"></i></label> }
                    
-                  <input type="file" ref={ref} id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple={false} />
+                  <input type="file" ref={ref} accept='image/*' id='logo-file' style={{display:"none"}}  onChange={(e)=>handleFileChallenge(e)} multiple={false} />
                    {/* <img className='employer-left-side-bar-logo' src={"./images/Logo-3.png"} alt="" /> */}
               </div>
             </label>

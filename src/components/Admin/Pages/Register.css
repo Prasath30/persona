@@ -75,10 +75,10 @@
   position: relative;
 }
 
-.register-form div select {
+/* .register-form div select {
   -webkit-appearance: none;
   appearance: none;
-}
+} */
 .select-wrapper::after {
   content: "▼";
   font-size: 1rem;

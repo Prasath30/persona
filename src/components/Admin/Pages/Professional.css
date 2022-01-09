@@ -12,6 +12,11 @@
   margin-left: 40%;
   margin-bottom: 10vh;
 }
+.table-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
 .professional-form label {
   text-align: left;
   display: block;
@@ -49,7 +54,20 @@ textarea {
   color: #7900bf;
   margin-bottom: 60px;
 }
-
+.admin-proffesional-modal-form label {
+  padding-right: 25px;
+}
+.admin-proffesional-modal-form input,
+select {
+  width: 150px;
+  border-radius: 15px;
+  height: 45px;
+  background-color: rgba(241, 234, 234, 0.562);
+}
+.admin-proffesional-modal-form span {
+  padding-left: 25px;
+  padding-right: 25px;
+}
 @media screen and (max-width: 1150px) {
   .professional-form {
     margin: auto;
@@ -60,5 +78,24 @@ textarea {
 @media screen and (max-width: 500px) {
   .professional-form {
     width: 300px;
+  }
+  .admin-proffesional-modal-form input,
+  span,
+  select {
+    display: block;
+  }
+  .admin-proffesional-modal-form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .admin-proffesional-modal-form label {
+    padding-bottom: 15px;
+  }
+  .admin-proffesional-modal-form input,
+  select {
+    margin-bottom: 10px;
   }
 }

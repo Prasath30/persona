@@ -82,7 +82,8 @@ tr:nth-child(even) {
   line-height: 36px;
   color: #000000;
 }
-.admin-booking-form input {
+.admin-booking-form input,
+select {
   border-radius: 20px;
   width: 100%;
 }

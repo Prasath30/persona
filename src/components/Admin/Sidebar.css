@@ -40,6 +40,12 @@
   font-family: "Acme", sans-serif;
   font-size: 29px;
 }
+.admin-sidebar div {
+  text-align: center;
+}
+.admin-sidebar div select {
+  width: 90%;
+}
 
 @media screen and (max-width: 1150px) {
   .admin-sidebar {
