@@ -61,7 +61,7 @@ const Employer = () => {
                 <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i>
                 
             </div> */}
-         <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} openLeftSidebar={openLeftSidebar} />
+         <Sidebar leftdisplay={leftdisplay} rightdisplay={rightdisplay} setleftdisplay={setleftdisplay} openRightSidebar={openRightSidebar} openLeftSidebar={openLeftSidebar} />
          <Content />   
          </div>
          </div>

@@ -9,9 +9,6 @@ const Professional = () => {
         three:960003323
     })
 
-    const [formValue, setformValue] = useState(profName.one)
-    const [add, setadd] = useState(true)
-
     const handleClearBtn = (e)=>{
         e.preventDefault();
         setprofName({
@@ -39,7 +36,7 @@ const Professional = () => {
                     <input type="tel" value={profName.three} onChange={(e)=>setprofName({...profName,three:e.target.value})} />
                 </div>
                 <div style={{textAlign:"center"}}>
-                    {add === true ? <button className='btn btn-primary btn-lg'>Add</button> : <button className='btn btn-success btn-lg'>Confirm </button> }
+                    <button className='btn btn-primary btn-lg'>Add</button> 
                     <button className='btn btn-secondary btn-lg' style={{marginLeft:"40px"}} onClick={(e)=>handleClearBtn(e)} >Clear</button>
                     
                 </div>

@@ -49,7 +49,7 @@ const Employer = () => {
     useEffect(() => {
         window.addEventListener("resize" ,function(){
             setmobview(window.innerWidth)
-            console.log(mobview)
+            // console.log(mobview)
         });
         var prevScrollpos = window.pageYOffset;
         window.addEventListener("scroll", function () {
@@ -57,7 +57,7 @@ const Employer = () => {
           var currentScrollPos = window.pageYOffset;
             console.log(prevScrollpos, "prev")
             console.log(currentScrollPos,"current")
-          if (prevScrollpos > currentScrollPos || prevScrollpos == currentScrollPos) {
+          if (prevScrollpos > currentScrollPos || prevScrollpos === currentScrollPos) {
                 
             document.getElementById("navbar").style.top = "0";
             if (window.pageYOffset === 0) {
@@ -67,15 +67,15 @@ const Employer = () => {
               document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
             }
           } else {
-                console.log(leftdisplay)
-                   document.getElementById("navbar").style.top = leftdisplay; 
+            
+                   document.getElementById("navbar").style.top = "-500px"; 
                 
                     
                 
           }
           prevScrollpos = currentScrollPos;
         })
-    }, [])
+    }, [mobview])
 
      
      

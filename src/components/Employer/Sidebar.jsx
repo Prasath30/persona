@@ -4,7 +4,6 @@ import Calendar from 'react-calendar'
 // import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
-         const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
      const [mobview, setmobview] = useState(window.innerWidth)
     
@@ -44,7 +43,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
                 <a href="#employer-redflags" onClick={handleNavigationBtnClick} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
                <a href="#employer-feedback" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
                 <a href="#employer-reports"  onClick={handleNavigationBtnClick}  ><button><i class="fas fa-file-contract fa-lg" onClick={()=>setleftdisplay("-500px")} ></i>Reports</button></a>
-                <a href="#employer-campaign"  onClick={handleNavigationBtnClick} ><button><i class="fas fa-bullhorn fa-lg"></i>campaigns</button></a>
+                <a href="#employer-campaign"  onClick={handleNavigationBtnClick} ><button><i class="fas fa-bullhorn fa-lg"></i>Campaigns</button></a>
                 
             </div>
           </section> 

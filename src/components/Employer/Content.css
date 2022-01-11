@@ -153,7 +153,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .employer-redflags h1 {
   font-family: "Acme", sans-serif;
@@ -319,7 +319,6 @@
 
 .employer-reports {
   position: relative;
-  background: inherit;
   margin-top: 100px;
   text-align: center;
 }
@@ -410,6 +409,7 @@
   }
   .redglag-chart {
     margin-bottom: 50px;
+    text-align: left !important;
   }
   .employer-session h1 {
     float: none;

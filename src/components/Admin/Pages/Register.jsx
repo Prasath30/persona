@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Register = () => {
       const [passwordVisisbility, setpasswordVisisbility] = useState(false)
-      const [Company, setCompany] = useState(false)
+
       const [regCompany, setregCompany] = useState({
           companyName:""
       })

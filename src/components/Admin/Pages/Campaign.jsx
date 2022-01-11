@@ -5,7 +5,7 @@ const Campaign = () => {
 
     const [uploaded, setuploaded] = useState(false)
      const [uploadedFileName, setuploadedFileName] = useState('')
-     const [imgPreview, setimgPreview] = useState('')
+    //  const [imgPreview, setimgPreview] = useState('')
     const ref = useRef()
     
     const handleFileChallenge = (e)=>{
@@ -15,13 +15,13 @@ const Campaign = () => {
         if(Files[1]){
             return true
         }
-        setuploadedFileName(Files[0].name)
-         let reader = new FileReader();
+         setuploadedFileName(Files[0].name)
+        //  let reader = new FileReader();
 
-        reader.onloadend = ()=>{
-            setimgPreview(reader.result)
-        }
-        reader.readAsDataURL(Files[0])  
+        // reader.onloadend = ()=>{
+        //     setimgPreview(reader.result)
+        // }
+        // reader.readAsDataURL(Files[0])  
        
     }
 

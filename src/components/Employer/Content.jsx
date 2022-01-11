@@ -72,7 +72,11 @@ const Content = ({leftdisplay,rightdisplay}) => {
             dataLabels:{
                 name:{
                     show:false
-                }
+                },
+                   value:{
+                fontSize:"18px"
+                 }
+                
             }
         }
     },
@@ -113,7 +117,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
         return (
                  <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
                   <div className='row'>
-                      <img className='col' src={imgSrc} className='img-fluid' alt="package" /> 
+                      <img  src={imgSrc} className='img-fluid col' alt="package" /> 
                       <h6 className='col'>{title}</h6>
                   </div>
                   <h6>{caption}</h6>
@@ -136,20 +140,23 @@ const Content = ({leftdisplay,rightdisplay}) => {
      const Averages = ({title,color}) =>{
          return(
              <div className='col-sm-3 employer-averages'>
-                   <h6 style={{color:"#858386",textAlign:"center"}}>{title}</h6>
-                   {color === "green"? <Chart options={options} type="radialBar" series={series}  width="200px"  /> :
+                   <h6 style={{color:"#00000",textAlign:"center"}}>{title}</h6>
+                   {color === "green"? <Chart options={options} type="radialBar"  series={series}  width="200px"  /> :
                    <Chart options={{
                        legend:{
                            show:false
                        },
-                       
-                       
+                        
                        plotOptions:{
                             radialBar:{
                                 dataLabels:{
                                     name:{
-                                        show:false
+                                        show:false,
+                                    },
+                                    value:{
+                                        fontSize:"18px"
                                     }
+                                      
                                 }
                             }
                        },
@@ -190,9 +197,9 @@ const Content = ({leftdisplay,rightdisplay}) => {
                             enabled: true,
                             formatter: function (val) {
                              
-                            if(val === 60) return `Yes ${val}%`
+                            if(val === 60) return `Yes`
 
-                            return `No ${val}%`
+                            return `No`
                         },
                         style:{
                             colors:["#000000"],
@@ -262,19 +269,12 @@ const Content = ({leftdisplay,rightdisplay}) => {
                 <SessionChart chartTitle={chartTitleTwo.four}  chartimgSrc={chartimgSrc} />
 
             </div>
-
-
              </>
-        )
-       
-       
+        )     
      }
-
      const CarouselImg = ({imgSrc})=>{
          return(
              <div>
-                 {/* <a class="my-link" href="image01-big.jpg"><img src="image01-small.jpg" alt="image alt"/></a>
-<a class="my-link" data-vbtype="iframe" href="http://example.com/">open iFrame</a> */}
                 <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>setreportImg(imgSrc)} >
                 <img style={{marginLeft:"20px",width:"220px"}} className='img-fluid' src={imgSrc} alt='report'  />
                 </button>
@@ -287,7 +287,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
     return (
         <> 
             
-           <section className={leftdisplay == "0" || rightdisplay ==0 ? "blur" : 'employer-content'} style={mobview < "1150" ? {margin:"0"} : null} >
+           <section className={leftdisplay === "0px" || rightdisplay === "0px" ? "blur" : 'employer-content'} style={mobview < "1150" ? {margin:"0"} : null} >
            <div className='employer-welcome-head row M-0' style={mobview < "1150" ? {margin:"0"} : null} >
                 <img src={`./images/Employer/welcome-head.png`} className='col-sm welcome-head-img' alt='welcome head' />
                 <div className='col-sm col-lg-6' style={mobview < "577" ? {textAlign:"center"}: {textAlign:"left"}}>
@@ -304,7 +304,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
             <div  className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
                   <div className='row'>
                      
-                      <img className='col' src={`./images/Employer/package/duration.png`} className='img-fluid' 
+                      <img  src={`./images/Employer/package/duration.png`} className='img-fluid' 
                       style={{color:"#753188"}} 
                       
                       alt="" />
@@ -316,7 +316,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
              <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '}   style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null}>
                   <div className='row'>
                      
-                     <img className='col' src={`./images/Employer/package/personal.png`} className='img-fluid'
+                     <img src={`./images/Employer/package/personal.png`} className='img-fluid'
                       style={{color:"#753188"}} 
                      
                       alt="" />
@@ -339,7 +339,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
                
            </div>
            <div className='row M-0'>
-               <Averages color="green" title="Average well-being Levels"/>
+               <Averages color="green" title="Average well-being"/>
                <Averages color="red" title="Average Stress"/>
                <Averages color="red" title="Average Fatigue"/>
                <Averages color="red" title="Average Work-stress"/>
@@ -348,34 +348,44 @@ const Content = ({leftdisplay,rightdisplay}) => {
 
            <div id="employer-redflags" className='employer-redflags row M-0'>
                  <h1>Employee Mental Health Red Flags</h1>
-                <Chart type='pie' className="text-start" options={{
+                <Chart type='pie'  options={{
                     stroke: {
                    colors: ['#fff']
                    },
                     fill: {
-                        opacity: 0.8
-                    },
+                        opacity: 1,
+                  },
+                  dataLabels: {
+                            enabled: true,
+                            formatter: function (val) {
+                             
+                            if(val === 60) return ``
+
+                            return ``
+                        }
+                        },
                     legend:{
                         show:true,
                          showForSingleSeries: true,
       
                         position: 'left',
-                        horizontalAlign: 'left', 
+                        horizontalAlign: 'right', 
                         floating:false,
                         offsetX:10,
                         onItemHover: {
                         highlightDataSeries: true
                         },
                     },
+                    
                     colors:["#2A3067","#4D73CF","#DA9133","#666666","#D2CA26","#7892FF","#76A355"],
                     
-                    labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"]
+                    labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"],
                     
                     
-                }} series={[10, 20, 30, 10, 15, 10, 10]}
+                }} series={[10, 20, 30, 10, 10, 10, 10]}
                 
                 width={mobview < 500 ? "350px": "400px"  }
-                  className='col redglag-chart'  
+                  className='col redglag-chart text-start'  
                 />
                 <div className='col'>
                     <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt='rect'  />

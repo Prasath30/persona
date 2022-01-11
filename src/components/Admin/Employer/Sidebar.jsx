@@ -1,16 +1,13 @@
 import React,{useState,useEffect,useRef} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
-import { render } from '@testing-library/react';
 // import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
-         const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+7));
     const [date, setdate] = useState(new Date(new Date().setDate(new Date().getDate()+1)))
      const [mobview, setmobview] = useState(window.innerWidth)
-     const [events, setevents] = useState([])
      const [upload, setupload] = useState(false)
-     const [uploadedFileName, setuploadedFileName] = useState('')
+    //  const [uploadedFileName, setuploadedFileName] = useState('')
      const [imgPreview, setimgPreview] = useState('')
       const ref = useRef()
     
@@ -40,7 +37,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
         if(Files[1]){
             return true
         }
-        setuploadedFileName(Files[0].name)
+        // setuploadedFileName(Files[0].name)
         let reader = new FileReader();
          reader.onloadend = () =>{
            setimgPreview(reader.result)
@@ -70,7 +67,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
          
 
           <section  className={mobview < "1150" ? "admin-mob-employer-right-sidebar" : 'admin-employer-right-sidebar' } style={mobview < "1150" ? {right:rightdisplay} : null }>
-            <label htmlFor="logo-file"style={{textAlign:"center"}} className='admin-sidebar-logo-upload' style={{background: imgPreview ? `url("${imgPreview}") no-repeat center/cover`: "inherit",height:"182px"}}>
+            <label htmlFor="logo-file"  className='admin-sidebar-logo-upload' style={{background: imgPreview ? `url("${imgPreview}") no-repeat center/cover`: "inherit",height:"182px",textAlign:"center"}}>
               <div>
                    {upload === true ? null : <p>Upload Logo here</p>}
                   

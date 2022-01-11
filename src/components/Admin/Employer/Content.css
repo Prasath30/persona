@@ -134,7 +134,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .employer-redflags h3 {
   font-family: "Acme", sans-serif;
@@ -285,7 +285,6 @@
 }
 .employer-reports {
   position: relative;
-  background: inherit;
   margin-top: 100px;
   text-align: center;
 }

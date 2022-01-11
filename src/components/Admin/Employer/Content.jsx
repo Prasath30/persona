@@ -1,19 +1,10 @@
 import React,{useState,useEffect,useRef} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
-import  Carousel  from 'react-elastic-carousel'
-import { type } from 'jquery'
 import axios from "axios"
 const Content = ({setdisplay}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
-    const [reportImg, setreportImg] = useState('')
-    const [wellbeing, setwellbeing] = useState({
-    one:"x% of Employees",
-    two:"x% of Employees",
-    three:"x% of Employees"
-    })
-
     const [uploaded, setuploaded] = useState(false);
     const [uploadedFileName, setuploadedFileName] = useState()
     const [topform, settopform] = useState({
@@ -42,15 +33,7 @@ const Content = ({setdisplay}) => {
         ref.current.value = "";
         setuploaded(false)
     }
-    
 
-
-        const [packageCard, setpackageCard] = useState({
-            one:"Persona Enhance",
-            two:"3 Months",
-            three:"XX-XX-XXX",
-            four:"XX-XX-XXX"
-        })
 
         const [sessionCard, setsessionCard] = useState({
             one:"35",
@@ -61,8 +44,6 @@ const Content = ({setdisplay}) => {
             one:"35",
             two:"35"
         })
-        const [sessionReview, setsessionReview] = useState('')
-        const [workshopReview, setworkshopReview] = useState('')
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -107,14 +88,6 @@ const chartTitleTwo = {
     }
     
 
-    const breakPoints = [
-        {width:1, 
-        itemsToShow:1},
-        {width:550, itemsToShow:3},
-        {width:600, itemsToShow:3},
-        {width:768, itemsToShow:3}
-    ]
-
 
 
     // jasncsCN
@@ -141,40 +114,10 @@ const chartTitleTwo = {
   },
     
   };
-      const CardbStyle = {
-            width:"231px", 
-            position: "relative",
-            textAlign: "center",
-            background: "#eaebef",
-            borderRadius:"18px",
-            padding: "0"
 
-    }
 
-    const Cardb = ({date,title}) =>{
-        return(
-            <div  style={CardbStyle} className='employee-newsletter' >
-                <img style={{width:"230px"}} src={`/images/category/newsletter.png`} alt="newslettre" />
-                <div>
-                    <p className='newsletter-date' >{date}</p>
-                    <p  className='newsletter-title' >{title}</p>
-                    <button>Read</button>
-                </div>
-            </div>
-        )
-    }
 
-    // const PackageCard = ({imgSrc , title,caption}) =>{
-    //     return (
-                
-    //     )
-    // }
-    //  const WellbeingCard = ({imgSrc,title,caption,color}) => {
-    //      return(
-               
-              
-    //      )
-    //  }
+
 
      const Averages = ({title,color}) =>{
          return(
@@ -205,11 +148,6 @@ const chartTitleTwo = {
          )
      } 
 
-    //       const SessionCard = ({cardTitle,number})=>{
-    //     return(
-            
-    //     )
-    //  }
      const SessionChart = ({chartTitle,chartimgSrc})=>{
             return(
                 <>
@@ -235,21 +173,12 @@ const chartTitleTwo = {
             )
      }
 
-    //  const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
-    //      return(
-            
-    //      )
-    //  }
+
 
      const Session = ({cardTitle,number,bottomimgSrc,chartimgSrc,chartTitle,workshop})=>{
         if(workshop !== "true"){
              return(
             <>
-            {/* <div className='row session-card-wrap M-0'>
-                <SessionCard cardTitle={cardTitle.one}   number={number} />   
-                <SessionCard cardTitle={cardTitle.two}   number={number} />
-                <SessionCard cardTitle={cardTitle.three} number={number} />
-            </div> */}
 
             <div className='row M-0'>
                 <div className='col-sm-3 session-chart'>
@@ -348,16 +277,6 @@ const chartTitleTwo = {
        
      }
 
-     const CarouselImg = ({imgSrc})=>{
-         return(
-             <div>
-                 
-                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>setreportImg(imgSrc)} >
-                <img style={{marginLeft:"20px",width:"220px"}} src={imgSrc} alt='report'  />
-                </button>
-             </div>
-         )
-     }
 
 
 
@@ -383,8 +302,8 @@ const chartTitleTwo = {
            
              <div className='package-card col'>
                   <div>
-                       <img className='col' src={`/images/Employer/package/duration.png`} className='img-fluid' 
-                      style={{color:"#753188"}} />
+                       <img  src={`/images/Employer/package/duration.png`} className='img-fluid' 
+                       alt='img-s' />
                       <h6>Wellness package</h6>
                   </div>
                   {/* <h6>{caption}</h6> */}
@@ -398,8 +317,8 @@ const chartTitleTwo = {
               </div> 
                <div className='package-card col'>
                   <div>
-                     <img className='col' src={`/images/Employer/package/personal.png`} className='img-fluid' 
-                      style={{color:"#753188"}} />
+                     <img   src={`/images/Employer/package/personal.png`} className='img-fluid' 
+                     alt='img' />
                       <h6>Duration</h6>
                   </div>
                   {/* <h6>{caption}</h6> */}
@@ -566,7 +485,7 @@ const chartTitleTwo = {
                 <form action="" className='admin-chart-input col-lg-6 col-sm-12 col-md-12'>
                     <div  className='row'>
                         <label className='col' htmlFor="chart">Sleep Issues</label>
-                        <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -575,7 +494,7 @@ const chartTitleTwo = {
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Work Stress:</label>
-                        <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                        <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -584,7 +503,7 @@ const chartTitleTwo = {
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Conflict with Colleagues:</label>
-                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                          <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -593,7 +512,7 @@ const chartTitleTwo = {
                     </div>
                     <div  className='row' >
                         <label className='col'htmlFor="chart">Lack of Motivation:</label>
-                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                          <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -602,7 +521,7 @@ const chartTitleTwo = {
                     </div>
                     <div  className='row' >
                         <label className='col'htmlFor="chart">Feeling Overwhelmed:</label>
-                           <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                           <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -611,7 +530,7 @@ const chartTitleTwo = {
                     </div>
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Low Mood:</label>
-                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                          <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -621,7 +540,7 @@ const chartTitleTwo = {
 
                     <div  className='row' >
                         <label className='col' htmlFor="chart">Physical Fatigue:</label>
-                          <div className='input-group' className='col' style={{width:"120px",marginTop:"0px"}} >
+                          <div className='input-group col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append" style={{marginTop:"-30px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -690,7 +609,7 @@ const chartTitleTwo = {
                 <h6>{cardTitle.three}</h6>
                 <input type="number" value={workshopCard.one} 
                     style={{width:"90px"}}
-                    onChange={(e)=>{setsessionCard({...workshopCard,one:e.target.value})}}
+                    onChange={(e)=>{setworkshopCard({...workshopCard,one:e.target.value})}}
                 /> 
               </div>
 
@@ -699,7 +618,7 @@ const chartTitleTwo = {
                 <input type="number" value={sessionCard.two} 
                     
                     style={{width:"90px"}}
-                    onChange={(e)=>setsessionCard({...workshopCard,two:e.target.value})}
+                    onChange={(e)=>setworkshopCard({...workshopCard,two:e.target.value})}
                 />
              </div>
 
@@ -760,25 +679,7 @@ const chartTitleTwo = {
             </div>
             
 
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <img src={reportImg} alt="" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a style={{color:"white",textDecoration:"none"}}  class="btn btn-primary" href={reportImg} download={reportImg}>Download</a>
-            </div>
-            </div>
-        </div>
-        </div>
+
             <div className='admin-employer-submitbtn'>
             <button  >Submit</button>
             </div>
