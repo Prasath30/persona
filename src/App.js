@@ -5,7 +5,7 @@ import {BrowserRouter,Route, Routes} from "react-router-dom"
 import Employer from "./components/Employer/Employer";
 import "./App.css"
 import Admin from "./components/Admin/Admin";
-// import Gapi from "./components/Gapi";
+
 
 function App() {
  
@@ -22,7 +22,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
-    {/* <Gapi /> */}
+   
     
     
 
