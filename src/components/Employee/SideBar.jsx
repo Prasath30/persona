@@ -131,7 +131,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
 
                   <div style={{marginTop:"30px"}} >
                       <label htmlFor="professional">Professional:</label>
-                      <select name="" id="" required  >
+                      <select name="" id="" required style={{width:"100%"}} >
                         <option value="professional-one" selected>Professional 1</option>
                         <option value="professional-two">Professional 2</option>
                         <option value="professional-three">Professional 2</option>
@@ -141,9 +141,9 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                  
                   <div  style={{marginTop:"30px"}} >
                     <label htmlFor="time">Time:</label>
-                      <select name="time"  onChange={(e)=>setform({...form,time:e.target.value})} >
+                      <select name="time" style={{width:"100%"}} onChange={(e)=>setform({...form,time:e.target.value})} >
                       
-                      <option value="09:00" selected>09.00 AM</option>
+                      <option value="09:00" selected >09.00 AM</option>
                       
                       <option value="10:00">10.00 AM</option>
                       
@@ -181,7 +181,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   
                   <div style={{marginTop:"30px"}} >
                      <label htmlFor="category">Category:</label>
-                      <select name="category" id="" value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} required >
+                      <select name="category" id="" style={{width:"100%"}} value={categoryValue} onChange={(e)=>{setcategoryValue(e.target.value)}} required >
                           <option value={category.one} selected >Feeling Stressed</option>
                           <option value={category.two}>Manage Burnout</option>
                           <option value={category.three}>Relationship/People Problems</option>

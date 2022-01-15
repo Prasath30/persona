@@ -1,5 +1,6 @@
 .admin {
   height: 100%;
+  min-height: 100vh;
   position: relative;
   background: #eff2f9;
   overflow: hidden;
@@ -18,7 +19,7 @@
 }
 .admin-card {
   width: 330px;
-  height: 300px;
+  height: 280px;
   text-align: center;
   border: 1px rgb(63, 53, 53) solid;
   border-radius: 20px;
@@ -70,7 +71,7 @@
   width: 300px;
   height: 300px;
   max-height: 300px;
-  background-color: rgb(207, 201, 201);
+  background-color: #e5d9ec;
   padding-top: 50px;
   padding-left: 60px;
   border-radius: 10px 0px 10px 10px;
@@ -88,9 +89,10 @@
   font-weight: 500;
 }
 .admin-dropdown-form button {
-  background-color: #7900bf;
+  background-color: #eff2f9;
+  color: #7900bf;
   padding: 8px;
-  color: white;
+
   font-weight: 600;
   border: none;
   outline: none;

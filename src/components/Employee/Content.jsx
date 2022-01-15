@@ -67,7 +67,7 @@ const Content = ({category,setcategoryValue,categoryValue}) => {
 
     return (
         <>
-        <div  className={ mobview > "1140" ? 'health-issue-categories' : null } >
+        <div  className={ mobview > "1150" ? 'health-issue-categories' : null } >
                     
         <div  className= 'row categories' style={mobview < "1140" ? {display:"none"}: null} >
         <h2>Take Charge of Your Mental Health</h2>

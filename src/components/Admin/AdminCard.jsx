@@ -38,12 +38,12 @@ const AdminCard = ({user}) => {
                 </div>
                 
      
-                 {user ?  <div className='admin-card' onClick={()=>handleClick("/admin/employer")} >
+                 {user ?  <div className='admin-card' onClick={()=>handleClick("/admin/users")} >
                     <div>
                         <img src={`/images/Admin/employer.jpg`} alt="" />
                     </div>
                 
-                      <h3 className='admin-card-btn' >Employer</h3>
+                      <h3 className='admin-card-btn' >Users</h3>
                    
                 </div> :
                  <div className='admin-card' onClick={()=>handleClick("/admin/employer")} >
@@ -51,7 +51,7 @@ const AdminCard = ({user}) => {
                         <img src={`/images/Admin/employer.jpg`} alt="" />
                     </div>
                 
-                      <h3 className='admin-card-btn' >User</h3>
+                      <h3 className='admin-card-btn' >Employers</h3>
                    
                 </div>
                 }

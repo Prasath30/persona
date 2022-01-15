@@ -31,10 +31,10 @@ const Bookings = () => {
     return (
         <>
         <section className='booking'>
-             <h1>Booking</h1>
+             <h1>Bookings</h1>
              <button className='booking-add-booking-btn' onClick={()=>setopenForm(true)} >Add Booking</button>
             <div className='wrap'>
-           <table {...getTableProps()}  >
+           <table {...getTableProps()} className='table' >
                <thead >
                {headerGroups.map((headerGroup) => (
                  <tr {...headerGroup.getHeaderGroupProps()} >
@@ -77,7 +77,7 @@ const Bookings = () => {
                        
         {
             openForm ? <form action=""  className='admin-booking-form row'  >
-                        <h2>Booking form</h2>
+                        <h2>Bookings form</h2>
                 <div className='col-lg-6 col-sm-12' >
                     <label htmlFor="name">Employee Name:</label>
                     <input type="text"  />
@@ -95,8 +95,8 @@ const Bookings = () => {
                     <input type="date"  />
                 </div>
                  <div className='col-lg-6 col-sm-12' >
-                     <label htmlFor="time">Time:</label>
-                      <select name="time"> 
+                     <label htmlFor="time"  >Time:</label>
+                      <select name="time" style={{width:"100%"}}  > 
                       <option value="09:00" selected>09.00 AM</option>
                       <option value="10:00">10.00 AM</option>
                       <option value="11:00">11.00 AM</option>
@@ -116,7 +116,7 @@ const Bookings = () => {
                 </div>
                  <div className='col-lg-6 col-sm-12' >
                     <label htmlFor="professional">Proffesional:</label>
-                      <select  required  >
+                      <select  required style={{width:"100%"}} >
                         <option value="professional-one" selected>Proffesional 1</option>
                         <option value="professional-two">Proffesional 2</option>
                         <option value="professional-three">Proffesional 2</option>
@@ -124,7 +124,7 @@ const Bookings = () => {
                 </div>
                  <div className='col-lg-6 col-sm-12' >
                    <label htmlFor="category">Category:</label>
-                      <select name="category" id="" required >
+                      <select name="category" id="" required style={{width:"100%"}}  >
                           <option selected >Feeling Stressed</option>
                           <option > Manage Burnout</option>
                           <option >  Relationship/People Problems</option>

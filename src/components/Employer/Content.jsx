@@ -116,9 +116,9 @@ const Content = ({leftdisplay,rightdisplay}) => {
     const PackageCard = ({imgSrc , title,caption}) =>{
         return (
                  <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
-                  <div className='row'>
-                      <img  src={imgSrc} className='img-fluid col' alt="package" /> 
-                      <h6 className='col'>{title}</h6>
+                  <div className='row' style={{textAlign:"center",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                      <img  src={imgSrc} className='img-fluid' alt="package" style={ ( "1150" < mobview && mobview < "1300") ? {width:"64px",height:"50px"} : null } /> 
+                      <h6 className='col-sm' style={ mobview <"1300" && mobview > "1150" ? {paddingRight:"0",fontSize:"13px"} :{paddingRight:"0"} }>{title}</h6>
                   </div>
                   <h6>{caption}</h6>
               </div> 
@@ -141,7 +141,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
          return(
              <div className='col-sm-3 employer-averages'>
                    <h6 style={{color:"#00000",textAlign:"center"}}>{title}</h6>
-                   {color === "green"? <Chart options={options} type="radialBar"  series={series}  width="200px"  /> :
+                   {color === "green"? <Chart options={options} type="radialBar"  series={series}  width="200px" /> :
                    <Chart options={{
                        legend:{
                            show:false
@@ -301,31 +301,11 @@ const Content = ({leftdisplay,rightdisplay}) => {
            </div>
 
            <div className='employer-package-sec row M-0'>
-            <div  className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '} style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null} >
-                  <div className='row'>
-                     
-                      <img  src={`./images/Employer/package/duration.png`} className='img-fluid' 
-                      style={{color:"#753188"}} 
-                      
-                      alt="" />
-                      <h6 className='col' >Wellness package</h6>
-                  </div>
-                  <h6>Persona Enhance</h6>
-            </div> 
-            {/* className={mobview < "1350" ? 'package-card col-lg-3 col-md-4 col-sm-6' :"package-card col-sm"}> */}
-             <div className={mobview < "1150" ? "col-lg-3 col-md-4 col-sm-6 package-card" : 'col-sm package-card '}   style={mobview < "1150" ?{minWidth:"155px",maxWidth:"170px",height:"180px"} : null}>
-                  <div className='row'>
-                     
-                     <img src={`./images/Employer/package/personal.png`} className='img-fluid'
-                      style={{color:"#753188"}} 
-                     
-                      alt="" />
-                      <h6 className='col' >Duration</h6>
-                  </div>
-                  <h6>3 Months</h6>
-            </div> 
+        
             {/* <PackageCard imgSrc={`./images/Employer/package/loan.png`}   title="" caption="" />
             <PackageCard imgSrc={`./images/Employer/package/one.png`}   title="" caption="" /> */}
+                <PackageCard imgSrc={`./images/Employer/package/duration.png`} title="Wellness package" caption="Persona Enhance" />  
+             <PackageCard imgSrc={`./images/Employer/package/personal.png`} title="Duration" caption="3 Months" />  
             <PackageCard imgSrc={`./images/Employer/package/three.png`} title="Billing Date" caption="XX-XX-XXX" />     
             <PackageCard imgSrc={`./images/Employer/package/four.png`}  title="Billing Amount" caption="XX-XX-XXX" />
            </div>
@@ -384,11 +364,11 @@ const Content = ({leftdisplay,rightdisplay}) => {
                     
                 }} series={[10, 20, 30, 10, 10, 10, 10]}
                 
-                width={mobview < 500 ? "350px": "400px"  }
-                  className='col redglag-chart text-start'  
+                width={"400px" }
+                  className='col-sm redglag-chart text-start'  
                 />
-                <div className='col'>
-                    <img src={`./images/Employer/rectangle.png`} style={{width:"300px" ,height:"280px"}}  alt='rect'  />
+                <div className='col-sm'>
+                    <img src={`./images/Employer/rectangle.png`} style={{minnWidth:"200px" ,height:"280px"}}  alt='rect'  />
                 </div>
            </div>
            <div id="employer-feedback" className='employer-session M-0'>

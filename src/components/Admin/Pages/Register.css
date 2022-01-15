@@ -39,18 +39,19 @@
   text-align: center;
   margin-bottom: 30px;
 }
-.company-register-form button {
+.admin-register-form-button {
   margin-top: 0px;
-  width: 100px;
+  width: 200px;
   height: 49px;
-  background: #7700bb;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3rem;
   text-align: center;
-  color: #ffffff;
   border-radius: 25px;
+  background-color: #eff2f9;
+  border-radius: 20px;
+  color: #7700bb;
 }
 .company-register-form h2 {
   font-family: Acme;

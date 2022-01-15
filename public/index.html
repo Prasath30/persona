@@ -35,6 +35,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
      
-  
+    <script>
+        var prevScrollpos = window.pageYOffset;
+          window.addEventListener("scroll", function () {
+
+            var currentScrollPos = window.pageYOffset;
+            console.log(prevScrollpos, "prev")
+            console.log(currentScrollPos, "current")
+            if (prevScrollpos > currentScrollPos || prevScrollpos === currentScrollPos) {
+
+              document.getElementById("navbar").style.top = "0";
+              if (window.pageYOffset === 0) {
+                document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
+              }
+              if (window.pageYOffset > 0) {
+                document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
+              }
+            } else {
+
+              document.getElementById("navbar").style.top = "-500px";
+
+
+
+            }
+            prevScrollpos = currentScrollPos;
+          })
+
+        
+    </script>
   </body>
 </html>

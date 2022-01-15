@@ -32,7 +32,7 @@ const Users = () => {
     return (<>
 
         <h1 className='admin-users-title'>Users </h1>
-      <div className='wrap'>
+      <div className='tablur-column'>
            <table {...getTableProps()}  >
                <thead >
                {headerGroups.map((headerGroup) => (

@@ -2,12 +2,13 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   margin-left: 22%;
-  width: 76%;
+  width: 78%;
   scrollbar-width: none;
+  margin-right: 0;
 }
 
 .wrap {
-  width: 98vw;
+  width: 100vw;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -48,14 +49,15 @@ tr:nth-child(even) {
   margin-bottom: 30px;
   width: 200px;
   height: 49px;
-  background: #7700bb;
+
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
-  color: #ffffff;
-  border-radius: 25px;
+  background-color: #eff2f9;
+  border-radius: 20px;
+  color: #7700bb;
 }
 .admin-booking-form h2 {
   color: #7700bb;

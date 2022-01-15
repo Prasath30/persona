@@ -33,16 +33,6 @@ const Login = () => {
         
         <form className='login-form'>
             <h2>Login</h2>
-            <div className='row'>
-                <div className='col-6'>
-                <input type="radio" name="position" id='employee' value="employee" onChange={()=> setform({...form,role:"employee"})} defaultChecked/>
-                <label style={{display:"inline-block",paddingLeft:"15px"}}  htmlFor="employee">Employee</label>
-                </div>
-                <div className='col-6' >
-                <input type="radio" name="position" id='employer'  value="employer" onChange={()=> setform({...form,role:"employer"})}  />
-                <label style={{display:"inline-block",paddingLeft:"15px"}}  htmlFor="employer">Employer</label>
-                </div>
-            </div>
             <div  >
             <label htmlFor="username">Username:</label>
             <input className='login-form-text' 

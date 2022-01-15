@@ -49,8 +49,8 @@ const Admin = () => {
               <div style={{position:"relative",height:"70px"}} >
                   <div id="navbar" className='admin-panel-navba mob-navbar' >
                    {mobview < "1150" ?  <i className="fas fa-chevron-circle-right fa-3x" style={{paddingTop:"10px",paddingLeft:"15px",color:"#7700BB"}} onClick={openLeftSidebar}></i> : null}
-                   <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img'  alt="" />
-                  <i class="fas fa-user-circle fa-3x admin-nav-icons" onClick={()=>openRightDropdownForm()} style={{padding:"10px 30px 10px 10px",float:"right"}}></i> 
+                   <img src={`/images/Logo-3.png`} className='img-fluid admin-panel-navbar-img' style={ mobview > "1150" ? {position:"absolute",left:"30px"} : null}  alt="" />
+                  <i class="fas fa-user-circle fa-3x admin-nav-icons" onClick={()=>openRightDropdownForm()}   style={ mobview > "1150" ? {position:"absolute",right:"30px",top:"15px"} : {padding:"10px 30px 10px 10px",float:"right"}} ></i> 
                   
             </div>
               

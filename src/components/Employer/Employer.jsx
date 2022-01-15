@@ -11,6 +11,30 @@ const Employer = () => {
         const [mobview, setmobview] = useState(window.innerWidth)
 
 
+        var prevScrollpos = window.pageYOffset;
+        window.addEventListener("scroll", function () {
+            
+          var currentScrollPos = window.pageYOffset;
+            console.log(prevScrollpos, "prev")
+            console.log(currentScrollPos,"current")
+          if (prevScrollpos > currentScrollPos || prevScrollpos === currentScrollPos) {
+                
+            document.getElementById("navbar").style.top = "0";
+            if (window.pageYOffset === 0) {
+              document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
+            }
+            if (window.pageYOffset > 0) {
+              document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
+            }
+          } else {
+            
+                   document.getElementById("navbar").style.top = "-500px"; 
+                
+                    
+                
+          }
+          prevScrollpos = currentScrollPos;
+        })
 
         
 
@@ -51,31 +75,8 @@ const Employer = () => {
             setmobview(window.innerWidth)
             // console.log(mobview)
         });
-        var prevScrollpos = window.pageYOffset;
-        window.addEventListener("scroll", function () {
-            
-          var currentScrollPos = window.pageYOffset;
-            console.log(prevScrollpos, "prev")
-            console.log(currentScrollPos,"current")
-          if (prevScrollpos > currentScrollPos || prevScrollpos === currentScrollPos) {
-                
-            document.getElementById("navbar").style.top = "0";
-            if (window.pageYOffset === 0) {
-              document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
-            }
-            if (window.pageYOffset > 0) {
-              document.getElementById("navbar").style.backgroundColor = "#e5d9ec";
-            }
-          } else {
-            
-                   document.getElementById("navbar").style.top = "-500px"; 
-                
-                    
-                
-          }
-          prevScrollpos = currentScrollPos;
-        })
-    }, [mobview])
+        
+    }, [])
 
      
      

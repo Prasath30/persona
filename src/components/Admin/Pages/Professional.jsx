@@ -22,7 +22,7 @@ const Professional = () => {
         <>
             <section className='admin-professional'>
                  <form action=""  className='professional-form'  >
-                    <h2>Professional Form</h2>
+                    <h2>Professionals Form</h2>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input type="text" value={profName.one} onChange={(e)=>setprofName({...profName,one:e.target.value})} />
@@ -42,8 +42,9 @@ const Professional = () => {
                 </div>
                
             </form>
+                <h2 className='tablur-column-h2'>Professionals Table</h2>
             <div className='tablur-column'>
-                <h2>Professional Table</h2>
+                
           <table>
               <thead>
                   <tr>

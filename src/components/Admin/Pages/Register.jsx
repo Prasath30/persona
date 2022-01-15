@@ -31,9 +31,9 @@ const Register = () => {
             return (
         <div className='admin-register'>
              {/* <div className='admin-register d-flex align-items-center'> */}
-            <form className='company-register-form'>
+            <form className='register-form d-flex justify-content-center row'>
                     <h2>Company Registration</h2>
-            <div  className='row'>
+            <div>
             <label htmlFor="companyName">Company Name:</label>
             <input type="text" 
             className='login-form-text col' 
@@ -42,7 +42,7 @@ const Register = () => {
             onChange={(e)=> setregCompany(e.target.value)}  
             />
             </div>
-            <button type='submit' onClick={(e)=>handleCompanyRegistration(e)} >Submit</button>
+            <button type='submit' className='admin-register-form-button' onClick={(e)=>handleCompanyRegistration(e)} >Submit</button>
              </form>
               {/* </div> */}
                     <hr />
@@ -84,7 +84,7 @@ const Register = () => {
             </div>   
             
             {/* <button type='submit' className='login-form-btn'>Sign In</button> */}
-            <button type='button' className='login-form-btn' >Register</button>
+            <button type='button' className='admin-register-form-button' >Register</button>
             
         </form>
         </div>

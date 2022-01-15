@@ -9,12 +9,16 @@
   padding-bottom: 7vh;
   padding-top: 4vh;
 }
+.category {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .category-card {
   position: relative;
   margin-top: 60px;
   margin-bottom: 30px;
-  margin-left: 50px;
+  margin-left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

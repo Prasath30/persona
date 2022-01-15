@@ -487,7 +487,7 @@ const chartTitleTwo = {
                         <label className='col' htmlFor="chart">Sleep Issues</label>
                         <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                     </div>
@@ -496,7 +496,7 @@ const chartTitleTwo = {
                         <label className='col' htmlFor="chart">Work Stress:</label>
                         <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -505,7 +505,7 @@ const chartTitleTwo = {
                         <label className='col' htmlFor="chart">Conflict with Colleagues:</label>
                           <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -514,7 +514,7 @@ const chartTitleTwo = {
                         <label className='col'htmlFor="chart">Lack of Motivation:</label>
                           <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -523,7 +523,7 @@ const chartTitleTwo = {
                         <label className='col'htmlFor="chart">Feeling Overwhelmed:</label>
                            <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -532,7 +532,7 @@ const chartTitleTwo = {
                         <label className='col' htmlFor="chart">Low Mood:</label>
                           <div className='input-group col'  style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -542,7 +542,7 @@ const chartTitleTwo = {
                         <label className='col' htmlFor="chart">Physical Fatigue:</label>
                           <div className='input-group col' style={{width:"120px",marginTop:"0px"}} >
                         <input type="number" className='form-control' />
-                        <div class="input-group-append" style={{marginTop:"-30px"}}>
+                        <div class="input-group-append" style={{marginTop:"0px"}}>
                             <span class="input-group-text" id="basic-addon2">/100%</span>
                         </div>
                         </div>
@@ -581,7 +581,7 @@ const chartTitleTwo = {
                  <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}}>
                      <h6>"Average Session Rating / Q1"</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px",marginTop:"15px"}} />
+                     <input type="number" style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
                  </div>
                  
             
@@ -625,7 +625,7 @@ const chartTitleTwo = {
              <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}} >
                      <h6>Average Session Rating / Q1</h6>
                      <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px",marginTop:"15px"}} />
+                     <input type="number" style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
                  </div>
 
             </div>      

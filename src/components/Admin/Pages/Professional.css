@@ -8,7 +8,6 @@
 
 .professional-form {
   width: 500px;
-
   margin-left: 40%;
   margin-bottom: 10vh;
 }
@@ -47,12 +46,15 @@ textarea {
   overflow-x: auto;
   min-width: 370px;
   scrollbar-width: none;
-}
-.tablur-column h2 {
   text-align: center;
+}
+.tablur-column-h2 {
   font-family: "Acme", sans-serif;
   color: #7900bf;
   margin-bottom: 60px;
+  margin-left: 24%;
+  width: 76%;
+  text-align: center;
 }
 .admin-proffesional-modal-form label {
   padding-right: 25px;
@@ -72,6 +74,11 @@ select {
   .professional-form {
     margin: auto;
     padding-bottom: 10vh;
+  }
+  .tablur-column-h2 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
   }
 }
 

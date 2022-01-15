@@ -39,7 +39,7 @@ const Sidebar = ({mobview,left,setleft,user,setuser}) => {
           </div>
           { user === true ? <div>
                 <Link className='admin-links' to="/admin/register" ><button   onClick={handleClick} >Register </button></Link> 
-                <Link className='admin-links' to="/admin/booking" ><button    onClick={handleClick} >Booking</button></Link>
+                <Link className='admin-links' to="/admin/booking" ><button    onClick={handleClick} >Bookings</button></Link>
                 {/* <Link className='admin-links' to="/admin/employer" ><button   onClick={handleClick} >Employers</button></Link> */}
               <Link className='admin-links' to="/admin/professional"><button onClick={handleClick}    >Professionals</button></Link>
               <Link className='admin-links' to="/admin/campaign"><button onClick={handleClick}    >Campaign</button></Link>
@@ -47,7 +47,7 @@ const Sidebar = ({mobview,left,setleft,user,setuser}) => {
             </div> : 
             <div>
                {/* <Link className='admin-links' to="/admin/register" ><button   onClick={handleClick} >Register </button></Link>  */}
-               <Link className='admin-links' to="/admin/booking" ><button    onClick={handleClick} >Booking</button></Link>
+               <Link className='admin-links' to="/admin/booking" ><button    onClick={handleClick} >Bookings</button></Link>
                <Link className='admin-links' to="/admin/employer" ><button   onClick={handleClick} >Employers</button></Link>
               {/* <Link className='admin-links' to="/admin/professional"><button onClick={handleClick}    >Professionals</button></Link> */}
               <Link className='admin-links' to="/admin/campaign"><button onClick={handleClick}    >Campaign</button></Link>
