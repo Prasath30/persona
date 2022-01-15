@@ -2,10 +2,14 @@ import React,{useState,useEffect,useRef} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
 import axios from "axios"
+import Star from "./Star"
 const Content = ({setdisplay}) => {
 
     const [mobview, setmobview] = useState(window.innerWidth)
     const [uploaded, setuploaded] = useState(false);
+    const [starRating, setstarRating] = useState("3.5")
+    const [secondstarRating, setsecondstarRating] = useState("4")
+    
     const [uploadedFileName, setuploadedFileName] = useState()
     const [topform, settopform] = useState({
         
@@ -580,8 +584,8 @@ const chartTitleTwo = {
              
                  <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}}>
                      <h6>"Average Session Rating / Q1"</h6>
-                     <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
+                     <Star rating={starRating} />
+                     <input type="number" value={starRating} onChange={(e)=> setstarRating(e.target.value.toString())} style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
                  </div>
                  
             
@@ -624,8 +628,8 @@ const chartTitleTwo = {
 
              <div className='session-review-stars col-lg-6 col-sm-12 ' style={{height:"200px"}} >
                      <h6>Average Session Rating / Q1</h6>
-                     <img src={`/images/Employer/stars.png`} className='img-fluid' alt='session-bottom' />
-                     <input type="number" style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
+                    <Star rating={secondstarRating} />
+                     <input type="number" onChange={(e)=>setsecondstarRating(e.target.value.toString())} style={{width:"90px",marginTop:"15px"}} min={0} max={5} step="0.5" />
                  </div>
 
             </div>      

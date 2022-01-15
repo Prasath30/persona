@@ -2,12 +2,15 @@ import React,{useState,useEffect} from 'react'
 import "./Content.css"
 import Chart from "react-apexcharts"
 import  Carousel  from 'react-elastic-carousel'
+import Star from "../Admin/Employer/Star"
 
 
 const Content = ({leftdisplay,rightdisplay}) => {
 
          const [mobview, setmobview] = useState(window.innerWidth)
          const [reportImg, setreportImg] = useState('')
+         const [ratingOne, setratingOne] = useState("4")
+         const [ratingTwo, setratingTwo] = useState("4.5")
     
     useEffect(() => {
         window.addEventListener("resize" ,function(){
@@ -218,12 +221,12 @@ const Content = ({leftdisplay,rightdisplay}) => {
             )
      }
 
-     const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
+     const SessionBottom = ({reviewTitle,starRating})=>{
          return(
             <div className='session-review-stars col-sm'>
                      <div>
                          <h6>{reviewTitle}</h6>
-                     <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
+                     <Star rating={starRating} />
                      </div>
                      
             </div>
@@ -237,7 +240,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
             <div className='row session-card-wrap M-0'>
                 <SessionCard cardTitle={cardTitle.one}   number={number} />   
                 <SessionCard cardTitle={cardTitle.two}   number={number} />
-                <SessionBottom reviewTitle={reviewTitle.one} bottomimgSrc={bottomimgSrc} />
+                <SessionBottom reviewTitle={reviewTitle.one} starRating={ratingOne} />
                 
             </div>
 
@@ -260,7 +263,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
 
                 <SessionCard cardTitle={cardTitle.three}   number={number} />   
                 <SessionCard cardTitle={cardTitle.four}   number={number} />
-                <SessionBottom reviewTitle={reviewTitle.two} bottomimgSrc={bottomimgSrc} />
+                <SessionBottom reviewTitle={reviewTitle.two} starRating={ratingTwo} />
 
             </div>
 

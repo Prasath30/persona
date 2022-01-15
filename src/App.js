@@ -5,7 +5,7 @@ import {BrowserRouter,Route, Routes} from "react-router-dom"
 import Employer from "./components/Employer/Employer";
 import "./App.css"
 import Admin from "./components/Admin/Admin";
-import Zoom from "./Zoom";
+import "./components/Admin/Employer/Star.scss"
 
 
 function App() {
@@ -23,8 +23,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
-   
-    {/* <Zoom /> */}
+
     
 
     </>

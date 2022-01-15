@@ -40,8 +40,6 @@
           window.addEventListener("scroll", function () {
 
             var currentScrollPos = window.pageYOffset;
-            console.log(prevScrollpos, "prev")
-            console.log(currentScrollPos, "current")
             if (prevScrollpos > currentScrollPos || prevScrollpos === currentScrollPos) {
 
               document.getElementById("navbar").style.top = "0";
