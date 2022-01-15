@@ -16,8 +16,8 @@ export const Columns = [
         accessor:"type"
     },
     {
-        Header:"companyName",
-        accessor:"date"
+        Header:"Company Name",
+        accessor:"companyName"
     }
     
 

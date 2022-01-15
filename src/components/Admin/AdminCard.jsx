@@ -23,7 +23,7 @@ const AdminCard = ({user}) => {
                     </div>
                     
                          
-               <h3 className='admin-card-btn' >Booking</h3>
+               <h3 className='admin-card-btn' >Bookings</h3>
                 
            
                     
@@ -59,7 +59,7 @@ const AdminCard = ({user}) => {
                     <div>
                         <img src={`/images/Admin/professional.png`}  alt="" />
                     </div>
-                        <h3 className='admin-card-btn' >Professional</h3>
+                        <h3 className='admin-card-btn' >Professionals</h3>
                 </div>
             
             

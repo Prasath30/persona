@@ -221,8 +221,11 @@ const Content = ({leftdisplay,rightdisplay}) => {
      const SessionBottom = ({reviewTitle,bottomimgSrc})=>{
          return(
             <div className='session-review-stars col-sm'>
-                     <h6>{reviewTitle}</h6>
+                     <div>
+                         <h6>{reviewTitle}</h6>
                      <img src={bottomimgSrc} className='img-fluid' alt='session-bottom' />
+                     </div>
+                     
             </div>
          )
      }
@@ -357,7 +360,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
                         },
                     },
                     
-                    colors:["#2A3067","#4D73CF","#DA9133","#666666","#D2CA26","#7892FF","#76A355"],
+                    colors:["#ff0000","#ffff00","#ff9900","#333300","#00ff00","#00ffff","#cc00cc"],
                     
                     labels:["Sleep Issues","Work Stress","Conflict with Colleagues","Lack of Motivation","Feeling Overwhelmed","Low Mood","Physical Fatigue"],
                     
@@ -407,15 +410,15 @@ const Content = ({leftdisplay,rightdisplay}) => {
             <div className='employer-bottom'>
                 <div id="employer-reports" className='employer-reports M-0'>
                 <h1>Employee Mental Well-being Reports</h1>
-                <form className='row'>
-                    <div className='col emplyer-report-form-input'>
+                <form className='employer-report-form-wrap'>
+                    <div className='emplyer-report-form-input'>
                         <label htmlFor="type" style={{paddingRight:"15px"}}>Report Type:</label>
                         <select name="" id="">
                             <option value=""></option>
                         </select>
                     </div>
 
-                     <div className='col emplyer-report-form-input'>
+                     <div className='emplyer-report-form-input'>
                         <label htmlFor="type" style={{paddingRight:"15px"}}>Report Frequency:</label>
                         <select name="" id="">
                             <option value="">Quarterly</option>
@@ -450,7 +453,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
             
            </section> 
 
-    <div style={{width:"100vw",margin:"0",padding:"0"}} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div style={{width:"100vw",margin:"0",padding:"0",height:"100%"}} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div style={{width:"100vw",position:"absolute",left:"0"}} class="modal-dialog modal-dialog-centered" role="document">
     <div style={{width:"100vw"}} class="modal-content">
       <div style={{width:"100vw"}} class="modal-header">
@@ -460,7 +463,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
         </button>
       </div>
       <div style={{width:"100vw"}} class="modal-body">
-       <img style={{maxWidth:"100%",width:"100%"}} src={reportImg} alt="" />
+       <img style={{maxWidth:"100%",width:"100%",height:"80vh"}} src={reportImg} alt="" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

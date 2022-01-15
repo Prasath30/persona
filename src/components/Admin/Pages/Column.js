@@ -20,8 +20,8 @@ export const Columns = [
         accessor:"time"
     },
     {
-        Header:"Professional",
-        accessor:"professional"
+        Header:"Professionals",
+        accessor:"professionals"
         
     },
     {

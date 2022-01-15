@@ -13,7 +13,7 @@
 }
 .table-cols {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .professional-form label {

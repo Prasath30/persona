@@ -81,7 +81,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
           </section>  
             
           <section  className={ mobview > "1140" ? 'employee-right-side-bar'  : null } >
-              <img   className={ mobview > "1140" ? 'employee-right-side-bar-logo' : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/ellipse.png`} alt="ellipse"  />
+              <img   className={ mobview > "1140" ? 'employee-right-side-bar-logo' : 'mob-employee-left-side-bar-logo img-fluid' } src={`./images/ellipse.png`} style={mobview < "1150" ? {paddingBottom:"50px",paddingTop:"50px"} : null} alt="ellipse"  />
               <div className={ mobview > "1140" ? null  : 'mob-employee-right-side-bar' } >
                  <h2>Book a session</h2>
               <form action="" className='form'>
@@ -92,7 +92,7 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                   <input type="text" 
                    name='name' 
                    required  
-                   size={30}
+                   style={{width:"100%"}}
                    value={form.name}
                    onChange={(e)=>setform({...form,name:e.target.value})}
 
@@ -102,7 +102,8 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                     <label htmlFor="email">Email id</label>
                   <input type="email"  
                   name='email' 
-                  required size={30}
+                  required 
+                  style={{width:"100%"}}
                    value={form.email}
                    onChange={(e)=>setform({...form,email:e.target.value})}
                    />

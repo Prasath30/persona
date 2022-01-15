@@ -36,7 +36,7 @@ const Register = () => {
             <div>
             <label htmlFor="companyName">Company Name:</label>
             <input type="text" 
-            className='login-form-text col' 
+            className='register-form-text col' 
             name='companyName' 
             value={regCompany.companyName}  
             onChange={(e)=> setregCompany(e.target.value)}  
@@ -51,7 +51,7 @@ const Register = () => {
                 <h2>Register Form</h2>
             <div  className='row'>
             <label htmlFor="username">Username:</label>
-            <input className='login-form-text col' type="text" name='username' />
+            <input className='col register-form-text' type="text" name='username' />
             </div>
 
             <div   className='row'>

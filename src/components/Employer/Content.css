@@ -347,7 +347,20 @@
   font-size: 36px;
   line-height: 46px;
 }
-
+.emplyer-report-form-input label {
+  display: inline-block;
+}
+.employer-report-form-input {
+  text-align: left;
+}
+.emplyer-report-form-input input {
+  text-align: left;
+}
+.employer-report-form-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 @media screen and (max-width: 1150px) {
   .employer-content {
     width: 100%;
@@ -428,6 +441,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+  .employer-report-form-wrap {
     flex-direction: column;
   }
 }

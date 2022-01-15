@@ -68,25 +68,27 @@ const Professional = () => {
                       <td>{profName.one}</td>
                       <td></td>
                       <td></td>
-                       <td className='table-cols'><button  className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                       <td className='table-cols'>
+                       <button  className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                      <button style={{marginLeft:"15px"}} className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button style={{marginLeft:"15px"}} type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-calendar-check"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.two}</td>
                       <td></td>
                       <td></td>
-                      <td className='table-cols'><button  className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                      <td className='table-cols'>
+                      <button  className='btn btn-dark'><i class="fas fa-edit"></i></button>
+                      <button style={{marginLeft:"15px"}} className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button style={{marginLeft:"15px"}} type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-calendar-check"></i></button></td>
                   </tr>
                    <tr>
                       <td>{profName.three}</td>
                       <td></td>
                       <td></td>
                       <td className=' table-cols'><button  className='btn btn-dark'><i class="fas fa-edit"></i></button>
-                      <button className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i></button></td>
+                      <button style={{marginLeft:"15px"}}  className='btn btn-danger'><i class="fas fa-trash-alt"></i></button>
+                      <button style={{marginLeft:"15px"}}  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-calendar-check"></i></button></td>
                   </tr>
 
               </tbody>
@@ -101,7 +103,7 @@ const Professional = () => {
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Add Dates</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Unavailability Dates</h5>
                 <button type="button"  class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>

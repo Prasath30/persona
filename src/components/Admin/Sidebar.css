@@ -18,7 +18,7 @@
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .admin-sidebar div button {
@@ -43,7 +43,7 @@
   text-align: center;
 }
 .admin-sidebar div select {
-  width: 90%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1150px) {
