@@ -58,8 +58,8 @@ const Register = () => {
             <label htmlFor="passowrd">Password:</label>
          
                  <input  className='col login-form-password' type={passwordVisisbility ? "text" : "password"} name='password' /> 
-            {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
-            : <i style={{marginLeft:"15px",marginTop:"10px"}} className="far fa-eye-slash col-1"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
+            {passwordVisisbility ? <i style={{marginLeft:"15px",marginTop:"25px"}} className="far fa-eye col-1 fa-lg "  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i> 
+            : <i style={{marginLeft:"15px",marginTop:"25px"}} className="far fa-eye-slash col-1 fa-lg"  onClick={()=> setpasswordVisisbility(!passwordVisisbility)} ></i>   } 
             </div>
             <div  className='row'>
             <label htmlFor="companyName">Company Name:</label>

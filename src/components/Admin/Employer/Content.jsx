@@ -364,7 +364,7 @@ const chartTitleTwo = {
                     <img src={`/images/Employer/high-risk.png`}  alt='well-being' />
                     <h5 className='wellbeing-card-title'>High-risk</h5>
                     </div>
-                    <div className='input-group' style={{width:"120px"}} >
+                    <div className='input-group' style={{width:"140px"}} >
                         <input type="number" 
                         className='form-control'
                         value={topform.highRisk}
@@ -418,7 +418,7 @@ const chartTitleTwo = {
            <div className='col-lg-3 col-md-6 col-sm-12 employer-averages ' >
                <Averages color="green" title="Average well-being Levels"/>
                {/* <input type="number" style={{width:"90px",marginTop:"-50px"}} /> */}
-                <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                <div className='input-group' style={{width:"125px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -427,7 +427,7 @@ const chartTitleTwo = {
             </div>
             <div className='col-lg-3 col-md-6 col-sm-12 employer-averages' >
                  <Averages color="red" title="Average Stress"/>
-                  <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+                  <div className='input-group' style={{width:"125px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -436,7 +436,7 @@ const chartTitleTwo = {
             </div>
             <div className='col-lg-3 col-md-6 col-sm-12 employer-averages'  > 
             <Averages color="red" title="Average Fatigue"/> 
-             <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+             <div className='input-group' style={{width:"125px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -445,7 +445,7 @@ const chartTitleTwo = {
             </div>
             <div className='col-lg-3 col-md-6 col-sm-12 employer-averages'  >
              <Averages color="red" title="Average Work-stress"/>
-              <div className='input-group' style={{width:"120px",marginTop:"-50px"}} >
+              <div className='input-group' style={{width:"125px",marginTop:"-50px"}} >
                         <input type="number" className='form-control' />
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">/100%</span>
@@ -646,14 +646,14 @@ const chartTitleTwo = {
             </div>
             <div id="employer-reports" className='employer-reports M-0'>
                 <h2>Employee Mental Well-being Reports</h2>
-                <form className='row'>
-                    <div className='col'>
-                        <label htmlFor="type" style={{paddingRight:"20px"}}>Report Type:</label>
+                <form className='employer-report-form-wrap' >
+                    <div className='emplyer-report-form-input'>
+                        <label htmlFor="type" style={{paddingRight:"15px"}}>Report Type:</label>
                         <input style={{borderRadius:"15px", backgroundColor: "#fffaf2"}} type="text" />
                     </div>
 
-                     <div className='col'>
-                        <label htmlFor="type" style={{paddingRight:"20px"}}>Date:</label>
+                     <div className='emplyer-report-form-input'>
+                        <label htmlFor="type" style={{paddingRight:"15px"}}>Date:</label>
                         {/* <select name="" id="">
                             <option value="">Quarterly</option>
                             <option value="">Half-Yearly</option>
