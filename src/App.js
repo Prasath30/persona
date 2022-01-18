@@ -6,6 +6,7 @@ import Employer from "./components/Employer/Employer";
 import "./App.css"
 import Admin from "./components/Admin/Admin";
 import "./components/Admin/Employer/Star.scss"
+import Feedback from "./components/Feedback/Feedback";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Route path="/employer" element={ <Employer/>} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/:id" element={<Admin />} />
-
+          <Route path='/feedback' element={<Feedback />} />
       </Routes>
     </BrowserRouter>
 

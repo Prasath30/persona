@@ -50,6 +50,26 @@
   scrollbar-width: none;
 }
 
+.employee-feedback-link button i {
+  padding-right: 0px;
+  padding-top: 15px;
+  float: left;
+  color: gray;
+}
+
+.employee-feedback-link button {
+  width: 200px;
+  height: 55px;
+  background: #eff2f9;
+  border-radius: 20px;
+  color: #7700bb;
+  font-size: 25px;
+  font-family: "Acme", sans-serif;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: none;
+}
+
 .employee-right-side-bar::-webkit-scrollbar {
   display: none;
 }

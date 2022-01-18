@@ -3,6 +3,7 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import "./SideBar.css"
 import axios from "axios"
+import { Link } from 'react-router-dom';
 
 const SideBar = ({category,categoryValue,setcategoryValue}) => {
     const calendorMaxDate = new Date(new Date().setDate(new Date().getDate()+8));
@@ -78,6 +79,10 @@ const SideBar = ({category,categoryValue,setcategoryValue}) => {
                 </ul>
             </div>
             </div>
+            <div className='employee-feedback-link'>
+               <Link to="/feedback"><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></Link>
+            </div>
+           
           </section>  
             
           <section  className={ mobview > "1140" ? 'employee-right-side-bar'  : null } >

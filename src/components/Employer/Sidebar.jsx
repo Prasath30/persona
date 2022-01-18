@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import "./Sidebar.css";
 import Calendar from 'react-calendar'
+import { Link } from 'react-router-dom';
 // import 'react-calendar/dist/Calendar.css';
 
 const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
@@ -41,7 +42,7 @@ const Sidebar = ({leftdisplay,rightdisplay,setleftdisplay}) => {
             <div className='btn-ic'>
                 <a href="#employer-metrics" onClick={handleNavigationBtnClick}><button><i class="fas fa-desktop fa-lg"></i>Metrics</button></a>
                 <a href="#employer-redflags" onClick={handleNavigationBtnClick} > <button><i class="fas fa-exclamation-triangle fa-lg"></i>Red Flags</button></a>
-               <a href="#employer-feedback" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></a>
+               <Link to="/feedback" onClick={handleNavigationBtnClick} ><button><i class="fas fa-thumbs-up fa-lg"></i>Feedback</button></Link>
                 <a href="#employer-reports"  onClick={handleNavigationBtnClick}  ><button><i class="fas fa-file-contract fa-lg" onClick={()=>setleftdisplay("-500px")} ></i>Reports</button></a>
                 <a href="#employer-campaign"  onClick={handleNavigationBtnClick} ><button><i class="fas fa-bullhorn fa-lg"></i>Campaigns</button></a>
                 

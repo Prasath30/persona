@@ -178,7 +178,10 @@ const Content = ({leftdisplay,rightdisplay}) => {
             </div>
         )
      }
-     const SessionChart = ({chartTitle,chartimgSrc})=>{
+
+     var hp;
+
+     const SessionChart = ({chartTitle,chartimgSrc,value=60})=>{
             return(
                 <div className='col-sm-3 session-chart'>
                     <h6>{chartTitle}</h6>
@@ -200,7 +203,9 @@ const Content = ({leftdisplay,rightdisplay}) => {
                             enabled: true,
                             formatter: function (val) {
                              
-                            if(val === 60) return `Yes`
+                             
+
+                            if(val === hp ) return `Yes`
 
                             return `No`
                         },
@@ -215,7 +220,7 @@ const Content = ({leftdisplay,rightdisplay}) => {
                             }
                        }
                        
-                   }} type="pie"  series={[60,40]}   width="180px"  />
+                   }} type="pie"  series={[value, 100-value]}   width="180px"  />
                    
                 </div>
             )
