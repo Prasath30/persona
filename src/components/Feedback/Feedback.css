@@ -22,6 +22,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 8vh;
+  background-image: url("./images/employee-well-being.png");
 }
 .feedback-session-star-rating h2 {
   text-align: center;
@@ -79,7 +80,7 @@
 }
 
 .switch-field input.feedback-no:checked + label {
-  background-color: rgb(224, 16, 16);
+  background-color: rgba(224, 16, 16, 0.747);
   box-shadow: none;
 }
 .switch-field input.feedback-yes:checked + label {
@@ -109,8 +110,22 @@ h2 {
   font-size: 18px;
   margin-bottom: 8px;
 }
+.feedback-back-btn {
+  margin: 6vh;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 23px;
+  border: 1px solid black;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  background-color: #eff2f9;
+  border-radius: 20px;
+  color: #7700bb;
+  margin-bottom: 0;
+}
 .feedback-submit-btn {
-  margin-top: 4vh;
+  margin-top: 7vh;
   margin-bottom: 8vh;
   padding: 8px;
   font-weight: 600;
@@ -127,5 +142,8 @@ h2 {
 @media screen and (max-width: 400px) {
   .react-stars {
     padding-left: 10%;
+  }
+  .feedback-back-btn {
+    margin-left: 2vh;
   }
 }

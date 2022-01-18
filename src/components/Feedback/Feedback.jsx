@@ -1,12 +1,16 @@
 import React from 'react'
 import "./Feedback.css"
 import ReactStars from "react-rating-stars-component";
+import { useNavigate } from 'react-router-dom';
 
 
 const Feedback = () => {
+    const g = useNavigate()
     return (
         <>
+        
            <section className='feedback'>
+                    <button onClick={()=>g(-1)} className='feedback-back-btn' ><i class="fas fa-arrow-left" style={{float:"left",padding:"6px 10px 10px 20px"}}></i>Back</button>
                     <h1>Feedback</h1>
                 <div className='feedback-session  container'>
                     <h1>Session Usage & Feedback</h1>
@@ -145,9 +149,11 @@ const Feedback = () => {
                             </div>
                          
                     </div>    
-                     <button className='feedback-submit-btn'>Submit</button> 
+                     
                 </div>
-
+                <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <button className='feedback-submit-btn'>Submit</button> 
+                </div>
                
            </section>
         </>
