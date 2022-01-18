@@ -12,7 +12,10 @@
   font-size: 26px;
 }
 .feedback {
-  background: #b7c4e9;
+  /* background: #b7c4e9; */
+  background: rgba(255, 239, 213, 0.3);
+  margin: 0;
+  padding: 0;
 }
 
 .feedback-session {
