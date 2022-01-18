@@ -21,6 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 8vh;
 }
 .feedback-session-star-rating h2 {
   text-align: center;
@@ -78,7 +79,7 @@
 }
 
 .switch-field input.feedback-no:checked + label {
-  background-color: red;
+  background-color: rgb(224, 16, 16);
   box-shadow: none;
 }
 .switch-field input.feedback-yes:checked + label {
@@ -107,6 +108,20 @@
 h2 {
   font-size: 18px;
   margin-bottom: 8px;
+}
+.feedback-submit-btn {
+  margin-top: 4vh;
+  margin-bottom: 8vh;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 23px;
+  border: 1px solid black;
+  outline: none;
+  width: 300px;
+  height: 50px;
+  background-color: #eff2f9;
+  border-radius: 20px;
+  color: #7700bb;
 }
 
 @media screen and (max-width: 400px) {

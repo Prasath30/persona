@@ -8,7 +8,7 @@ const Feedback = () => {
         <>
            <section className='feedback'>
                     <h1>Feedback</h1>
-                <div className='feedback-session'>
+                <div className='feedback-session  container'>
                     <h1>Session Usage & Feedback</h1>
                 <table className='feedback-session-table'>
                     <tbody>
@@ -78,7 +78,7 @@ const Feedback = () => {
                    
                 </div>
 
-            <div className='feedback-session'>
+            <div className='feedback-session container'>
                     <h1>Workshop Usage & Feedback</h1>
                 <table className='feedback-session-table'>
                     <tbody>
@@ -144,9 +144,11 @@ const Feedback = () => {
                     />
                             </div>
                          
-                    </div>
-                   
+                    </div>    
+                     <button className='feedback-submit-btn'>Submit</button> 
                 </div>
+
+               
            </section>
         </>
     )
