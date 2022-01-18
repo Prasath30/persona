@@ -77,11 +77,14 @@
   cursor: pointer;
 }
 
-.switch-field input:checked + label {
+.switch-field input.feedback-no:checked + label {
+  background-color: red;
+  box-shadow: none;
+}
+.switch-field input.feedback-yes:checked + label {
   background-color: #a5dc86;
   box-shadow: none;
 }
-
 .switch-field label:first-of-type {
   border-radius: 4px 0 0 4px;
 }
